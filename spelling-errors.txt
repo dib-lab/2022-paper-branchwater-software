@@ -4,7 +4,7 @@ ANI
 APIs
 BIGSI
 biogeographical
-biogeography
+Biogeography
 bioinformatics
 bluegenes
 CLI
@@ -22,7 +22,7 @@ Irber
 Jaccard
 lits
 lossy
-luiz
+Luiz
 luizirber
 Lumian
 MAGsearch
@@ -30,6 +30,7 @@ mer
 metagenome
 metagenomes
 metagenomic
+microbiome
 MinHash
 ModHash
 NHGRI
@@ -37,11 +38,12 @@ novo
 pangenome
 performant
 phormidium
-Postprocessing
 precomputed
+probiotics
 realtime
 reannotation
 Reiter
+repo
 repos
 saltyscientist
 SBT
@@ -50,7 +52,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-SRA
+Sra
 SSD
 summarization
 UC
