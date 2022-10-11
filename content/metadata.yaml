@@ -1,27 +1,42 @@
 ---
-title: "Manuscript Title"
+title: "MAGsearch is awesome"
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - sourmash
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+  - github: luizirber
+    name: Luiz Irber
+    initials: LI
+    orcid: 0000-0003-4371-9659
+    twitter: luizirber
+    email: lcirberjr@ucdavis.edu
     affiliations:
-      - Department of Something, University of Whatever
+      - Graduate Group in Computer Science, UC Davis
+      - Department of Population Health and Reproduction, UC Davis
     funders:
-      - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+      - Grant GBMF4551 from the Gordon and Betty Moore Foundation
+      - Grant R01HG007513 from the NIH NHGRI
+  - github: bluegenes
+    name: N. Tessa Pierce-Ward
+    initials: NTP
+    orcid: 0000-0002-2942-5331
+    twitter: saltyscientist
+    email: ntpierce@ucdavis.edu
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
-    corresponding: true
+     - Department of Population Health and Reproduction, UC Davis
+    funders:
+      - Grant 1711984 from the NSF
+      - Grant GBMF4551 from the Gordon and Betty Moore Foundation
+      - Grant 2018911 from the NSF
+  - github: ctb
+    name: C. Titus Brown
+    initials: CTB
+    orcid: 0000-0001-6001-2677
+    email: ctbrown@ucdavis.edu
+    affiliations:
+      - Department of Population Health and Reproduction, UC Davis
+    funders:
+      - Grant GBMF4551 from the Gordon and Betty Moore Foundation
+      - Grant R01HG007513 from the NIH NHGRI
+      - Grant 2018911 from the NSF
+      - Grant R03OD030596 from the NIH Common Fund
