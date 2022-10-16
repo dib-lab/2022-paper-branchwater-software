@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-magsearch-software/v/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-magsearch-software/tree/6c0b17ac82dc6cb723283df8268968b660420bd2">dib-lab/2022-paper-magsearch-software@6c0b17a</a>
+from <a href="https://github.com/dib-lab/2022-paper-magsearch-software/tree/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e">dib-lab/2022-paper-magsearch-software@ff381c6</a>
 on October 16, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -317,7 +317,8 @@ individual gzipped JSON files for each input run.</p>
 <p>Note that any requested downsampling of sketches is performed
 dynamically, after load. Results are reported back to a separate
 “writer” thread via a threadsafe multi-producer, single-consumer FIFO
-queue.</p>
+queue. We use the rayon <code>par_iter</code> function to execute the closures in
+parallel.</p>
 <p>This approach leverages the core features of sourmash to efficiently
 keep queries in memory and batch-process metagenome sketches without
 storing them all in memory. The approach also takes advantage of
@@ -348,7 +349,7 @@ be done but it’s fast enough and the code is simple.</li>
 by distributing sketches to various nodes but in practice this is
 logistically challenging to coordinate. 13 TB is large. In a cloud
 environment with fast interconnect other design decisions could be
-made. But also other query systems could be built.</p>
+made. But also other query systems could be built (what was I thinking here? :).</p>
 <h3 id="post-search-validation-etc.-testing.">Post-search validation etc. Testing.</h3>
 <p>It is straightforward to use sourmash CLI to query the metagenome data
 sets to double check magsearch results. This is usually only internal
@@ -363,40 +364,87 @@ discussed further below.</p>
 download. Serratus is probably cheaper than $20k now but still
 expensive.</p>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
+<p>Making large collections of sequencing data easy to search by content
+is an open problem, and approaches that work for smaller collections
+rarely scale well, even for current database sizes. New methods that
+take advantage of specific particularities of the query and desired
+answer can help bridge the gap between more general methods by
+allowing filtering large databases, resulting in more manageable
+subsets that can be used efficiently with current methods.
+FracMinHash sketches allow calculating similarity and containment
+between datasets with-out the need to access the original
+datasets. Because only a fraction of the original data need to be
+stored, they are good basic components in the implementation of
+systems that allow searching large collections of datasets.</p>
+<p>This has been used in two papers so far - Lumian et al, Viehgewer et
+al.</p>
+<p>We expect more use cases, and more elaborate use cases, to emerge over
+the next few years. Here we believe that it’s important that the low
+cost of search means that exploratory efforts can be quickly
+evaluated. The major obstacle at the moment is that it is not realtime
+nor can it be run by others without direct command-line access to the
+13 TB of data. These are topics for future software engineering
+development.</p>
+<p>There are several scientific limitations to overcome as well. The
+current search approach has limited sensitivity to divergent sequence
+beyond the genus level, and cannot find smaller matches. These are
+topics for future research and development.</p>
 <h3 id="following-up-on-magsearch-results">Following up on MAGsearch results</h3>
-<p>Many MAGsearch use cases are intended for early-stage hypothesis generation and refinement i.e. “hit to lead”, and hence MAGsearch is an early stage in conceptual and concrete workflows. Typical immediate concerns after receiving MAGsearch results are (1) what is the right threshold for my results (2) are my results at that threshold valid (3) how do I get my hands on the actual data, not just the sketches.</p>
+<p>Many MAGsearch use cases are intended for early-stage hypothesis
+generation and refinement i.e. “hit to lead”, and hence MAGsearch is
+an early stage in conceptual and concrete workflows. Typical immediate
+concerns after receiving MAGsearch results are (1) what is the right
+threshold for my results (2) are my results at that threshold valid
+(3) how do I get my hands on the actual data, not just the sketches.</p>
 <p>The first analysis step taken is often picking a threshold. The exact approach taken will vary depending on use case, but many use cases are looking for or expecting specific distributions of ScientificName so we have provided a simple script that imports SRA metadata and summarizes the MAGsearch results at that threshold. (example output)</p>
 <p>After that, many paths can be taken.</p>
-<p>Most metagenome data sets are Illumina short-read sequencing, and a plethora of general purpose bioinformatics tools exist for mapping and assembling.</p>
-<p>Two tools that were developed in concert with sourmash and MAGsearch are genome-grist and spacegraphcats.</p>
-<p>Genome-grist performs an entirely automated reference-based characterization of individual metagenomes that combines sourmash gather / minimum metagenome cover with mapping; it is described in Irber et al and was used in Lumian et al. Given that it does download all the data and maps all the reads, it is still relatively lightweight.</p>
-<p>spacegraphcats is an assembly-graph based investigative tool for metagenomes that retrieves graph neighborhoods from metagenome assembly graphs for the purpose of investigating strain variation. It was used in Reiter et al., and Lumian et al. (phormidium paper). It is much heavier weight than genome-grist because it uses assembly graphs.</p>
-<h3 id="design-alternatives---could-be-moved-to-discussion">Design alternatives - (could be moved to discussion)</h3>
-<p>Sra search is a simple yet extremely effective initial implementation that supports a number of use cases. As its use increases many improvements are possible.</p>
+<p>Most metagenome data sets are Illumina short-read sequencing, and a
+plethora of general purpose bioinformatics tools exist for mapping and
+assembling.</p>
+<p>Two tools that were developed in concert with sourmash and MAGsearch
+are genome-grist and spacegraphcats.</p>
+<p>Genome-grist performs an entirely automated reference-based
+characterization of individual metagenomes that combines sourmash
+gather / minimum metagenome cover with mapping; it is described in
+Irber et al and was used in Lumian et al. Given that it does download
+all the data and maps all the reads, it is still relatively
+lightweight.</p>
+<p>spacegraphcats is an assembly-graph based investigative tool for
+metagenomes that retrieves graph neighborhoods from metagenome
+assembly graphs for the purpose of investigating strain variation. It
+was used in Reiter et al., and Lumian et al. (phormidium paper). It is
+much heavier weight than genome-grist because it uses assembly graphs.</p>
+<h3 id="design-alternatives">Design alternatives</h3>
+<p>Sra search is a simple yet extremely effective initial implementation
+that supports a number of use cases. As its use increases many
+improvements are possible.</p>
 <p>In practice, FracMinHash consists of comparing collections of 64-bit
 integers which is in the wheelhouse of computers.</p>
 <p>Roads not (yet) taken include:</p>
-<p>Indexing the data sets in some way. Colors present a challenge. (Mastiff)
-Organizing data sets in some way based on content. Clustering and data set organization present a challenge at this scale.
-Putting a Bloom filter in front of each data set, and/or implementing SBT. Unbalanced data sets and additional storage present a challenge.
-Revising on-disk format; progressive loading; etc.</p>
-<p>Lack of auxiliary data structures is also a feature… allows us to update collection quickly.</p>
+<ul>
+<li>Indexing the data sets in some way. Colors present a challenge. (Mastiff)</li>
+<li>Organizing data sets in some way based on content. Clustering and data set organization present a challenge at this scale.</li>
+<li>Putting a Bloom filter in front of each data set, and/or implementing SBT. Unbalanced data sets and additional storage present a challenge.</li>
+<li>Revising on-disk format; progressive loading; etc.</li>
+</ul>
+<p>We note that lack of auxiliary data structures is also a
+feature because it allows us to update the collection quickly.</p>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
-<p>From luiz thesis:
-Making large collections of sequencing data searchable is an open problem, and approaches that work for smaller collections rarely scale well, even for current database sizes. New methods that take advantage of specific particularities of the query and desired answer can help bridge the gap between more general methods by allowing filtering large databases, resulting in more manageable subsets that can be used efficiently with current methods.
-Scaled MinHash sketches allow calculating similarity and containment between datasets with- out the need to access the original datasets. Because only a fraction of the original data
-need to be stored, (controlled with the scaled parameter) they are good basic components in the implementation of systems that allow searching large collections of datasets.</p>
-<p>We provide flexible large-scale fast search, together with some simple downstream summarization tools and a more mature (but slower) investigative ecosystem. This supports and enables a wide range of use cases that explore public data, ranging from biomedical to ecological to technical.</p>
-<p>This has been used in two papers so far - Lumian et al, Viehgewer et al. </p>
-<p>We expect more use cases to emerge quickly. Here we believe that it’s important that the low cost of search means that exploratory efforts can be quickly evaluated. The major obstacle at the moment is that it is not realtime nor can it be run by others without direct command-line access to the 13 TB of data. These are topics for future software engineering development.</p>
-<p>There are several scientific limitations to overcome as well. The current search approach has limited sensitivity to divergent sequence beyond the genus level, and cannot find smaller matches. These are topics for future research and development.</p>
-<p>Data availability statement:
-* all original data is available from SRA
-* query for what we search is here (=&gt; zenodo)
-* list of data sets we currenlty have indices for is here
-* how to get data one at a time via IPFS is here
-* bulk data is 13 TB, available upon request/arrangement
-* all sketches are CC0</p>
+<p>We provide a flexible and fast petabase-scale search based on
+FracMinHash, together with some simple downstream summarization tools
+and an increasingly mature (but much slower) investigative ecosystem.
+This supports and enables a wide range of interesting use cases that
+take advantage of public data; these use cases range from biomedical
+to ecological to technical (Table 1).</p>
+<h2 id="data-availability-statement">Data availability statement:</h2>
+<ul>
+<li>all original data is available from SRA</li>
+<li>query for what we search is here (=&gt; zenodo)</li>
+<li>list of data sets we currenlty have indices for is here</li>
+<li>how to get data one at a time via IPFS is here</li>
+<li>bulk data is 13 TB, available upon request/arrangement</li>
+<li>all sketches are CC0</li>
+</ul>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">
