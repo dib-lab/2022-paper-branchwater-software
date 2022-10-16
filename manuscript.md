@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/))
+([permalink](https://dib-lab.github.io/2022-paper-magsearch-software/v/6c0b17ac82dc6cb723283df8268968b660420bd2/))
 was automatically generated
-from [dib-lab/2022-paper-magsearch-software@98d2184](https://github.com/dib-lab/2022-paper-magsearch-software/tree/98d2184ebe1cd018f255f1915a4fdf7d23d072d3)
+from [dib-lab/2022-paper-magsearch-software@6c0b17a](https://github.com/dib-lab/2022-paper-magsearch-software/tree/6c0b17ac82dc6cb723283df8268968b660420bd2)
 on October 16, 2022.
 </em></small>
 
@@ -152,8 +152,6 @@ and archaeal genomes have been isolated from public metagenomes, and
 several entirely new branches of life have been discovered (large
 bacteriophage, hug et al, etc.)
 
-Searching by content, unassembled.
-
 There are many use cases for SRA-scale search that rely on
 content-based search (see Table XX). This is in part because of the
 many unknowns present in metagenomes, and the associated unreliability
@@ -189,6 +187,7 @@ on five newly generated cyanobacterial genomes from Antarctic samples.
 
 
 Thoughts and questions:
+
 * do we mention CMash and mash screen? Same challenges as serratus and
   intended for single sample analysis.
   not intended for large scale search but rather s
@@ -237,14 +236,11 @@ FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
 sets (gather paper). In brief, FracMinHash is a lossy compression
 approach that reduces data sets in size by a scaled factor S. Sketches
-support overlap, bidirectional containment, and Jaccard similarity
-between two data sets. Unlike other common sketching techniques
-(MinHash, HyperLogLog), FracMinHash supports these operations between
-two data sets of different sizes, and unlike mash screen and CMash
-does not require the original data sets.
-
-In practice, FracMinHash consists of comparing collections of 64-bit
-integers which is in the wheelhouse of computers.
+support estimation of overlap, bidirectional containment, and Jaccard
+similarity between two data sets. Unlike other common sketching
+techniques (MinHash, HyperLogLog), FracMinHash supports these
+operations between two data sets of different sizes, and unlike mash
+screen and CMash does not require the original data sets.
 
 The open-source sourmash software provides a mature and
 well-documented command-line interface to FracMinHash, along with
@@ -266,29 +262,13 @@ required for targeted sequencing data such as amplicon data sets. Some
 of these limitations are intrinsic to FracMinHash, and others can be
 overcome by parameter tuning and further research.
 
-### Wort and the SRA digest
-
-Over time we (Luiz :)) has sketched the entire microbial SRA (put
-query here) at DNA k=21,31,51, scaled=1000 with abundance
-tracking. The metagenome portion of this is approximately 13 TB in
-size. Sketches are CC0. Discuss availability. Describe number, maximum
-size, mode of sketches.
-
-### Use case: MAGsearch
-
-Given this collection of sketches, collaborators immediately wanted to
-search it with isolate genome sequences and metagenome-assembled
-genomes (MAGs). Two early use cases were biogeography and outbreak
-detection. In both cases we were confronted with the desire to search
-for 5-100 queries,
-
 ### MAGsearch represents a specific technical challenge to sourmash
 
-The primary design focus for sourmash CLI has been on searching and
-comparing many genome-sized sketches, e.g. genomes, where for typical
-parameters above there are ~1k-10k hashes in the sketch. The software
-provides a variety of in-memory and on-disk data structures for
-organizing sketches in this size range and can search 100s of
+The primary design focus for the sourmash CLI has been on searching
+and comparing many genome-sized sketches, e.g. genomes, where for
+typical parameters above there are ~1k-10k hashes in the sketch. The
+software provides a variety of in-memory and on-disk data structures
+for organizing sketches in this size range and can search 100s of
 thousands of genome sketches with a single query in minutes in a
 single thread on an SSD laptop; more complex algorithms such as the
 min-set-cov described in XXX can take a few hours but are still
@@ -296,14 +276,16 @@ acceptably performant on real-world data.
 
 This doesn’t work at all for searching 800,000 metagenomes. The main
 challenges are (1) many very large data sets that (2) do not easily
-fit in memory (3) being queried by 1-1000 query genomes. An additional
-practical challenge was that much of the sourmash CLI and Python
-library UX is designed for end users and is hence slow and not
-supportive of batch processing.
+fit in memory (3) being queried by 1-1000 query genomes at once. An
+additional practical challenge was that much of the sourmash CLI and
+Python library UX is designed for end users and is hence slow and not
+supportive of batch processing. In particular, the sourmash CLI
+and Python library is single-threaded.
 
 One possible solution is a parallel workflow /
 scatter-gather. Overhead on shell commands and workflow coordination
-was significant. Instead luiz wrote rust thing described below.
+was significant, and we decided to implement a purpose-built
+multithreaded solution instead.
 
 
 ## Methods {.page_break_before}
@@ -313,19 +295,44 @@ was significant. Instead luiz wrote rust thing described below.
  implementation; and a subsection on Operation, which should include
  the minimal system requirements needed to run the software and an
  overview of the workflow.*
+ 
+### Wort and the SRA digest
+
+We determined the accessions of all publicly available shotgun
+metagenomic via the query string `"METAGENOMIC"[Source] NOT
+amplicon[All Fields]` at the NCBI Sequence Read Archive Web site,
+https://www.ncbi.nlm.nih.gov/sra.  We then downloaded all runs for all
+accessions and streamed them into `sourmash sketch dna` with
+parameters `-p k=21,31,51,scaled=1000,abund` and saved them as
+individual gzipped JSON files for each input run.
+
+The resulting metagenome data set sizes were XXX TB.
+(Describe number, sum, average, median, mode of sketch file sizes.)
 
 ### Implementation of sra_search - rust; uses sourmash core.
 
-It loads all the queries into memory and then uses threads to iterate
-across the provided collection of search sketches.
+The `sra_search` program implements the following steps:
 
-From luiz thesis: it is possible to leverage the core features to
-prototype a large scale search method in Rust that can efficiently
-keep queries in memory and process batches of the metagenome
-signatures without needing to store them in memory first, loading on
-demand and releasing resources after they are queried. This approach
-also benefits from queries being effectively immutable, and so can be
-easily shared without data races by multiple processing threads.
+1. Loads the query sketches into memory from a list of files.
+2. Loads the list of filenames containing subject sketches to search.
+3. In a Rust closure function executed in parallel for each subject sketch filename,
+   a. loads the subject sketch from the file;
+   b. for each query, determines the estimated overlap between query and subject;
+   c. reports overlaps above a user-specified threshold.
+   d. releases all per-metagenome resources
+
+Note that any requested downsampling of sketches is performed
+dynamically, after load. Results are reported back to a separate
+"writer" thread via a threadsafe multi-producer, single-consumer FIFO
+queue.
+
+This approach leverages the core features of sourmash to efficiently
+keep queries in memory and batch-process metagenome sketches without
+storing them all in memory. The approach also takes advantage of
+the effective immutability of queries, which can be easily shared
+without data races by multiple processing threads.
+
+### Executing sra_search at the command line
 
 sra_search takes in search parameters as well as two text files, one
 containing a list of query file paths and one containing a lits of
@@ -334,8 +341,10 @@ sketches loaded and the number of subject file paths found, and then
 begins the search. It progressively reports the number of sketches
 searched in blocks of 10000 along with any matches.
 
-### Performance - scales linearly in memory and time with queries and # threads
+We typically run sra_search in a snakemake workflow, which manages
+environment variables and input/output files.
 
+### Performance - scales linearly in memory and time with queries and # threads
 
 A variety of simple benchmarks will presumably show:
 
@@ -355,13 +364,7 @@ logistically challenging to coordinate. 13 TB is large. In a cloud
 environment with fast interconnect other design decisions could be
 made. But also other query systems could be built.
 
-### Sra_search is inexpensive and supports exploratory queries
-
-Estimate cost of a run. Compare to serratus - cloud compute, data
-download. Serratus is probably cheaper than $20k now but still
-expensive.
-
-### Immediate validation etc.
+### Post-search validation etc. Testing.
 
 It is straightforward to use sourmash CLI to query the metagenome data
 sets to double check magsearch results. This is usually only internal
@@ -371,12 +374,13 @@ is better and the output is richer (e.g. weighted abundances,e tc.)
 
 FracMinHash generally and MAGsearch specifically have been validated
 in a more scientific sense primarily by mapping reads. This is
-addressed below.
+discussed further below.
 
-### Practically running MAGsearch
+### Sra_search is inexpensive and supports exploratory queries
 
-Usually run in snakemake workflow, which sets RAYON threads etc.
-Here are the repos.
+Estimate cost of a run. Compare to serratus - cloud compute, data
+download. Serratus is probably cheaper than $20k now but still
+expensive.
 
 
 
@@ -402,6 +406,9 @@ spacegraphcats is an assembly-graph based investigative tool for metagenomes tha
 ### Design alternatives - (could be moved to discussion)
 
 Sra search is a simple yet extremely effective initial implementation that supports a number of use cases. As its use increases many improvements are possible.
+
+In practice, FracMinHash consists of comparing collections of 64-bit
+integers which is in the wheelhouse of computers.
 
 Roads not (yet) taken include:
 
@@ -433,6 +440,7 @@ Data availability statement:
 * list of data sets we currenlty have indices for is here
 * how to get data one at a time via IPFS is here
 * bulk data is 13 TB, available upon request/arrangement
+* all sketches are CC0
 
 
 ## References {.page_break_before}
