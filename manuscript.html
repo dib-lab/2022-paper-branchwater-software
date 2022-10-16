@@ -7,7 +7,7 @@
   <meta name="author" content="Luiz Irber" />
   <meta name="author" content="N. Tessa Pierce-Ward" />
   <meta name="author" content="C. Titus Brown" />
-  <meta name="dcterms.date" content="2022-10-11" />
+  <meta name="dcterms.date" content="2022-10-16" />
   <meta name="keywords" content="sourmash" />
   <title>Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search</title>
   <style>
@@ -46,8 +46,8 @@
   <meta name="citation_title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-10-11" />
-  <meta name="citation_publication_date" content="2022-10-11" />
+  <meta name="dc.date" content="2022-10-16" />
+  <meta name="citation_publication_date" content="2022-10-16" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/a5a18c470c5a69c7919ae5e5d99a5712e9ca46c0/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/a5a18c470c5a69c7919ae5e5d99a5712e9ca46c0/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/a5a18c470c5a69c7919ae5e5d99a5712e9ca46c0/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-magsearch-software/v/a5a18c470c5a69c7919ae5e5d99a5712e9ca46c0/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-magsearch-software/v/98d2184ebe1cd018f255f1915a4fdf7d23d072d3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-magsearch-software/tree/a5a18c470c5a69c7919ae5e5d99a5712e9ca46c0">dib-lab/2022-paper-magsearch-software@a5a18c4</a>
-on October 11, 2022.
+from <a href="https://github.com/dib-lab/2022-paper-magsearch-software/tree/98d2184ebe1cd018f255f1915a4fdf7d23d072d3">dib-lab/2022-paper-magsearch-software@98d2184</a>
+on October 16, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -142,60 +142,64 @@ Department of Population Health and Reproduction, UC Davis
 <p>Substantial growth in publicly available nucleotide sequencing data
 (DNA and RNA) has occurred over the last decade, driven by decreases
 in sequencing costs. In particular the Sequence Read Archive now has
-over XXX PB of data as of YY date.</p>
-<p>A particularly intriguing sort of data is metagenomes, shotgun
-(random) sequencing of mixtures of microbes from host-associated and
-environmental samples. These datasets are often large, and can be
-highly complex, with environmental samples containing genomic sequence
-from thousands or more species. These samples often contain many
-microbial species unknown at the time of their deposition as well. The
-SRA currently contains about 800,000 of these data sets as of ZZ date,
-and these datasets are an as-yet largely untapped source of
-information on microbial life. In particular, they are ripe for reuse,
-since they typically contain culture-independent random samples of an
-entire microbial community, even when they were collected for a
-specific purpose.</p>
-<p>Mining SRA metagenomes for biological information takes many forms,
-including reference-based and de novo techniques. De novo techniques
-focus on isolating new genomes of certain types from large
-collections. Reference based techniques concentrate instead on
-identifying new strains and species organisms related to known species
-using genome references; this has been used on a large scale with
-serratus. However, all of these techniques are relatively heavyweight
-and in particular rely on analyzing the original data, which is time
-consuming and expensive. The diversity of these data prevent
-approaches developed for single-organism data such as BIGSI from being
-used. (Also mention raptor? Or others?)</p>
-<p>The growth in k-mer sketching approaches that support containment
-analysis, i.e. looking for small overlaps between two sequencing data
-sets, provides an opportunity to enable fast queries on a much reduced
-index of the original data. In particular, the FracMinHash approach
-supports robust overlap and containment analysis on sketches, and the
-sourmash software implementation provides a mature CLI and Python/Rust
-library for generating and investigating FracMinHash sketches.</p>
-<p>Here, we describe a fast search tool, MAGsearch, that makes use of
-precomputed sourmash FracMinHash sketches to search the entire
-metagenomic SRA in under 24 hours in 50 GB of RAM and 32 threads,
-i.e. on commodity hardware, 1-1000 microbial genomes at a time. With
-the present SRA digest, this tool has high sensitivity and specificity
-for detecting 10kb of larger overlaps, and can also be used to detect
-larger matches at average nucleotide identities of 90% or lower,
-i.e. genus level matches.</p>
-<p>We developed a new tool for the specific use case of searching the SRA
-because the general purpose sourmash command-line tool and Python
-library was not performant enough to search.</p>
-<h3 id="biological-use-cases-for-magsearch">Biological use cases for MAGsearch</h3>
-<p>The availability of relatively lightweight search of SRA metagenomes
-has opened up a number of use cases, including biogeographical
-analysis of genomes and pathogen outbreak analysis. And, because
-sketches can be generated separately and this approach searches only a
-subset of the information that does not require revealing the full
-sample data, it can also be applied to making private metagenome
-databases available for search, e.g. for commercial collections of
-metagenomes.</p>
-<p>features of current MAGsearch:
-* content-based search, including MAGs and things without marker genes.
-* lightweight resource usage</p>
+over XXX PB of data as of YY date, with YYY PB of data public. Given
+the sheer volume of data, finding data sets relevant to a particular
+scientific question among the many publicly available data is
+difficult.</p>
+<p>Shotgun metagenomes are a particularly intriguing type of public data.
+These data sets are generated by random sequencing of mixtures of
+microbes sampled from a microbiome. Metagenome data sets are often
+large (100s of MBs to 10s of GB) and can be highly complex, with
+environmental samples containing genomic data that can be attributed
+to thousands or more species. In many cases these metagenomes come
+from microbiomes containing many organisms unknown at the time of
+sequencing, and a productive cottage industry of data reusers has
+emerged. In the past decade, hundreds of thousands of new bacterial
+and archaeal genomes have been isolated from public metagenomes, and
+several entirely new branches of life have been discovered (large
+bacteriophage, hug et al, etc.)</p>
+<p>Searching by content, unassembled.</p>
+<p>There are many use cases for SRA-scale search that rely on
+content-based search (see Table XX). This is in part because of the
+many unknowns present in metagenomes, and the associated unreliability
+of annotations generated at the time of submission; but bioinformatics
+data analysis techniques such as de novo assembly are also typically
+lossy, and so reanalyzing data with different parameters is often
+fruitful. In particular, a number of studies have shown that it’s a
+good idea to search unassembled data rather than building MAGs first.</p>
+<p>However, content-based search of 100s of thousands of metagenomes is
+technically challenging. This is largely because of their sheer size
+and diversity; approaches that work for single-organism genomic and
+RNAseq data sets such as SBTs and BIGSI do not match well to datasets
+with unknown levels of underlying sequence diversity, because they
+must choose a single parameter for their Bloom filters. Serratus
+requires access to the raw metagenome data, which can be costly.</p>
+<p>Below, we introduce MAGsearch, an SRA-scale querying system that uses
+containment searches based on FracMinHash sketching to search all
+public metagenome data sets in the SRA in approximately 24 hours on
+commodity hardware with 1-1000 query genomes. MAGsearch uses the Rust
+library underlying the sourmash implementation of FracMinHash to
+execute massively parallel searches of a presketched digest of the
+SRA. This addresses many (but not all) of the use cases in Table XXX.</p>
+<p>The availability of relatively lightweight content-based search of SRA
+metagenomes presents a possible solution for a number of use cases (Table XX).
+Some of these use cases have already been explored with MAGsearch:
+Viehweger et al. used MAGsearch to discover a metagenomic sample containing
+<em>Klebsiella pneumonia</em> that was subsequently included in an outbreak
+analysis, and Lumian et al. (2022) conducted a biogeographical study
+on five newly generated cyanobacterial genomes from Antarctic samples.</p>
+<p>Thoughts and questions:
+* do we mention CMash and mash screen? Same challenges as serratus and
+intended for single sample analysis.
+not intended for large scale search but rather s
+* (re)emphsaize unassembled, no marker genes
+* figure out how to talk about things it can’t do - in Table 1, and
+also caption, and also discussion.
+* For discussion: content-based search, including MAGs and things
+without marker genes.
+* stress lightweight resource usage</p>
+<hr />
+<p>Table 1 contents to have:</p>
 <ul>
 <li>Biogeography of genomes
 <ul>
@@ -374,7 +378,12 @@ need to be stored, (controlled with the scaled parameter) they are good basic co
 <p>This has been used in two papers so far - Lumian et al, Viehgewer et al. </p>
 <p>We expect more use cases to emerge quickly. Here we believe that it’s important that the low cost of search means that exploratory efforts can be quickly evaluated. The major obstacle at the moment is that it is not realtime nor can it be run by others without direct command-line access to the 13 TB of data. These are topics for future software engineering development.</p>
 <p>There are several scientific limitations to overcome as well. The current search approach has limited sensitivity to divergent sequence beyond the genus level, and cannot find smaller matches. These are topics for future research and development.</p>
-<p>Data availability statement.</p>
+<p>Data availability statement:
+* all original data is available from SRA
+* query for what we search is here (=&gt; zenodo)
+* list of data sets we currenlty have indices for is here
+* how to get data one at a time via IPFS is here
+* bulk data is 13 TB, available upon request/arrangement</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" role="doc-bibliography">
