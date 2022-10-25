@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/dib-lab/2022-paper-magsearch-software/tree/gh-pages) branch hosts the contents of this directory at <https://dib-lab.github.io/2022-paper-magsearch-software/>.
-The permalink for this webpage version is <https://dib-lab.github.io/2022-paper-magsearch-software/v/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e/>.
+The permalink for this webpage version is <https://dib-lab.github.io/2022-paper-magsearch-software/v/cce83ad7291d06cfe2c2743026ff7b2619beb0fb/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://dib-lab.github.io/2022-paper-magsearch-software/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`ff381c6df7ee99e14719b97d182f6c7f72cdbc5e`](https://github.com/dib-lab/2022-paper-magsearch-software/commit/ff381c6df7ee99e14719b97d182f6c7f72cdbc5e).
+[`cce83ad7291d06cfe2c2743026ff7b2619beb0fb`](https://github.com/dib-lab/2022-paper-magsearch-software/commit/cce83ad7291d06cfe2c2743026ff7b2619beb0fb).
