@@ -1,9 +1,9 @@
 ---
-title: Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search
+title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-10-25'
+date-meta: '2022-10-26'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -14,12 +14,12 @@ header-includes: |-
   Suggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html
   -->
   <meta name="dc.format" content="text/html" />
-  <meta name="dc.title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="citation_title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta property="og:title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta property="twitter:title" content="Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-10-25" />
-  <meta name="citation_publication_date" content="2022-10-25" />
+  <meta name="dc.title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
+  <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
+  <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
+  <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
+  <meta name="dc.date" content="2022-10-26" />
+  <meta name="citation_publication_date" content="2022-10-26" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/cce83ad7291d06cfe2c2743026ff7b2619beb0fb/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/cce83ad7291d06cfe2c2743026ff7b2619beb0fb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/cce83ad7291d06cfe2c2743026ff7b2619beb0fb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-magsearch-software/v/cce83ad7291d06cfe2c2743026ff7b2619beb0fb/))
+([permalink](https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/))
 was automatically generated
-from [dib-lab/2022-paper-magsearch-software@cce83ad](https://github.com/dib-lab/2022-paper-magsearch-software/tree/cce83ad7291d06cfe2c2743026ff7b2619beb0fb)
-on October 25, 2022.
+from [dib-lab/2022-paper-magsearch-software@ba73761](https://github.com/dib-lab/2022-paper-magsearch-software/tree/ba737612c01232dd2765cd0aa21ee021ec705d10)
+on October 26, 2022.
 </em></small>
 
 ## Authors
@@ -153,8 +153,8 @@ basic evolutionary processes to disease associations and pathogenicity
 (Table X).
 However, comprehensive discovery of relevant data sets is challenging.
 Metadata for these data sets is typically geared towards the
-submitting researcher's major findings and study questions, and cannot
-possibly cannot encompass the range of data available within.
+submitting researcher's major findings and study questions, and moreover cannot
+possibly describe the full contents of the data.
 Furthermore, metadata provided at the time of submission can be
 incomplete or inconsistent, rendering systematic data set discovery
 intractable.
@@ -188,18 +188,18 @@ Recent extensive search across viral datasets ... comprehensive but
 time-consuming and costly, intractable for independent researchers.
 
 
-Below, we introduce MAGsearch, an SRA-scale querying system that uses
+Below, we introduce Branchwater, an SRA-scale querying system that uses
 containment searches based on FracMinHash sketching to search all
 public metagenome data sets in the SRA in approximately 24 hours on
-commodity hardware with 1-1000 query genomes. MAGsearch uses the Rust
+commodity hardware with 1-1000 query genomes. Branchwater uses the Rust
 library underlying the sourmash implementation of FracMinHash to
 execute massively parallel searches of a presketched digest of the
 SRA. This addresses many (but not all) of the use cases in Table XXX.
 
 The availability of relatively lightweight content-based search of SRA
-metagenomes presents a possible solution for a number of use cases (Table XX).
-Some of these use cases have already been explored with MAGsearch:
-Viehweger et al. used MAGsearch to discover a metagenomic sample containing
+metagenomes addresses a number of use cases (Table XX).
+Some of these use cases have already been explored with Branchwater:
+Viehweger et al. used Branchwater to discover a metagenomic sample containing
 *Klebsiella pneumonia* that was subsequently included in an outbreak
 analysis, and Lumian et al. (2022) conducted a biogeographical study
 on five newly generated cyanobacterial genomes from Antarctic samples.
@@ -216,6 +216,10 @@ Thoughts and questions:
 * For discussion: content-based search, including MAGs and things
   without marker genes.
 * stress lightweight resource usage
+* note that a key requirement of Branchwater was that we search unassembled.
+* discuss thresholds ...somewhere.
+* list breakdown of current data sets in paper
+* remember "hit to lead" stuff
 
 ----
 
@@ -264,47 +268,50 @@ screen and CMash does not require the original data sets.
 The open-source sourmash software provides a mature and
 well-documented command-line interface to FracMinHash, along with
 Python and Rust APIs for loading and using FracMinHash sketches. The
-Python layer provides a larger number of UX conveniences on top of the
-performant Rust layer. Despite the thread safety of the underlying
-Rust code, the CLI and Python library operate in single-threaded mode,
-which limits the utility of sourmash in certain corners of design
-space.
+Python layer provides a larger number of user experience conveniences
+on top of the performant Rust layer. However, despite the thread
+safety of the underlying Rust code, the CLI and Python library still
+operate in single-threaded mode, which limits the utility of sourmash
+for very large scale operations. Refactoring the sourmash CLI and
+Python libraries to take advantage of thread safety is a substantial
+and ongoing effort and we chose instead to develop a dedicated CLI
+in Rust.
 
-We note up front that there are several limitations of FracMinHash and
-sourmash that affect downstream use cases. The typical scaled
-parameters used below do not work well for genomes < 10kb in size. Nor
-can divergent genomes be found; based on the k-mer containment to ANI
-conversion, we find that MAGsearch works well for finding matches to
-genomes within about 10% ANI of the query. Finally, FracMinHash was
-developed for shotgun data sets and different parameters would be
-required for targeted sequencing data such as amplicon data sets. Some
-of these limitations are intrinsic to FracMinHash, and others can be
-overcome by parameter tuning and further research.
+There are several limitations of FracMinHash and sourmash that limit
+their utility to specific downstream use cases. In particular, the
+default scaled parameters used below do not work well for genomes
+smaller than 10kb in size. Nor can divergent genomes be found; based
+on the k-mer containment to ANI conversion, we find that sourmash and
+Branchwater work well for finding matches to genomes within about 10%
+ANI of the query. Finally, FracMinHash was developed for shotgun data
+sets and different parameters would be required for targeted
+sequencing data such as amplicon data sets.  Some of these limitations
+are intrinsic to FracMinHash, and others may be overcome by parameter
+tuning and further research.
 
-### MAGsearch represents a specific technical challenge to sourmash
+### Petabase scale search represents a specific technical challenge to sourmash
 
 The primary design focus for the sourmash CLI has been on searching
-and comparing many genome-sized sketches, e.g. genomes, where for
-typical parameters above there are ~1k-10k hashes in the sketch. The
+and comparing many genome-sized sketches, where for
+typical parameters there are between 1000 and 10,000 hashes in each sketch. The
 software provides a variety of in-memory and on-disk data structures
-for organizing sketches in this size range and can search 100s of
+for organizing sketches in this size range and can search hundreds of
 thousands of genome sketches with a single query in minutes in a
 single thread on an SSD laptop; more complex algorithms such as the
 min-set-cov described in XXX can take a few hours but are still
 acceptably performant on real-world data.
 
-This doesn’t work at all for searching 800,000 metagenomes. The main
-challenges are (1) many very large data sets that (2) do not easily
-fit in memory (3) being queried by 1-1000 query genomes at once. An
-additional practical challenge was that much of the sourmash CLI and
-Python library UX is designed for end users and is hence slow and not
-supportive of batch processing. In particular, the sourmash CLI
-and Python library is single-threaded.
+Branchwater faces very different parameters in searching 800,000
+metagenomes.  Many of these data sets are extremely large, slow to
+read from disk, and individually require substantial memory to load.
+Multiple queries may be used to search each metagenome as well, making
+this a quadratic search.
 
-One possible solution is a parallel workflow /
-scatter-gather. Overhead on shell commands and workflow coordination
-was significant, and we decided to implement a purpose-built
-multithreaded solution instead.
+One solution we tried initially was a scatter-gather approach based on
+a cluster-aware workflow engine (in this case, snakemake). The
+overhead on workflow coordination and executing shell commands was
+prohibitive, so we implemented a purpose-built multithreaded solution
+instead.
 
 
 ## Methods {.page_break_before}
@@ -323,16 +330,25 @@ amplicon[All Fields]` at the NCBI Sequence Read Archive Web site,
 https://www.ncbi.nlm.nih.gov/sra.  We then downloaded all runs for all
 accessions and streamed them into `sourmash sketch dna` with
 parameters `-p k=21,31,51,scaled=1000,abund` and saved them as
-individual gzipped JSON files for each input run.
+individual gzipped JSON files (each containing 3 sketches) for each
+input run.
 
-The resulting metagenome data set sizes were XXX TB.
-(Describe number, sum, average, median, mode of sketch file sizes.)
+The resulting catalog contains 767,277 metagenome data sets as of
+YYY. The size of all sketches together is 7.5 TB, representing ZZZ PB
+of original files. The average sketch file size is 9.7 MB, and the
+median is 570kb. The largest 10,000 data sets comprise 30% of the
+total sketch sizes.
+
+(show distribution of metadata names)
 
 ### Implementation of sra_search - rust; uses sourmash core.
 
-The `sra_search` program implements the following steps:
+CTB: rename program to branchwater?
 
-1. Loads the query sketches into memory from a list of files.
+The `sra_search` program is built in Rust on top of the sourmash Rust
+library for loading and comparing sketches. It implements the following steps:
+
+1. Loads all query sketches into memory from a list of files.
 2. Loads the list of filenames containing subject sketches to search.
 3. In a Rust closure function executed in parallel for each subject sketch filename,
    a. loads the subject sketch from the file;
@@ -348,18 +364,18 @@ parallel.
 
 This approach leverages the core features of sourmash to efficiently
 keep queries in memory and batch-process metagenome sketches without
-storing them all in memory. The approach also takes advantage of
-the effective immutability of queries, which can be easily shared
-without data races by multiple processing threads.
+storing them all in memory. The approach also takes advantage of the
+effective immutability of queries, which can be shared without
+data races by multiple processing threads.
 
 ### Executing sra_search at the command line
 
-sra_search takes in search parameters as well as two text files, one
-containing a list of query file paths and one containing a lits of
+`sra_search` takes in search parameters as well as two text files, one
+containing a list of query file paths and one containing a list of
 subject file paths. Upon execution, it reports the number of query
 sketches loaded and the number of subject file paths found, and then
 begins the search. It progressively reports the number of sketches
-searched in blocks of 10000 along with any matches.
+searched in blocks of 10000, and outputs matches to a CSV File.
 
 We typically run sra_search in a snakemake workflow, which manages
 environment variables and input/output files.
@@ -382,7 +398,8 @@ Sra_search is largely I/O bound. Presumably we could speed it up a bit
 by distributing sketches to various nodes but in practice this is
 logistically challenging to coordinate. 13 TB is large. In a cloud
 environment with fast interconnect other design decisions could be
-made. But also other query systems could be built (what was I thinking here? :).
+made. But also other query systems could be built (what was I thinking
+here? :).
 
 ### Post-search validation etc. Testing.
 
@@ -392,7 +409,7 @@ technical validation since magsearch is built on the same code that
 sourmash uses, but is a recommended first step because the sourmash UX
 is better and the output is richer (e.g. weighted abundances,e tc.)
 
-FracMinHash generally and MAGsearch specifically have been validated
+FracMinHash generally and Branchwater specifically have been validated
 in a more scientific sense primarily by mapping reads. This is
 discussed further below.
 
@@ -436,57 +453,96 @@ current search approach has limited sensitivity to divergent sequence
 beyond the genus level, and cannot find smaller matches. These are
 topics for future research and development.
 
-### Following up on MAGsearch results
+### Following up on Branchwater results
 
-Many MAGsearch use cases are intended for early-stage hypothesis
-generation and refinement i.e. “hit to lead”, and hence MAGsearch is
-an early stage in conceptual and concrete workflows. Typical immediate
-concerns after receiving MAGsearch results are (1) what is the right
-threshold for my results (2) are my results at that threshold valid
-(3) how do I get my hands on the actual data, not just the sketches.
+Many Branchwater use cases are intended for early-stage hypothesis
+generation and refinement, i.e. branchwater implements the first part
+of a “hit to lead” pipeline. Hence Branchwater operates at an early
+stage in conceptual and concrete workflows. The initial steps
+immediately after executing Branchwater are (1) choosing a
+threshold at which to filter results, (2) evaluating the overall
+results by type of metagenome retrieved, and (3) retrieving the data
+underlying the matches.
 
-The first analysis step taken is often picking a threshold. The exact approach taken will vary depending on use case, but many use cases are looking for or expecting specific distributions of ScientificName so we have provided a simple script that imports SRA metadata and summarizes the MAGsearch results at that threshold. (example output)
+The first analysis step taken is typically picking a more stringent
+threshold. The default Branchwater threshold is set to 0.01
+containment - any metagenome that contains more than 1% of the k-mers
+in any query is reported. This is done because searches are exhaustive
+- every query is searched against every subject - and so there is no extra
+cost beyond the minimal space required to save the results.
 
-After that, many paths can be taken.
+Thresholds are typically chosen based on the use case and the expected
+distribution of the annotated metagenome type (`ScientificName` from
+the SRA Runinfo database). We have provided a simple script that imports
+the SRA metadata and summarizes the Branchwater results at the provided
+threshold (example output).
 
-Most metagenome data sets are Illumina short-read sequencing, and a
-plethora of general purpose bioinformatics tools exist for mapping and
-assembling.
+After filtering, many paths can be taken. A plethora of general purpose
+bioinformatics tools exist for working with the data from individual
+metagenomes. 
 
-Two tools that were developed in concert with sourmash and MAGsearch
-are genome-grist and spacegraphcats.
-
-Genome-grist performs an entirely automated reference-based
-characterization of individual metagenomes that combines sourmash
-gather / minimum metagenome cover with mapping; it is described in
-Irber et al and was used in Lumian et al. Given that it does download
-all the data and maps all the reads, it is still relatively
-lightweight.
+We have built two custom tools in concert with sourmash and
+Branchwater, genome-grist and spacegraphcats.  Genome-grist performs
+an entirely automated reference-based characterization of individual
+metagenomes that combines sourmash gather / minimum metagenome cover
+with mapping; it is described in Irber et al and was used in Lumian et
+al. Given that it does download all the data and maps all the reads,
+it is still relatively lightweight.
 
 spacegraphcats is an assembly-graph based investigative tool for
 metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation. It
 was used in Reiter et al., and Lumian et al. (phormidium paper). It is
-much heavier weight than genome-grist because it uses assembly graphs.
+much heavier weight than genome-grist because it relies on a compact
+De Bruijn graph, which is expensive to build for many metagenomes.
 
 ### Design alternatives
 
-Sra search is a simple yet extremely effective initial implementation
-that supports a number of use cases. As its use increases many
-improvements are possible.
+Brancwhater is a simple and effective implementation that is easy to
+analyze algorithmically and supports a number of use cases. However,
+many improvements are possible: FracMinHash analyses are based on
+comparing collections of 64-bit integers, and there are many effective
+tools and approaches for organizing and searching such collections
+more efficiently than is presently done in Branchwater.
 
-In practice, FracMinHash consists of comparing collections of 64-bit
-integers which is in the wheelhouse of computers.
+One area for particular improvement is storing and loading sketches
+more efficiently. The current JSON-based format is convenient for
+debugging and multi-language interoperability but is extremely
+inefficient, to put it mildly. Moreover, each file currently contains
+three k-mer sketches (one per k-mer size), which means approximately 3
+times as much data is loaded per query than is actually used.
+FracMinHash also could support fractional loading, i.e. decreased
+resolution by loading only the bottom portion of the sketch; this
+would enable must faster searches albeit at lower resolution. This is
+not yet supported by the underlying sourmash library.
 
-Roads not (yet) taken include:
+Currently the data files are organized as flat files in a single directory.
+There are a variety of ways 
 
-* Indexing the data sets in some way. Colors present a challenge. (Mastiff)
-* Organizing data sets in some way based on content. Clustering and data set organization present a challenge at this scale.
-* Putting a Bloom filter in front of each data set, and/or implementing SBT. Unbalanced data sets and additional storage present a challenge.
-* Revising on-disk format; progressive loading; etc.
+A further simple idea would to create a simple pre-filter for each
+file using a data structure with one-sided error. For example, we
+could create a Bloom filter for each sketch that could be used to
+estimate containment prior to loading the full sketch file. However,
+for some potentially common use cases such as queries that are present
+in many data sets, this could add significant I/O without speeding up
+the actual search.
 
-We note that lack of auxiliary data structures is also a
-feature because it allows us to update the collection quickly.
+Building an inverted index that maps hashes to data sets could also
+enable rapid queries. Two challenges here are the scale of the catalog
+and the number of data sets; the total number of hashes present in our
+metagenome catalog is XYZ, across nearly 800,000 data sets.
+
+Despite these many opportunities for optimization, we note that there
+is a significant benefit our current simplistic approach. In
+particular, sourmash provides a flexible suite of tools for inspecting
+and manipulating individual metagenome sketches, and providing the
+sketches in individual files makes it straightforward to both access
+individual sketches and quickly update the metagenome catalog. The
+lack of auxiliary data structures also avoids expensive load and
+synchronization steps when adding new datasets. These features are
+important for downstream user investigation as well as maintainability
+and correctness, which are important considerations in any scientific
+software workflow.
 
 ## Conclusion {.page_break_before}
 
@@ -499,12 +555,11 @@ to ecological to technical (Table 1).
 
 ## Data availability statement:
 
-* all original data is available from SRA
-* query for what we search is here (=> zenodo)
-* list of data sets we currenlty have indices for is here
-* how to get data one at a time via IPFS is here
-* bulk data is 13 TB, available upon request/arrangement
-* all sketches are CC0
+All of the original data underlying the Branchwater database is
+available from the NCBI Sequence Read Archive. A current catalog of
+the SRA accessions is provided (here). The sketch collection is 7 TB
+and is available upon request.  All sketches are provided under
+Creative Commons Zero (CC0) - No Rights Reserved.
 
 
 ## References {.page_break_before}
