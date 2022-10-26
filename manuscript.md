@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/db8175b4a391429c35b8426d4ff2580ecacca23e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/db8175b4a391429c35b8426d4ff2580ecacca23e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/db8175b4a391429c35b8426d4ff2580ecacca23e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/db8175b4a391429c35b8426d4ff2580ecacca23e/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@07c4aae](https://github.com/dib-lab/2022-paper-branchwater-software/tree/07c4aae03360271a0aae8263f92618f617b48d8c)
+from [dib-lab/2022-paper-branchwater-software@db8175b](https://github.com/dib-lab/2022-paper-branchwater-software/tree/db8175b4a391429c35b8426d4ff2580ecacca23e)
 on October 26, 2022.
 </em></small>
 
@@ -240,6 +240,8 @@ Thoughts and questions:
 Table: Biological use cases for petabase scale sequence search of metagenomes {#tbl:bio-use-cases}
 
 NOTE: Small viral pangenome query comment/Luiz. Association studies?
+
+edit table [here](https://hackmd.io/Pgj6AjM_RlGF0_7rGhY3tA)
 
 
 ## Background: FracMinHash and sourmash {.page_break_before}

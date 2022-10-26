@@ -9,7 +9,7 @@ biogeographical
 Biogeography
 bioinformatics
 bluegenes
-branchwater
+Branchwater
 Brancwhater
 Bruijn
 CLI
@@ -18,7 +18,7 @@ contig
 contigs
 cov
 CSV
-CTB
+ctb
 cyanobacterial
 datasets
 downsampling
@@ -68,11 +68,11 @@ RNAseq
 Runinfo
 saltyscientist
 SBT
-serratus
+Serratus
 snakemake
 sourmash
 spacegraphcats
-Sra
+sra
 SSD
 summarization
 threadsafe
