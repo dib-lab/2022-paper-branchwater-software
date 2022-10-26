@@ -38,15 +38,15 @@ header-includes: |-
   <meta name="citation_author" content="C. Titus Brown" />
   <meta name="citation_author_institution" content="Department of Population Health and Reproduction, UC Davis" />
   <meta name="citation_author_orcid" content="0000-0001-6001-2677" />
-  <link rel="canonical" href="https://dib-lab.github.io/2022-paper-magsearch-software/" />
-  <meta property="og:url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
-  <meta property="twitter:url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
-  <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/" />
-  <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-magsearch-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/manuscript.pdf" />
+  <link rel="canonical" href="https://dib-lab.github.io/2022-paper-branchwater-software/" />
+  <meta property="og:url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
+  <meta property="twitter:url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
+  <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
+  <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
+  <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-magsearch-software/v/ba737612c01232dd2765cd0aa21ee021ec705d10/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/07c4aae03360271a0aae8263f92618f617b48d8c/))
 was automatically generated
-from [dib-lab/2022-paper-magsearch-software@ba73761](https://github.com/dib-lab/2022-paper-magsearch-software/tree/ba737612c01232dd2765cd0aa21ee021ec705d10)
+from [dib-lab/2022-paper-branchwater-software@07c4aae](https://github.com/dib-lab/2022-paper-branchwater-software/tree/07c4aae03360271a0aae8263f92618f617b48d8c)
 on October 26, 2022.
 </em></small>
 
@@ -117,7 +117,7 @@ on October 26, 2022.
 
 
 ::: {#correspondence}
-✉ — Correspondence possible via [GitHub Issues](https://github.com/dib-lab/2022-paper-magsearch-software/issues)
+✉ — Correspondence possible via [GitHub Issues](https://github.com/dib-lab/2022-paper-branchwater-software/issues)
 
 :::
 
@@ -223,34 +223,23 @@ Thoughts and questions:
 
 ----
 
-Table 1 contents to have:
+| Use case | Description | Enabled by branchwater |
+| -------- | -------- | -------- |
+| Biogeography of genomes     | Describe and characterize biogeographical distribution of species; identify sampling locations     | Yes     |
+| Outbreak tracking | Trace pathogen spread via public data | Yes, for genomes > 10kb |
+| Pangenome expansion | Expand and explore composition of strains, species and genus levele pangenomes (including SAGs and MAGs) | Yes |
+| SRA metadata reannotation | Content-based validation and reannotation of SRA metagenomes | Yes |
+| Private database access and search | Provide privacy-enabled search of large, access-restricted databases | Yes |
+| Post-processing and cleaning MAGs | Evaluating contig-level presence and abundance across multiple metagenomes | Yes, for contigs > 10kb |
+| Exploring breadth of plasmids etc. | Evaluating range and prevalence of laterally transferred genomic elements | Yes, for plasmids > 10b |
+| Exploring host range of species for regulatory evaluation | | Yes, for genomes > 10kb |
+| Search for small viruses | | No |
+| Searching for specific functional genes | | No |
+| Detecting novel classes and orders | |  No |
 
-* Biogeography of genomes
-  * describe and characterize biogeographical distribution of species and genus;
-  * identify potential sampling locations;
-  * (Jessica paper)
-* Outbreak tracking
-  * trace history of pathogen evolution from public data
-  * monitor for future outbreaks
-  * (Adrian paper)
-* Expanding / exploring strain, species, and genus composition for further genomic analysis
-  * Newly isolated species and genera
-  * SAGs
-* Content-based exploration and reannotation of SRA contents vs metadata
-  * Host contamination
-  * IBD stuff/discovering gut microbiome
-* Making other large-scale databases accessible
-  * differential privacy
-  * commercial privacy
-* Post-processing and cleaning MAGs
-* Discovering matches in newly public samples; notification service
-* Exploring spread of AMR
-* Regulatory evaluation of probiotics
+Table: Biological use cases for petabase scale sequence search of metagenomes {#tbl:bio-use-cases}
 
-Small viral pangenome query comment/Luiz. Association studies?
-
-Anti use cases: small virus search a la serratus. Searching for new
-members of class or order. Searching for specific functional genes.
+NOTE: Small viral pangenome query comment/Luiz. Association studies?
 
 
 ## Background: FracMinHash and sourmash {.page_break_before}
