@@ -1,4 +1,4 @@
-# Sourmash MAGsearch Enables Lightweight Petabyte-Scale Sequence Search
+# Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 
 <!-- usage note: edit the H1 title above to personalize the manuscript -->
 
