@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-10-27'
+date-meta: '2022-10-28'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-10-27" />
-  <meta name="citation_publication_date" content="2022-10-27" />
+  <meta name="dc.date" content="2022-10-28" />
+  <meta name="citation_publication_date" content="2022-10-28" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/2d21ffdb6628b7dbc41c15a9afa99e7933d937e5/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/2d21ffdb6628b7dbc41c15a9afa99e7933d937e5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/2d21ffdb6628b7dbc41c15a9afa99e7933d937e5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/2d21ffdb6628b7dbc41c15a9afa99e7933d937e5/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@2d21ffd](https://github.com/dib-lab/2022-paper-branchwater-software/tree/2d21ffdb6628b7dbc41c15a9afa99e7933d937e5)
-on October 27, 2022.
+from [dib-lab/2022-paper-branchwater-software@6a6a06f](https://github.com/dib-lab/2022-paper-branchwater-software/tree/6a6a06f46e77ad5a09aae51fa9639520e1e79336)
+on October 28, 2022.
 </em></small>
 
 ## Authors
@@ -128,7 +128,7 @@ We introduce branchwater, a flexible and fast petabase-scale search
 for the 800,000 public metagenomes presently in the NCBI Sequence Read
 Archive. Our search is based on the FracMinHash k-mer sketching
 technique and can search all public metagenomes with 1000 query
-genoems in approximately 24 hours using 30 GB of RAM and 32 threads.
+genomes in approximately 24 hours using 30 GB of RAM and 32 threads.
 Branchwater is a Rust-based multithreading front-end built on top of
 the sourmash library. We provide biological use cases, discuss design
 and performance considerations, and provide benchmarks for a variety of
@@ -137,7 +137,7 @@ different parameters.
 
 ## Introduction {.page_break_before}
 
-*The Introduction should provide context as to why the software tool was developed and what need it addresses. It is good scholarly practice to mention previously developed tools that address similar needs, and why the current tool is needed.*
+<!-- *The Introduction should provide context as to why the software tool was developed and what need it addresses. It is good scholarly practice to mention previously developed tools that address similar needs, and why the current tool is needed.* -->
 
 Substantial growth in publicly available nucleotide sequencing data
 (DNA and RNA) has occurred over the last decade, driven by decreases
@@ -212,20 +212,15 @@ Viehweger et al. used Branchwater to discover a metagenomic sample
 containing *Klebsiella pneumonia* that was subsequently included in an
 outbreak analysis, and Lumian et al. (2022) conducted a
 biogeographical study on five newly generated cyanobacterial genomes
-from Antarctic samples.
+from Antarctic samples [@viehweger; @lumian_biogeo].
 
 Thoughts and questions:
 
-* do we mention CMash and mash screen? Same challenges as serratus and
-  intended for single sample analysis.
-  not intended for large scale search but rather s
 * For discussion: content-based search, including MAGs and things
   without marker genes.
 * stress lightweight resource usage
 * note that a key requirement of Branchwater was that we search unassembled.
 * discuss thresholds ...somewhere.
-* list breakdown of current data sets in paper
-* remember "hit to lead" stuff
 
 ----
 
@@ -298,14 +293,14 @@ software provides a variety of in-memory and on-disk data structures
 for organizing sketches in this size range and can search hundreds of
 thousands of genome sketches with a single query in minutes in a
 single thread on an SSD laptop; more complex algorithms such as the
-min-set-cov described in XXX can take a few hours but are still
+min-set-cov described in [@gather] can take a few hours but are still
 acceptably performant on real-world data.
 
-Branchwater faces very different parameters in searching 800,000
+Branchwater faces very different challenges in searching 800,000
 metagenomes.  Many of these data sets are extremely large, slow to
 read from disk, and individually require substantial memory to load.
-Multiple queries may be used to search each metagenome as well, making
-this a quadratic search.
+Multiple queries may be used to search each metagenome as well, incurring
+quadratic search costs.
 
 One solution we tried initially was a scatter-gather approach based on
 a cluster-aware workflow engine (in this case, snakemake
@@ -316,11 +311,11 @@ pursued a purpose-built multithreaded solution instead.
 
 ## Methods {.page_break_before}
 
-*The Methods should include a subsection on Implementation describing
+<!-- *The Methods should include a subsection on Implementation describing
  how the tool works and any relevant technical details required for
  implementation; and a subsection on Operation, which should include
  the minimal system requirements needed to run the software and an
- overview of the workflow.*
+ overview of the workflow.* -->
  
 ### Sketching the Sequence Read Archive
 
@@ -333,12 +328,13 @@ parameters `-p k=21,31,51,scaled=1000,abund`. The resulting sourmash
 signature files were saved as individual gzipped JSON files (each
 containing 3 sketches), one file for each input run.
 
-The resulting catalog contains 767,277 metagenome data sets as of YYY,
-with the large majority being from human-associated microbiomes (Table
-@tbl:sra-types). The size of all sketches together is 7.5 TB,
-representing ZZZ PB of original files. The average sketch file size is
-9.7 MB, and the median is 570kb. The largest 10,000 data sets comprise
-30% of the total sketch sizes.
+The resulting catalog contains 767,277 metagenome data sets as of
+March 2022, with the majority annotated human-associated microbiomes
+(Table @tbl:sra-types). The size of all sketches together is 7.5 TB,
+containing approximately 375 billion hashes per k-mer size,
+representing 375 trillion k-mers from ZZZ PB of original files. The
+average sketch file size is 9.7 MB, and the median is 570kb. The
+largest 10,000 data sets comprise 30% of the total sketch sizes.
 
 | "Scientific Name" provided by submitter | distinct data sets | 
 | --- | --- |
@@ -418,21 +414,20 @@ Do a benchmark of a complete query against all.
 requirements; this is particularly clear from the YYY% slowdown from
 loading the 10,000 biggest sketches. 
 
-### Post-search validation etc. Testing.
+### Post-search validation
 
-It is straightforward to use sourmash CLI to query the metagenome data
-sets to double check magsearch results. This is usually only internal
-technical validation since magsearch is built on the same code that
-sourmash uses, but is a recommended first step because the sourmash UX
-is better and the output is richer (e.g. weighted abundances,e tc.)
-
-FracMinHash generally and Branchwater specifically have been validated
-in a more scientific sense primarily by mapping reads. This is
-discussed further below.
+The sourmash CLI can be used to explore k-mer matches for individual
+data sets. This does not validate the matches beyond confirming the
+containment numbers, although sourmash provides additional information
+(e.g. estimated abundances) on top of the minimial information
+provided by branchwater.  FracMinHash generally and Branchwater
+specifically have been validated bioinformatically primarily by
+mapping reads (see [@gather; @lumian_biogeo]). This is discussed
+further below.
 
 ### Sra_search is inexpensive and supports exploratory queries
 
-Estimate cost of a run. Compare to serratus - cloud compute, data
+CTB: Estimate cost of a run. Compare to serratus - cloud compute, data
 download. Serratus is probably cheaper than $20k now but still
 expensive.
 
@@ -454,8 +449,11 @@ datasets. Because only a fraction of the original data need to be
 stored, they are good basic components in the implementation of
 systems that allow searching large collections of datasets.
 
-This has been used in two papers so far - Lumian et al, Viehgewer et
-al.
+This has been used in two papers so far - Lumian et al, Viehweger et
+al. [@viehweger]. Viehweger et al. [@viehweger] used branchwater to
+find a metagenome containing an additional *Klebsiella pneumoniae* for
+a large scale analysis of outbreak data, while Lumian et al. conducted
+a global biogeography analysis of five new antarctic cyanobacteria.
 
 We expect more use cases, and more elaborate use cases, to emerge over
 the next few years. The low cost of search is particularly enabling
@@ -501,16 +499,17 @@ Branchwater, genome-grist and spacegraphcats.  Genome-grist performs
 an entirely automated reference-based characterization of individual
 metagenomes that combines sourmash gather / minimum metagenome cover
 with mapping; it is described in Irber et al. [@gather] and was used
-in Lumian et al. Given that it does download all the data and maps all
-the reads, it is still relatively lightweight.
+in Lumian et al. [@lumian_biogeo]. Given that it does download all the
+data and maps all the reads, it is still relatively lightweight.
 
 spacegraphcats is an assembly-graph based investigative tool for
 metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation
-[@spacegraphcats]. It was used in Reiter et al., and Lumian et
-al. (phormidium paper). It is much heavier weight than genome-grist
+[@spacegraphcats]. It was used to retrieve putative accessory elements
+from sourmash matches in Reiter et al. [@reiter_ibd] and Lumian et
+al. [@lumian_phormidium]. It is much heavier weight than genome-grist
 because it relies on a compact De Bruijn graph, which is expensive to
-build for many metagenomes.
+build for very rich or diverse metagenomes.
 
 ### Design alternatives
 
@@ -612,11 +611,15 @@ Creative Commons Zero (CC0) - No Rights Reserved.
 
 [@cmash]: doi:10.1101/184150
 
-[@snakemake]: doi:10.12688/f1000research.29032.2)
+[@snakemake]: doi:10.12688/f1000research.29032.2
 
 [@viehweger]: doi:10.1099/mgen.0.000741
 
 [@spacegraphcats]: doi:10.1186/s13059-020-02066-4
+
+[@lumian_phormidium]: doi:10.3390/genes12030426
+
+[@reiter_ibd]: doi:10.1101/2022.06.30.498290
 
 
 ## References {.page_break_before}
