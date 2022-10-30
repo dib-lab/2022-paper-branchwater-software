@@ -11,7 +11,7 @@ Biogeography
 bioinformatically
 bioinformatics
 bluegenes
-branchwater
+Branchwater
 Brancwhater
 Bruijn
 CLI
@@ -46,7 +46,7 @@ MBs
 mer
 mers
 metagenome
-Metagenomes
+metagenomes
 metagenomic
 Metagraph
 microbiome
@@ -58,7 +58,7 @@ multithreaded
 multithreading
 NCBI
 NHGRI
-pangenome
+Pangenome
 pangenomes
 PARTIE
 pathogenicity
@@ -77,15 +77,14 @@ Runinfo
 runtime
 saltyscientist
 searchsra
-serratus
+Serratus
 simplicit
 snakemake
 sourmash
 spacegraphcats
-SRA
+sra
 ssbt
 SSD
-subsample
 summarization
 threadsafe
 UC
