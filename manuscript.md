@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd175d0142e1c00e74b81b2fc85c220166927038/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd175d0142e1c00e74b81b2fc85c220166927038/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd175d0142e1c00e74b81b2fc85c220166927038/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/8783f70c033276e095324eb65ce9e4ab99fc5963/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/8783f70c033276e095324eb65ce9e4ab99fc5963/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/8783f70c033276e095324eb65ce9e4ab99fc5963/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/dd175d0142e1c00e74b81b2fc85c220166927038/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/8783f70c033276e095324eb65ce9e4ab99fc5963/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@dd175d0](https://github.com/dib-lab/2022-paper-branchwater-software/tree/dd175d0142e1c00e74b81b2fc85c220166927038)
+from [dib-lab/2022-paper-branchwater-software@8783f70](https://github.com/dib-lab/2022-paper-branchwater-software/tree/8783f70c033276e095324eb65ce9e4ab99fc5963)
 on October 30, 2022.
 </em></small>
 
@@ -419,12 +419,12 @@ Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 met
 
 ![**branchwater scales well with number of threads.**](images/basic_benchmarks.svg "basic benchmarking"){#fig:basic_bench}
 
-![**branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.**](images/subsample_benchmarks.svg "branchwater scaling){#fig:basic_scaling}
-
 CTB: should note that one thread is used exclusively for writing to CSV.
 
 See https://github.com/dib-lab/2022-branchwater-benchmarking for
 numbers and notebook.
+
+![**branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.**](images/subsample_benchmarks.svg "branchwater scaling){#fig:basic_scaling}
 
 ### Post-search validation
 
