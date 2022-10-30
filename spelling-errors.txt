@@ -4,7 +4,7 @@ ANI
 APIs
 archaeal
 bacteriophage
-BIGSI
+bigsi
 biogeo
 biogeographical
 Biogeography
@@ -20,7 +20,7 @@ contig
 contigs
 cov
 CSV
-CTB
+ctb
 cyanobacteria
 cyanobacterial
 datasets
@@ -63,7 +63,7 @@ pangenomes
 PARTIE
 pathogenicity
 performant
-Petabase
+petabase
 plasmids
 pneumoniae
 pre
@@ -77,14 +77,15 @@ Runinfo
 runtime
 saltyscientist
 searchsra
-Serratus
+serratus
 simplicit
 snakemake
 sourmash
 spacegraphcats
-SRA
+sra
 ssbt
 SSD
+subsample
 summarization
 threadsafe
 UC
