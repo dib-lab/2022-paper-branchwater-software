@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84">dib-lab/2022-paper-branchwater-software@d487ae7</a>
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/09c7580ead0d021a792eebd2e98e02e805d9e59d">dib-lab/2022-paper-branchwater-software@09c7580</a>
 on October 30, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -209,22 +209,14 @@ Rust library underlying the sourmash implementation of FracMinHash to
 execute massively parallel searches of a presketched digest of the
 SRA <span class="citation" data-cites="ExvjTLL3 IadOz4ol">[<a href="#ref-ExvjTLL3" role="doc-biblioref">10</a>,<a href="#ref-IadOz4ol" role="doc-biblioref">11</a>]</span>.</p>
 <p>The availability of relatively lightweight content-based search of SRA
-metagenomes addresses many biological use cases (Table <a href="#tbl:bio-use-cases">1</a>).
-Some of these use cases have already been explored with Branchwater:
-Viehweger et al. used Branchwater to discover a metagenomic sample
-containing <em>Klebsiella pneumonia</em> that was subsequently included in an
-outbreak analysis, and Lumian et al. (2022) conducted a
-biogeographical study on five newly generated cyanobacterial genomes
-from Antarctic samples <span class="citation" data-cites="cEbYrZXG uNh28jlz">[<a href="#ref-cEbYrZXG" role="doc-biblioref">12</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">13</a>]</span>.</p>
-<p>Thoughts and questions:</p>
-<ul>
-<li>For discussion: content-based search, including MAGs and things
-without marker genes.</li>
-<li>stress lightweight resource usage</li>
-<li>note that a key requirement of Branchwater was that we search unassembled.</li>
-<li>discuss thresholds …somewhere.</li>
-</ul>
-<hr />
+metagenomes addresses many biological use cases (Table
+<a href="#tbl:bio-use-cases">1</a>). Some of these use cases have already been
+explored with Branchwater: Viehweger et al. (2021) <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">12</a>]</span> used
+Branchwater to discover a metagenomic sample containing <em>Klebsiella
+pneumonia</em> that was subsequently included in an outbreak analysis, and
+Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">13</a>]</span> conducted a biogeographical
+study on five newly generated cyanobacterial genomes from Antarctic
+samples.</p>
 <div id="tbl:bio-use-cases" class="tablenos">
 <table id="tbl:bio-use-cases">
 <caption><span>Table 1:</span> Biological use cases for petabase scale sequence search of metagenomes </caption>
@@ -299,8 +291,16 @@ without marker genes.</li>
 </tbody>
 </table>
 </div>
-<p>NOTE: Small viral pangenome query comment/Luiz. Association studies?</p>
 <p>edit table <a href="https://hackmd.io/Pgj6AjM_RlGF0_7rGhY3tA">here</a></p>
+<p>Thoughts and questions:</p>
+<ul>
+<li>For discussion: content-based search, including MAGs and things
+without marker genes.</li>
+<li>stress lightweight resource usage</li>
+<li>note that a key requirement of Branchwater was that we search unassembled.</li>
+<li>discuss thresholds …somewhere.</li>
+</ul>
+<p>CTB NOTE: Small viral pangenome query comment/Luiz. Association studies.</p>
 <h2 class="page_break_before" id="background-fracminhash-and-sourmash">Background: FracMinHash and sourmash</h2>
 <p>FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
@@ -467,18 +467,15 @@ searched in blocks of 10000, and outputs matches to a CSV File.</p>
 <p>We typically run <code>sra_search</code> in a snakemake workflow, which manages
 environment variables and input/output files.</p>
 <h3 id="performance-and-scaling-analysis">Performance and scaling analysis</h3>
-<p><code>sra_search</code> scales linearly in memory and time with queries and # threads.</p>
-<p>A variety of simple benchmarks will presumably show:</p>
+<p>Benchmarks TODO:</p>
 <ul>
 <li>Do a benchmark of a complete query against all.</li>
-<li>What happens w/biggest sketches? Much slower.</li>
-<li>Complexity is n(query) * n(subject), with subject loading being the
-dominant practical time. More complex indexing and query foo could
-be done but it’s fast enough and the code is simple.</li>
+<li>Biggest sketches are much slower.</li>
 </ul>
 <p><code>sra_search</code> is largely I/O bound, with substantial input
 requirements; this is particularly clear from the YYY% slowdown from
-loading the 10,000 biggest sketches.</p>
+loading the 10,000 biggest sketches.
+<code>sra_search</code> scales linearly in memory and time with queries and number of threads.</p>
 <table>
 <caption>Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 metagenomes. Queries were randomly selected from 318k genomes in GTDB rs207. Metagenomes were randomly selected from the full catalog of 767k.</caption>
 <thead>
@@ -504,8 +501,8 @@ loading the 10,000 biggest sketches.</p>
 </table>
 <div id="fig:basic_bench" class="fignos">
 <figure>
-<img src="images/basic_benchmarks.svg" alt="Figure 1: branchwater scales well with number of threads." />
-<figcaption aria-hidden="true"><span>Figure 1:</span> <strong>branchwater scales well with number of threads.</strong></figcaption>
+<img src="images/basic_benchmarks.svg" alt="Figure 1: branchwater scales well with number of threads. Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search." />
+<figcaption aria-hidden="true"><span>Figure 1:</span> <strong>branchwater scales well with number of threads.</strong> Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search.</figcaption>
 </figure>
 </div>
 <p>CTB: should note that one thread is used exclusively for writing to CSV.</p>
@@ -513,8 +510,8 @@ loading the 10,000 biggest sketches.</p>
 numbers and notebook.</p>
 <div id="fig:basic_scaling" class="fignos">
 <figure>
-<img src="images/subsample_benchmarks.svg" alt="Figure 2: branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime." />
-<figcaption aria-hidden="true"><span>Figure 2:</span> <strong>branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.</strong></figcaption>
+<img src="images/subsample_benchmarks.svg" alt="Figure 2: branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime. Processing time increases slowly with number of query genomes used to search, because they are held in memory and fast to compare. Processing time increases quickly with number of subject metagenomes being searched, because they are large and slow to load and search." />
+<figcaption aria-hidden="true"><span>Figure 2:</span> <strong>branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.</strong> Processing time increases slowly with number of query genomes used to search, because they are held in memory and fast to compare. Processing time increases quickly with number of subject metagenomes being searched, because they are large and slow to load and search.</figcaption>
 </figure>
 </div>
 <h3 id="post-search-validation">Post-search validation</h3>
@@ -531,7 +528,6 @@ further below.</p>
 download. Serratus is probably cheaper than $20k now but still
 expensive.</p>
 <h2 class="page_break_before" id="discussion">Discussion</h2>
-<p>Discuss sens/spec of k-mer search.</p>
 <p>Making large collections of sequencing data easy to search by content
 is an open problem, and approaches that work for smaller collections
 rarely scale well, even for current database sizes. New methods that
@@ -544,16 +540,38 @@ between datasets with-out the need to access the original
 datasets. Because only a fraction of the original data need to be
 stored, they are good basic components in the implementation of
 systems that allow searching large collections of datasets.</p>
-<p>This has been used in two papers so far - Lumian et al, Viehweger et
-al. <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">12</a>]</span>. Viehweger et al. <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">12</a>]</span> used branchwater to
-find a metagenome containing an additional <em>Klebsiella pneumoniae</em> for
-a large scale analysis of outbreak data, while Lumian et al. conducted
-a global biogeography analysis of five new antarctic cyanobacteria.</p>
-<p>We expect more use cases, and more elaborate use cases, to emerge over
-the next few years. The low cost of search is particularly enabling
-for exploratory efforts, although the sheer size of the underlying
-data needed for branchwater continues to present obstacles. We are
-currently focusing on realtime API access to search methods.</p>
+<p>Nucleotide k-mer search has high detection ability when close matches
+to the query (90% ANI or above) are available (ref?), while alignment
+based approaches such as Serratus can detect more distant
+matches. This extends to FracMinHash matches, although a minimum
+overlap of 2-3 hashes (2-3 kb) is necessary for robust detection
+<span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">11</a>]</span>. Since many plasmids and most bacterial and archaeal genomes
+are far larger than 10kb, branchwater is well suited to detecting
+matches to such sequences in the SRA.</p>
+<p>Lumian et al. (2022) validated branchwater results by downloading
+matching Illumina metagenomes above a specific containment threshold
+and mapping the reads back to the query genomes to evaluate both
+mapping detection and effective coverage. In all but one case,
+k-mer-based genome detection of the query was well below mapping-based
+detection -(in some cases significantly so. This was also seen with a
+other samples in Irber et al., 2022 <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">11</a>]</span>, and is likely because
+mapping-based approaches can tolerate mismatches, while k-mer based
+approaches do not.</p>
+<h3 id="tackling-biological-use-cases-with-branchwater">Tackling biological use cases with branchwater</h3>
+<p>K-mer search via branchwater has been used in two papers so far -
+Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">13</a>]</span> and Viehweger et al. (2021)
+<span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">12</a>]</span>. Viehweger et al. used branchwater to find a metagenome
+containing an additional <em>Klebsiella pneumoniae</em> for a large scale
+analysis of outbreak data, while Lumian et al. conducted a global
+biogeography analysis of five new antarctic cyanobacteria. Both
+studies benefitted from the low cost and comprehensive nature of the
+search.</p>
+<p>We expect more use cases, and more elaborate use cases, to emerge as
+petabase scale search improves. The low cost of search is particularly
+enabling for exploratory efforts, although the sheer size of the
+underlying data needed for branchwater continues to present
+obstacles. We are planning to focus on realtime API access to search
+methods.</p>
 <p>There are several scientific limitations to overcome as well. The
 current search approach has limited sensitivity to divergent sequence
 beyond the genus level, and cannot find smaller matches. These are

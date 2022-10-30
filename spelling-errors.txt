@@ -4,6 +4,7 @@ ANI
 APIs
 archaeal
 bacteriophage
+benefitted
 bigsi
 biogeo
 biogeographical
@@ -11,11 +12,11 @@ biogeography
 bioinformatically
 bioinformatics
 bluegenes
-Branchwater
+branchwater
 Brancwhater
 Bruijn
 CLI
-CMash
+cmash
 contig
 contigs
 cov
@@ -33,6 +34,7 @@ GTDB
 gzipped
 HPC
 HyperLogLog
+Illumina
 Irber
 Jaccard
 JSON
@@ -46,7 +48,7 @@ MBs
 mer
 mers
 metagenome
-Metagenomes
+metagenomes
 metagenomic
 Metagraph
 microbiome
@@ -82,11 +84,12 @@ simplicit
 snakemake
 sourmash
 spacegraphcats
-SRA
+Sra
 ssbt
 SSD
 summarization
 threadsafe
+TODO
 UC
 unassembled
 Viehweger
