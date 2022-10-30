@@ -149,6 +149,7 @@ content/04.methods.md:20:metagenome
 content/04.methods.md:21:microbiomes
 content/04.methods.md:22:sra
 content/04.methods.md:23:mer
+content/04.methods.md:24:CTB
 content/04.methods.md:24:mers
 content/04.methods.md:30:metagenome
 content/04.methods.md:31:metagenome

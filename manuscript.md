@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/620f801b6613397e3feaeeaf541173858a456e0c/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/620f801b6613397e3feaeeaf541173858a456e0c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/620f801b6613397e3feaeeaf541173858a456e0c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/620f801b6613397e3feaeeaf541173858a456e0c/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@620f801](https://github.com/dib-lab/2022-paper-branchwater-software/tree/620f801b6613397e3feaeeaf541173858a456e0c)
+from [dib-lab/2022-paper-branchwater-software@d487ae7](https://github.com/dib-lab/2022-paper-branchwater-software/tree/d487ae7a077cf33cbfef040c4ac2f4e0fbdfbd84)
 on October 30, 2022.
 </em></small>
 
@@ -333,7 +333,7 @@ The resulting catalog contains 767,277 metagenome data sets as of
 March 2022, with the majority annotated human-associated microbiomes
 (Table @tbl:sra-types). The size of all sketches together is 7.5 TB,
 containing approximately 375 billion hashes per k-mer size,
-representing 375 trillion k-mers from ZZZ PB of original files. The
+representing 375 trillion k-mers <!-- from ZZZ PB of original files CTB -->. The
 average sketch file size is 9.7 MB, and the median is 570kb. The
 largest 10,000 data sets comprise 30% of the total sketch sizes.
 
@@ -413,7 +413,7 @@ loading the 10,000 biggest sketches.
 | -------- | -------- | 
 | time     | 24.2 +/- 1.7 min |
 | max RSS | 16.4 +/-  1.6 GB |
-| I/O in | 93.4 +/- 1.9  |
+| I/O in | 93.4 +/- 1.9 GB |
 
 Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 metagenomes. Queries were randomly selected from 318k genomes in GTDB rs207. Metagenomes were randomly selected from the full catalog of 767k.
 
