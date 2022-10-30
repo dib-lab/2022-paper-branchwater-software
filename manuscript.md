@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-10-28'
+date-meta: '2022-10-30'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-10-28" />
-  <meta name="citation_publication_date" content="2022-10-28" />
+  <meta name="dc.date" content="2022-10-30" />
+  <meta name="citation_publication_date" content="2022-10-30" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/37a3eceaef5641f20eb35ea1c6a12318c72bb543/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/37a3eceaef5641f20eb35ea1c6a12318c72bb543/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/37a3eceaef5641f20eb35ea1c6a12318c72bb543/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/6a6a06f46e77ad5a09aae51fa9639520e1e79336/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/37a3eceaef5641f20eb35ea1c6a12318c72bb543/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@6a6a06f](https://github.com/dib-lab/2022-paper-branchwater-software/tree/6a6a06f46e77ad5a09aae51fa9639520e1e79336)
-on October 28, 2022.
+from [dib-lab/2022-paper-branchwater-software@37a3ece](https://github.com/dib-lab/2022-paper-branchwater-software/tree/37a3eceaef5641f20eb35ea1c6a12318c72bb543)
+on October 30, 2022.
 </em></small>
 
 ## Authors
@@ -195,7 +195,8 @@ defining feature of metagenomic datasets.
 
 Recent extensive search across viral datasets ... comprehensive but
 time-consuming and costly, intractable for independent researchers
-[@serratus].
+[@serratus]. Also ref searchsra [@searchsra], PARTIE [@partie],
+etc. STAT [@stat], Metagraph, [@metagraph], BIGSI [@bigsi].
 
 Below, we introduce Branchwater, an SRA-scale querying system that
 uses containment searches based on FracMinHash sketching to search all
@@ -206,7 +207,7 @@ execute massively parallel searches of a presketched digest of the
 SRA [@sourmash_joss; @gather].
 
 The availability of relatively lightweight content-based search of SRA
-metagenomes addresses many of use cases (Table @tbl:bio-use-cases).
+metagenomes addresses many biological use cases (Table @tbl:bio-use-cases).
 Some of these use cases have already been explored with Branchwater:
 Viehweger et al. used Branchwater to discover a metagenomic sample
 containing *Klebsiella pneumonia* that was subsequently included in an
@@ -398,10 +399,10 @@ environment variables and input/output files.
 
 A variety of simple benchmarks will presumably show:
 
-* Speed increases linearly with number of threads
+* Speed increases linearly with number of threads: near perfect scaling.
 * Memory scales linearly: sum(queries) + sum(threads\*average size of
   sketches)
-* What happens w/biggest sketches?
+* What happens w/biggest sketches? Much slower.
 * Complexity is n(query) \* n(subject), with subject loading being the
   dominant practical time. More complex indexing and query foo could
   be done but it’s fast enough and the code is simple.
@@ -435,6 +436,8 @@ expensive.
 
 
 ## Discussion {.page_break_before}
+
+Discuss sens/spec of k-mer search.
 
 Making large collections of sequencing data easy to search by content
 is an open problem, and approaches that work for smaller collections
@@ -620,6 +623,14 @@ Creative Commons Zero (CC0) - No Rights Reserved.
 [@lumian_phormidium]: doi:10.3390/genes12030426
 
 [@reiter_ibd]: doi:10.1101/2022.06.30.498290
+
+[@metagraph]: doi:10.1101/2020.10.01.322164
+
+[@stat]: doi:10.1186/s13059-021-02490-0
+
+[@partie]: doi:10.1093/bioinformatics/btx184
+
+[@searchsra]: url:https://www.searchsra.org/
 
 
 ## References {.page_break_before}
