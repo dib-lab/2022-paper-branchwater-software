@@ -4,10 +4,10 @@ ANI
 APIs
 archaeal
 bacteriophage
-bigsi
+BIGSI
 biogeo
 biogeographical
-Biogeography
+biogeography
 bioinformatically
 bioinformatics
 bluegenes
@@ -15,7 +15,7 @@ Branchwater
 Brancwhater
 Bruijn
 CLI
-cmash
+CMash
 contig
 contigs
 cov
@@ -63,7 +63,7 @@ pangenomes
 PARTIE
 pathogenicity
 performant
-petabase
+Petabase
 plasmids
 pneumoniae
 pre
@@ -77,12 +77,12 @@ Runinfo
 runtime
 saltyscientist
 searchsra
-serratus
+Serratus
 simplicit
 snakemake
 sourmash
 spacegraphcats
-sra
+SRA
 ssbt
 SSD
 subsample
