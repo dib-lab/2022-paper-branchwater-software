@@ -1,4 +1,5 @@
 input_id	dealiased_id	standard_id	short_id
+sra	doi:10.1093/nar/gkq1019	doi:10.1093/nar/gkq1019	1GBPSAJ10
 sbt	doi:10.1038/nbt.3442	doi:10.1038/nbt.3442	DfZvKOpG
 bigsi	doi:10.1038/s41587-018-0010-1	doi:10.1038/s41587-018-0010-1	1C29pM7VV
 ssbt	doi:10.1089/cmb.2017.0265	doi:10.1089/cmb.2017.0265	1HpdDzfQX
@@ -10,7 +11,7 @@ metagraph	doi:10.1101/2020.10.01.322164	doi:10.1101/2020.10.01.322164	JAROV9W7
 sourmash_joss	doi:10.21105/joss.00027	doi:10.21105/joss.00027	ExvjTLL3
 gather	doi:10.1101/2022.01.11.475838	doi:10.1101/2022.01.11.475838	IadOz4ol
 viehweger	doi:10.1099/mgen.0.000741	doi:10.1099/mgen.0.000741	cEbYrZXG
-lumian_biogeo	lumian_biogeo	lumian_biogeo	nw1nxxDx
+lumian_biogeo	doi:10.1101/2022.10.27.514113	doi:10.1101/2022.10.27.514113	uNh28jlz
 mash	doi:10.1186/s13059-016-0997-x	doi:10.1186/s13059-016-0997-x	mH9pzoIn
 dashing	doi:10.1186/s13059-019-1875-0	doi:10.1186/s13059-019-1875-0	10ppWuOJ6
 mash_screen	doi:10.1186/s13059-019-1841-x	doi:10.1186/s13059-019-1841-x	19AP1jyqE

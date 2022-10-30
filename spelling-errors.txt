@@ -7,11 +7,11 @@ bacteriophage
 BIGSI
 biogeo
 biogeographical
-biogeography
+Biogeography
 bioinformatically
 bioinformatics
 bluegenes
-branchwater
+Branchwater
 Brancwhater
 Bruijn
 CLI
@@ -29,6 +29,7 @@ FracMinHash
 GBMF
 genomic
 genotypes
+GTDB
 gzipped
 HPC
 HyperLogLog
@@ -40,7 +41,7 @@ levele
 lossy
 Luiz
 luizirber
-lumian
+Lumian
 MBs
 mer
 mers
@@ -57,7 +58,7 @@ multithreaded
 multithreading
 NCBI
 NHGRI
-pangenome
+Pangenome
 pangenomes
 PARTIE
 pathogenicity
@@ -70,12 +71,13 @@ presketched
 realtime
 reannotation
 Reiter
-repo
 RNAseq
+RSS
 Runinfo
+runtime
 saltyscientist
 searchsra
-serratus
+Serratus
 simplicit
 snakemake
 sourmash
@@ -89,5 +91,4 @@ UC
 unassembled
 Viehweger
 XYZ
-YY
 YYY
