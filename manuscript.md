@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-10-30'
+date-meta: '2022-11-01'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-10-30" />
-  <meta name="citation_publication_date" content="2022-10-30" />
+  <meta name="dc.date" content="2022-11-01" />
+  <meta name="citation_publication_date" content="2022-11-01" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/a6c7ca09d2a7218f8664f5dc8d55928b2f99853b/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/a6c7ca09d2a7218f8664f5dc8d55928b2f99853b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/a6c7ca09d2a7218f8664f5dc8d55928b2f99853b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/09c7580ead0d021a792eebd2e98e02e805d9e59d/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/a6c7ca09d2a7218f8664f5dc8d55928b2f99853b/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@09c7580](https://github.com/dib-lab/2022-paper-branchwater-software/tree/09c7580ead0d021a792eebd2e98e02e805d9e59d)
-on October 30, 2022.
+from [dib-lab/2022-paper-branchwater-software@a6c7ca0](https://github.com/dib-lab/2022-paper-branchwater-software/tree/a6c7ca09d2a7218f8664f5dc8d55928b2f99853b)
+on November 1, 2022.
 </em></small>
 
 ## Authors
@@ -162,13 +162,13 @@ basic evolutionary processes to disease associations and pathogenicity
 tracking (Table X).
 However, comprehensive discovery of relevant data sets is challenging.
 Metadata for these data sets is typically geared towards the
-submitting researcher's major findings and study questions, and moreover cannot
+submitting researcher's study questions and major findings, and moreover cannot
 possibly describe the full contents of the data.
 Furthermore, metadata provided at the time of submission can be
 incomplete or inconsistent, rendering systematic data set discovery
 intractable.
 
-Content-based search is a promising alternative strategy to finding
+Content-based search is a promising alternative strategy for finding
 data sets in archives.  By searching with genomic content of interest,
 content-based search can recover datasets containing relevant species
 or genes of interest regardless of their associated metadata.
@@ -198,7 +198,7 @@ time-consuming and costly, intractable for independent researchers
 [@serratus]. Also ref searchsra [@searchsra], PARTIE [@partie],
 etc. STAT [@stat], Metagraph, [@metagraph], BIGSI [@bigsi].
 
-Below, we introduce Branchwater, an SRA-scale querying system that
+Below, we introduce Branchwater, a petabase-scale querying system that
 uses containment searches based on FracMinHash sketching to search all
 public metagenome data sets in the SRA in approximately 24 hours on
 commodity hardware with 1-1000 query genomes. Branchwater uses the
@@ -224,7 +224,7 @@ samples.
 | SRA metadata reannotation | Content-based validation and reannotation of SRA metagenomes | Yes |
 | Private database access and search | Provide privacy-enabled search of large, access-restricted databases | Yes |
 | Post-processing and cleaning MAGs | Evaluating contig-level presence and abundance across multiple metagenomes | Yes, for contigs > 10kb |
-| Exploring breadth of plasmids etc. | Evaluating range and prevalence of laterally transferred genomic elements | Yes, for plasmids > 10b |
+| Exploring breadth of plasmids etc. | Evaluating range and prevalence of laterally transferred genomic elements | Yes, for plasmids > 10kb |
 | Exploring host range of species for regulatory evaluation | | Yes, for genomes > 10kb |
 | Search for small viruses | | No |
 | Searching for specific functional genes | | No |
@@ -251,7 +251,7 @@ CTB NOTE: Small viral pangenome query comment/Luiz. Association studies.
 FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
 sets [@gather]. In brief, FracMinHash is a lossy compression approach
-that represents data sets using a "fractional" sketch containing 1/S
+that represents data sets using a "fractional" sketch containing $1/S$
 of the original k-mers.  Sketches support estimation of overlap,
 bidirectional containment, and Jaccard similarity between two data
 sets. Unlike other common sketching techniques such as MinHash [@mash]
@@ -277,7 +277,7 @@ their utility for specific use cases. In particular, the default
 scaled parameters used in sourmash do not work well for comparing or
 detecting genomes smaller than 10kb in size. Nor can divergent genomes
 be found; based on k-mer containment to ANI conversion
-[@dk_fracminhash], we find that sourmash works well for finding
+[@dk_fracminhash], we find that sourmash defaults work well for finding
 matches to genomes within about 90% ANI of the query, but not
 further. Finally, FracMinHash was developed for shotgun data sets and
 different parameters would be required for targeted sequencing data
@@ -288,7 +288,7 @@ tuning and further research.
 ### Petabase scale search represents a specific technical challenge to sourmash
 
 The primary design focus for the sourmash CLI has been on searching
-and comparing many genome-sized sketches, where for
+and comparing many microbial genome-sized sketches, where for
 typical parameters there are between 1000 and 10,000 hashes in each sketch. The
 software provides a variety of in-memory and on-disk data structures
 for organizing sketches in this size range and can search hundreds of
@@ -303,7 +303,7 @@ read from disk, and individually require substantial memory to load.
 Multiple queries may be used to search each metagenome as well, incurring
 quadratic search costs.
 
-One solution we tried initially was a scatter-gather approach based on
+One solution we explored was a scatter-gather approach based on
 a cluster-aware workflow engine (in this case, snakemake
 [@snakemake]). The overhead on workflow coordination and executing
 shell commands was prohibitive for our initial implementation, so we
@@ -317,7 +317,7 @@ pursued a purpose-built multithreaded solution instead.
  implementation; and a subsection on Operation, which should include
  the minimal system requirements needed to run the software and an
  overview of the workflow.* -->
- 
+
 ### Sketching the Sequence Read Archive
 
 We determined the accessions of all publicly available shotgun
@@ -325,19 +325,20 @@ metagenomic via the query string `"METAGENOMIC"[Source] NOT
 amplicon[All Fields]` at the NCBI Sequence Read Archive Web site,
 https://www.ncbi.nlm.nih.gov/sra.  We then downloaded all runs for all
 accessions and streamed them into `sourmash sketch dna` with
-parameters `-p k=21,31,51,scaled=1000,abund`. The resulting sourmash
+parameters `-p k=21,31,51,scaled=1000,abund`. The output sourmash
 signature files were saved as individual gzipped JSON files (each
 containing 3 sketches), one file for each input run.
 
 The resulting catalog contains 767,277 metagenome data sets as of
-March 2022, with the majority annotated human-associated microbiomes
+March 2022, with the majority annotated as human-associated microbiomes
 (Table @tbl:sra-types). The size of all sketches together is 7.5 TB,
 containing approximately 375 billion hashes per k-mer size,
 representing 375 trillion k-mers <!-- from ZZZ PB of original files CTB -->. The
 average sketch file size is 9.7 MB, and the median is 570kb. The
 largest 10,000 data sets comprise 30% of the total sketch sizes.
+<!-- NTP question: how big is largest sketch? -->
 
-| "Scientific Name" provided by submitter | distinct data sets | 
+| "Scientific Name" provided by submitter | distinct data sets |
 | --- | --- |
 | human gut metagenome  |   162187 |
 | metagenome              |   57048
@@ -444,37 +445,62 @@ expensive.
 
 ## Discussion {.page_break_before}
 
-Making large collections of sequencing data easy to search by content
+Enabling content-based search of very large collections of sequencing data
 is an open problem, and approaches that work for smaller collections
 rarely scale well, even for current database sizes. New methods that
 take advantage of specific particularities of the query and desired
 answer can help bridge the gap between more general methods by
 allowing filtering large databases, resulting in more manageable
 subsets that can be used efficiently with current methods.
-FracMinHash sketches allow calculating similarity and containment
-between datasets with-out the need to access the original
-datasets. Because only a fraction of the original data need to be
-stored, they are good basic components in the implementation of
-systems that allow searching large collections of datasets.
 
-Nucleotide k-mer search has high detection ability when close matches
-to the query (90% ANI or above) are available (ref?), while alignment
-based approaches such as Serratus can detect more distant
-matches. This extends to FracMinHash matches, although a minimum
-overlap of 2-3 hashes (2-3 kb) is necessary for robust detection
-[@gather]. Since many plasmids and most bacterial and archaeal genomes
-are far larger than 10kb, branchwater is well suited to detecting
-matches to such sequences in the SRA.
+K-mer search via sourmash branchwater is a lightweight, scaleable
+approach to content-based search of petabase-scale collections of
+sequencing data. Branchwater is designed to recover data sets
+with high nucleotide similarity to the query sequence (>90% ANI)
+across the Sequence Read Archive using computational resources
+available to many researchers. As this approach enables content-based
+search across petabases of sequence data, we anticipate it will be
+most useful for filtering large databases to generate a manageable
+subset of relevant data sets that can be analyzed in detail using other
+tools.
 
+Despite its utility, branchwater search has limitations, some
+of which are intrinsic to the approach, and some of which can be
+overcome with improved database storage and search design.
+First, branchwater search relies upon exact matching of long nucleotide
+k-mers, which work best for sequences with high sequence identity (90%+ ANI),
+particularly when combined with thresholding used for fast search.
+Approaches using alignment-based techniques may be more useful for
+detecting similarity across larger evolutionary distances (cite Serratus).
 Lumian et al. (2022) validated branchwater results by downloading
 matching Illumina metagenomes above a specific containment threshold
 and mapping the reads back to the query genomes to evaluate both
 mapping detection and effective coverage. In all but one case,
 k-mer-based genome detection of the query was well below mapping-based
-detection -(in some cases significantly so. This was also seen with a
+detection - in some cases significantly so. This was also seen with a
 other samples in Irber et al., 2022 [@gather], and is likely because
 mapping-based approaches can tolerate mismatches, while k-mer based
 approaches do not.
+
+Second, as designed, branchwater cannot robustly detect sequence similarity for
+data sets under 10kb in size. This limit is related to the scaling approach
+used to reduce the effective search space and enable petabase-scale search.
+Branchwater leverages FracMinHash sketching to build a reduced representation of each
+data set, which enables direct and accurate sequence similarity and containment
+comparisons without needing to access the original sequencing reads.
+Because only a fraction of the original data needs to be
+stored, FracMinHash sketches are good basic components in the implementation of
+systems that allow searching large collections of datasets.
+However, this approach comes with some detection limitations.
+Robust detection requires a minimum overlap of 2-3 k-mers
+(hashes) [@gather]. With the scaling used in branchwater, this represents
+approximately 2-3 kb of matching sequence.
+Since many plasmids and most bacterial and archaeal genomes
+are far larger than 10kb, branchwater is well suited to detecting
+matches to such sequences in the SRA.
+Future storage and search optimizations may enable higher resolution
+search, but for now, sequences smaller than 10kb may be missed a
+as a result of this fractional k-mer selection.
 
 ### Tackling biological use cases with branchwater
 
