@@ -10,10 +10,10 @@ biogeography
 bioinformatically
 bioinformatics
 bluegenes
-Branchwater
+branchwater
 Bruijn
 CLI
-CMash
+cmash
 contig
 contigs
 cov
@@ -40,7 +40,7 @@ levele
 lossy
 Luiz
 luizirber
-Lumian
+lumian
 MBs
 mer
 mers

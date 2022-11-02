@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/e68c5fbb1e57596b8e87ce065de34690ddc028e5/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e68c5fbb1e57596b8e87ce065de34690ddc028e5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e68c5fbb1e57596b8e87ce065de34690ddc028e5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/e68c5fbb1e57596b8e87ce065de34690ddc028e5/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@e68c5fb](https://github.com/dib-lab/2022-paper-branchwater-software/tree/e68c5fbb1e57596b8e87ce065de34690ddc028e5)
+from [dib-lab/2022-paper-branchwater-software@f83c624](https://github.com/dib-lab/2022-paper-branchwater-software/tree/f83c624cbdd915c3e7391ab8f5ca224135aeed3e)
 on November 2, 2022.
 </em></small>
 
