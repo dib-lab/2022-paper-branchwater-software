@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-11-01'
+date-meta: '2022-11-02'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-11-01" />
-  <meta name="citation_publication_date" content="2022-11-01" />
+  <meta name="dc.date" content="2022-11-02" />
+  <meta name="citation_publication_date" content="2022-11-02" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/d24141e315900a4a6e8a87fd52380b69ddd8129f/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d24141e315900a4a6e8a87fd52380b69ddd8129f/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/d24141e315900a4a6e8a87fd52380b69ddd8129f/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/d24141e315900a4a6e8a87fd52380b69ddd8129f/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@d24141e](https://github.com/dib-lab/2022-paper-branchwater-software/tree/d24141e315900a4a6e8a87fd52380b69ddd8129f)
-on November 1, 2022.
+from [dib-lab/2022-paper-branchwater-software@b483f0e](https://github.com/dib-lab/2022-paper-branchwater-software/tree/b483f0ee2e84b98538871bb8c21003d0428a9b6e)
+on November 2, 2022.
 </em></small>
 
 ## Authors
@@ -125,14 +125,13 @@ on November 1, 2022.
 ## Abstract {.page_break_before}
 
 We introduce branchwater, a flexible and fast petabase-scale search
-for the 800,000 public metagenomes presently in the NCBI Sequence Read
+for the 767,000 public metagenomes presently in the NCBI Sequence Read
 Archive. Our search is based on the FracMinHash k-mer sketching
 technique and can search all public metagenomes with 1000 query
-genomes in approximately 24 hours using 30 GB of RAM and 32 threads.
+genomes in approximately 36 hours using 50 GB of RAM and 32 threads.
 Branchwater is a Rust-based multithreading front-end built on top of
-the sourmash library. We provide biological use cases, discuss design
-and performance considerations, and provide benchmarks for a variety of
-different parameters.
+the sourmash library. We provide biological use cases, examine
+performance, and discuss design and performance considerations.
 
 
 ## Introduction {.page_break_before}
@@ -159,7 +158,7 @@ Beyond their initial use, these data sets form an incredibly rich
 resource for contextualizing novel sequencing data and for synthesis
 research on a myriad of large-scale genomic questions ranging from
 basic evolutionary processes to disease associations and pathogenicity
-tracking (Table XXX).
+tracking (Table @tbl:bio-use-cases).
 However, comprehensive discovery of relevant data sets is challenging.
 Metadata for these data sets is typically geared towards the
 submitting researcher's study questions and major findings, and moreover cannot
@@ -176,7 +175,7 @@ However, search of unassembled sequence is critical to ensure unbiased
 and comprehensive recovery of relevant datasets.  Assembly techniques
 are designed to produce consensus reference sequences useful for
 consistent comparisons across genotypes, often collapsing sequence
-variation in the process.  In addition, reassembly and reanalysis of
+variation in the process (XXX 2007, awad paper).  In addition, reassembly and reanalysis of
 existing data using different parameters or newer methods often yields
 different results.  Content-based search of unassembled metagenomes
 can bypass these issues and facilitate consistent downstream analysis
@@ -193,21 +192,26 @@ probabilistic data structures to reduce the effective search space
 translate to datasets with unknown levels of sequence diversity, the
 defining feature of metagenomic datasets.
 
-Recent extensive search across viral datasets ... comprehensive but
-time-consuming and costly, intractable for independent researchers
-[@serratus]. Also ref searchsra [@searchsra], PARTIE [@partie],
-etc. STAT [@stat], Metagraph, [@metagraph], BIGSI [@bigsi]. XXX
+Recent Serratus used extensive search across public datasets to
+recover 880,000 RNA-dependent RNA polymerase-containing sequences, and
+discovered over 131,000 novel RNA viruses [@serratus].  This search
+was comprehensive but also time-consuming and costly, and still out of
+reach for unfunded exploratory research. Other approaches such as
+searchsra.org [@searchsra] and metagraph [@metagraph] are promising
+but are not yet capable of searching all public data.
 
-Below, we introduce Branchwater, a petabase-scale querying system that
+<!-- add https://www.biorxiv.org/content/10.1101/2022.10.07.510278v1.full at some point -->
+
+Here, we introduce Branchwater, a petabase-scale querying system that
 uses containment searches based on FracMinHash sketching to search all
-public metagenome data sets in the SRA in approximately 24 hours on
+public metagenome data sets in the SRA in 24-36 hours on
 commodity hardware with 1-1000 query genomes. Branchwater uses the
 Rust library underlying the sourmash implementation of FracMinHash to
 execute massively parallel searches of a presketched digest of the
 SRA [@sourmash_joss; @gather].
 
 The availability of relatively lightweight content-based search of SRA
-metagenomes addresses many of the biological use cases in Table
+metagenomes helps address many of the biological use cases in Table
 @tbl:bio-use-cases (see 3rd column).  Some of these use cases have already been
 explored with Branchwater: Viehweger et al. (2021) [@viehweger] used
 Branchwater to discover a metagenomic sample containing *Klebsiella
@@ -232,7 +236,9 @@ samples.
 
 Table: Biological use cases for petabase scale sequence search of metagenomes {#tbl:bio-use-cases}
 
-edit table [here](https://hackmd.io/Pgj6AjM_RlGF0_7rGhY3tA)
+<!-- edit table [here](https://hackmd.io/Pgj6AjM_RlGF0_7rGhY3tA) -->
+
+<!--
 
 Thoughts and questions:
 
@@ -244,6 +250,7 @@ Thoughts and questions:
 
 CTB NOTE: Small viral pangenome query comment/Luiz. Association studies.
 
+-->
 
 
 ## Background: FracMinHash and sourmash {.page_break_before}
@@ -252,13 +259,16 @@ FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
 sets [@gather]. In brief, FracMinHash is a lossy compression approach
 that represents data sets using a "fractional" sketch containing $1/S$
-of the original k-mers.  Sketches support estimation of overlap,
-bidirectional containment, and Jaccard similarity between two data
-sets. Unlike other common sketching techniques such as MinHash [@mash]
-and HyperLogLog [@dashing], FracMinHash supports these operations
-between two data sets of different sizes, and unlike mash screen and
-CMash does not require the original data sets [@mash_screen; @cmash].
-In exchange, FracMinHash sketches are essentially unbounded in size.
+of the original k-mers.  FracMinHash sketches support estimation of
+overlap, bidirectional containment, and Jaccard similarity between two
+data sets. Unlike other common sketching techniques such as MinHash
+[@mash] and HyperLogLog [@dashing], FracMinHash supports these
+operations between two data sets of different sizes, which is
+important for metagenomic search; and unlike mash screen and CMash,
+FracMinHash does not require the original data sets
+[@mash_screen; @cmash].  In exchange, FracMinHash sketches are
+essentially unbounded in size, since they can grow to
+include up to $H/S$ elements for a hash space $H$ in size.
 
 The open-source sourmash software provides a mature and
 well-documented command-line interface to FracMinHash, along with
@@ -269,13 +279,14 @@ layer. However, despite the thread safety of the underlying Rust code,
 the CLI and Python library still operate in single-threaded mode,
 which limits the utility of sourmash for very large scale
 operations. Refactoring the sourmash CLI and Python libraries to take
-advantage of thread safety is a substantial and ongoing effort; we
-chose here to develop a dedicated CLI in Rust instead.
+advantage of thread safety is a substantial and ongoing effort; for
+petabase scale search, we chose to develop a dedicated CLI in Rust in
+the interim.
 
 There are several features of FracMinHash and sourmash that limit
 their utility for specific use cases. In particular, the default
-scaled parameters used in sourmash do not work well for comparing or
-detecting genomes smaller than 10kb in size. Nor can divergent genomes
+$S=1000$ parameter used in sourmash does not work well for comparing or
+detecting genomes smaller than 10kb in size. Nor can highly divergent genomes
 be found; based on k-mer containment to ANI conversion
 [@dk_fracminhash], we find that sourmash defaults work well for
 finding matches to genomes within about 90% ANI of the query, but not
@@ -417,16 +428,26 @@ loading the 10,000 biggest sketches.
 | max RSS | 16.4 +/-  1.6 GB |
 | I/O in | 93.4 +/- 1.9 GB |
 
-Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 metagenomes. Queries were randomly selected from 318k genomes in GTDB rs207. Metagenomes were randomly selected from the full catalog of 767k.
+Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 metagenomes. Queries were randomly selected from 318k genomes in GTDB rs207. Metagenomes were randomly selected from the full catalog of 767k. {#tbl:avg_bench}
+
+| database | time | max RSS |
+| -------- | -------- | -------- |
+| entire catalog | 27.2m$^*$ | 52.5 GB |
+| random 10k subset | 24.2m   | 16.4 GB |
+| 10k largest metagenomes | 594.0 m | 60.0 GB |
+
+Table: A comparison of database searches for the entire catalog of
+767k metagenomes, with time normalized to 10k, the average of the 10k
+subsets in Table @tbl:avg_bench, and the 10k largest metagenomses. {#tbl:catalog}
 
 ![**branchwater scales well with number of threads.** Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search.](images/basic_benchmarks.svg "basic benchmarking"){#fig:basic_bench}
 
-CTB: should note that one thread is used exclusively for writing to CSV.
-
-See https://github.com/dib-lab/2022-branchwater-benchmarking for
-numbers and notebook.
+<!-- CTB: should note that one thread is used exclusively for writing to CSV. -->
 
 ![**branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.** Processing time increases slowly with number of query genomes used to search, because they are held in memory and fast to compare. Processing time increases quickly with number of subject metagenomes being searched, because they are large and slow to load and search.](images/subsample_benchmarks.svg "branchwater scaling"){#fig:basic_scaling}
+
+See https://github.com/dib-lab/2022-branchwater-benchmarking for
+number processing and figure generating notebooks.
 
 ### Post-search validation
 
