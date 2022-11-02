@@ -3,8 +3,6 @@ amplicon
 ANI
 APIs
 archaeal
-awad
-bacteriophage
 bigsi
 biogeo
 biogeographical
@@ -12,10 +10,10 @@ Biogeography
 bioinformatically
 bioinformatics
 bluegenes
-Branchwater
+branchwater
 Bruijn
 CLI
-cmash
+CMash
 contig
 contigs
 cov
@@ -47,9 +45,8 @@ MBs
 mer
 mers
 metagenome
-metagenomes
+Metagenomes
 metagenomic
-metagenomses
 metagraph
 microbiome
 microbiomes
@@ -76,6 +73,7 @@ RNAseq
 RSS
 Runinfo
 runtime
+runtimes
 saltyscientist
 scalable
 searchsra
@@ -89,8 +87,6 @@ SSD
 summarization
 threadsafe
 thresholding
-TODO
 UC
 unassembled
 Viehweger
-YYY

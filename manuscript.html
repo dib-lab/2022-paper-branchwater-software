@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/b483f0ee2e84b98538871bb8c21003d0428a9b6e">dib-lab/2022-paper-branchwater-software@b483f0e</a>
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c">dib-lab/2022-paper-branchwater-software@dd58cd7</a>
 on November 2, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -159,8 +159,9 @@ GB) and can be highly complex, with environmental samples containing
 genomic data that can be attributed to thousands or more species. In
 the past decade, hundreds of thousands of new bacterial and archaeal
 genomes have been isolated from public metagenomes, and several
-entirely new branches of life have been discovered (large
-bacteriophage, hug et al, etc. XXX)</p>
+entirely new branches of life have been discovered purely through
+analysis of public data
+<span class="citation" data-cites="x94unSVP g228aulb aN8nTk2A">[<a href="#ref-x94unSVP" role="doc-biblioref">2</a>,<a href="#ref-g228aulb" role="doc-biblioref">3</a>,<a href="#ref-aN8nTk2A" role="doc-biblioref">4</a>]</span>.</p>
 <p>Beyond their initial use, these data sets form an incredibly rich
 resource for contextualizing novel sequencing data and for synthesis
 research on a myriad of large-scale genomic questions ranging from
@@ -181,27 +182,28 @@ However, search of unassembled sequence is critical to ensure unbiased
 and comprehensive recovery of relevant datasets. Assembly techniques
 are designed to produce consensus reference sequences useful for
 consistent comparisons across genotypes, often collapsing sequence
-variation in the process (XXX 2007, awad paper). In addition, reassembly and reanalysis of
-existing data using different parameters or newer methods often yields
-different results. Content-based search of unassembled metagenomes
-can bypass these issues and facilitate consistent downstream analysis
-across data sets that may have been initially generated to answer a
-range of disparate biological questions, and been first analyzed over
-a range of years and with myriad techniques.</p>
+variation in the process <span class="citation" data-cites="EZWCo053 18UKYqh4i">[<a href="#ref-EZWCo053" role="doc-biblioref">5</a>,<a href="#ref-18UKYqh4i" role="doc-biblioref">6</a>]</span>.
+In addition, reassembly and reanalysis of existing data using
+different parameters or newer methods often yields different results.
+Content-based search of unassembled metagenomes can bypass these
+issues and facilitate consistent downstream analysis across data sets
+that may have been initially generated to answer a range of disparate
+biological questions, and been first analyzed over a range of years
+and with myriad techniques.</p>
 <p>A number of approaches have been developed to enable content-based
 search of single-organism genomic and RNAseq data. Methods that
 enable rapid, large-scale search across hundreds of thousands of data
 sets typically leverage biological sketching techniques and
 probabilistic data structures to reduce the effective search space
-<span class="citation" data-cites="DfZvKOpG 1C29pM7VV 1HpdDzfQX">[<a href="#ref-DfZvKOpG" role="doc-biblioref">2</a>,<a href="#ref-1C29pM7VV" role="doc-biblioref">3</a>,<a href="#ref-1HpdDzfQX" role="doc-biblioref">4</a>]</span>. However, these approaches do not readily
+<span class="citation" data-cites="DfZvKOpG 1C29pM7VV 1HpdDzfQX">[<a href="#ref-DfZvKOpG" role="doc-biblioref">7</a>,<a href="#ref-1C29pM7VV" role="doc-biblioref">8</a>,<a href="#ref-1HpdDzfQX" role="doc-biblioref">9</a>]</span>. However, these approaches do not readily
 translate to datasets with unknown levels of sequence diversity, the
 defining feature of metagenomic datasets.</p>
 <p>Recent Serratus used extensive search across public datasets to
 recover 880,000 RNA-dependent RNA polymerase-containing sequences, and
-discovered over 131,000 novel RNA viruses <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">5</a>]</span>. This search
+discovered over 131,000 novel RNA viruses <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">10</a>]</span>. This search
 was comprehensive but also time-consuming and costly, and still out of
 reach for unfunded exploratory research. Other approaches such as
-searchsra.org <span class="citation" data-cites="1BYIMl6bC">[<a href="#ref-1BYIMl6bC" role="doc-biblioref">6</a>]</span> and metagraph <span class="citation" data-cites="JAROV9W7">[<a href="#ref-JAROV9W7" role="doc-biblioref">7</a>]</span> are promising
+searchsra.org <span class="citation" data-cites="1BYIMl6bC">[<a href="#ref-1BYIMl6bC" role="doc-biblioref">11</a>]</span> and metagraph <span class="citation" data-cites="JAROV9W7">[<a href="#ref-JAROV9W7" role="doc-biblioref">12</a>]</span> are promising
 but are not yet capable of searching all public data.</p>
 <!-- add https://www.biorxiv.org/content/10.1101/2022.10.07.510278v1.full at some point -->
 <p>Here, we introduce Branchwater, a petabase-scale querying system that
@@ -210,14 +212,14 @@ public metagenome data sets in the SRA in 24-36 hours on
 commodity hardware with 1-1000 query genomes. Branchwater uses the
 Rust library underlying the sourmash implementation of FracMinHash to
 execute massively parallel searches of a presketched digest of the
-SRA <span class="citation" data-cites="ExvjTLL3 IadOz4ol">[<a href="#ref-ExvjTLL3" role="doc-biblioref">8</a>,<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span>.</p>
+SRA <span class="citation" data-cites="ExvjTLL3 IadOz4ol">[<a href="#ref-ExvjTLL3" role="doc-biblioref">13</a>,<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>.</p>
 <p>The availability of relatively lightweight content-based search of SRA
 metagenomes helps address many of the biological use cases in Table
 <a href="#tbl:bio-use-cases">1</a> (see 3rd column). Some of these use cases have already been
-explored with Branchwater: Viehweger et al. (2021) <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">10</a>]</span> used
+explored with Branchwater: Viehweger et al. (2021) <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">15</a>]</span> used
 Branchwater to discover a metagenomic sample containing <em>Klebsiella
 pneumonia</em> that was subsequently included in an outbreak analysis, and
-Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">11</a>]</span> conducted a biogeographical
+Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span> conducted a biogeographical
 study on five newly generated cyanobacterial genomes from Antarctic
 samples.</p>
 <div id="tbl:bio-use-cases" class="tablenos">
@@ -311,22 +313,22 @@ CTB NOTE: Small viral pangenome query comment/Luiz. Association studies.
 <h2 class="page_break_before" id="background-fracminhash-and-sourmash">Background: FracMinHash and sourmash</h2>
 <p>FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
-sets <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span>. In brief, FracMinHash is a lossy compression approach
+sets <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>. In brief, FracMinHash is a lossy compression approach
 that represents data sets using a “fractional” sketch containing <span class="math inline">\(1/S\)</span>
 of the original k-mers. FracMinHash sketches support estimation of
 overlap, bidirectional containment, and Jaccard similarity between two
 data sets. Unlike other common sketching techniques such as MinHash
-<span class="citation" data-cites="mH9pzoIn">[<a href="#ref-mH9pzoIn" role="doc-biblioref">12</a>]</span> and HyperLogLog <span class="citation" data-cites="10ppWuOJ6">[<a href="#ref-10ppWuOJ6" role="doc-biblioref">13</a>]</span>, FracMinHash supports these
+<span class="citation" data-cites="mH9pzoIn">[<a href="#ref-mH9pzoIn" role="doc-biblioref">17</a>]</span> and HyperLogLog <span class="citation" data-cites="10ppWuOJ6">[<a href="#ref-10ppWuOJ6" role="doc-biblioref">18</a>]</span>, FracMinHash supports these
 operations between two data sets of different sizes, which is
 important for metagenomic search; and unlike mash screen and CMash,
 FracMinHash does not require the original data sets
-<span class="citation" data-cites="19AP1jyqE jxLvWK4U">[<a href="#ref-19AP1jyqE" role="doc-biblioref">14</a>,<a href="#ref-jxLvWK4U" role="doc-biblioref">15</a>]</span>. In exchange, FracMinHash sketches are
+<span class="citation" data-cites="19AP1jyqE jxLvWK4U">[<a href="#ref-19AP1jyqE" role="doc-biblioref">19</a>,<a href="#ref-jxLvWK4U" role="doc-biblioref">20</a>]</span>. In exchange, FracMinHash sketches are
 essentially unbounded in size, since they can grow to
 include up to <span class="math inline">\(H/S\)</span> elements for a hash space <span class="math inline">\(H\)</span> in size.</p>
 <p>The open-source sourmash software provides a mature and
 well-documented command-line interface to FracMinHash, along with
 Python and Rust APIs for loading and using FracMinHash sketches
-<span class="citation" data-cites="ExvjTLL3 ART4gJKs">[<a href="#ref-ExvjTLL3" role="doc-biblioref">8</a>,<a href="#ref-ART4gJKs" role="doc-biblioref">16</a>]</span>. The Python layer provides a larger
+<span class="citation" data-cites="ExvjTLL3 ART4gJKs">[<a href="#ref-ExvjTLL3" role="doc-biblioref">13</a>,<a href="#ref-ART4gJKs" role="doc-biblioref">21</a>]</span>. The Python layer provides a larger
 number of user experience conveniences on top of the performant Rust
 layer. However, despite the thread safety of the underlying Rust code,
 the CLI and Python library still operate in single-threaded mode,
@@ -340,7 +342,7 @@ their utility for specific use cases. In particular, the default
 <span class="math inline">\(S=1000\)</span> parameter used in sourmash does not work well for comparing or
 detecting genomes smaller than 10kb in size. Nor can highly divergent genomes
 be found; based on k-mer containment to ANI conversion
-<span class="citation" data-cites="fCWtHkDP">[<a href="#ref-fCWtHkDP" role="doc-biblioref">17</a>]</span>, we find that sourmash defaults work well for
+<span class="citation" data-cites="fCWtHkDP">[<a href="#ref-fCWtHkDP" role="doc-biblioref">22</a>]</span>, we find that sourmash defaults work well for
 finding matches to genomes within about 90% ANI of the query, but not
 necessarily further. Finally, FracMinHash was developed for shotgun
 data sets and different parameters would be required for targeted
@@ -355,7 +357,7 @@ software provides a variety of in-memory and on-disk data structures
 for organizing sketches in this size range and can search hundreds of
 thousands of genome sketches with a single query in minutes in a
 single thread on an SSD laptop; more complex algorithms such as the
-min-set-cov approach described in <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span> can take a few hours but are still
+min-set-cov approach described in <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span> can take a few hours but are still
 acceptably performant on most real-world data.</p>
 <p>Branchwater faces very different challenges in searching large
 collections of <em>metagenomes</em>. Many of these data sets are extremely
@@ -364,11 +366,11 @@ memory to load. Where multiple queries are used to search each
 metagenome, quadratic search costs will also be incurred.</p>
 <p>One solution we explored was a scatter-gather approach based on
 a cluster-aware workflow engine (in this case, snakemake
-<span class="citation" data-cites="1Anhy7wy0">[<a href="#ref-1Anhy7wy0" role="doc-biblioref">18</a>]</span>). The overhead on workflow coordination and executing
+<span class="citation" data-cites="1Anhy7wy0">[<a href="#ref-1Anhy7wy0" role="doc-biblioref">23</a>]</span>). The overhead on workflow coordination and executing
 shell commands was prohibitive for our initial implementation, so we
 pursued a purpose-built multithreaded solution instead.</p>
 <h2 class="page_break_before" id="methods">Methods</h2>
-<p>XXX diagram</p>
+<!-- XXX diagram -->
 <!-- *The Methods should include a subsection on Implementation describing
  how the tool works and any relevant technical details required for
  implementation; and a subsection on Operation, which should include
@@ -446,7 +448,7 @@ Read Archive, as of March 2022. </caption>
 </div>
 <h3 id="implementation-of-multithreaded-search">Implementation of multithreaded search</h3>
 <!-- CTB: rename program to branchwater? -->
-<p>The <code>sra_search</code> program is built in Rust on top of the sourmash
+<p>Branchwater program is built in Rust on top of the sourmash
 library for loading and comparing sketches. It implements the
 following steps:</p>
 <ol type="1">
@@ -470,27 +472,27 @@ keep queries in memory and batch-process metagenome sketches without
 storing them all in memory. The approach also takes advantage of the
 effective immutability of queries, which can be shared without
 data races by multiple processing threads.</p>
-<h3 id="executing-sra_search-at-the-command-line">Executing sra_search at the command line</h3>
-<p><code>sra_search</code> takes in search parameters as well as two text files, one
+<h3 id="executing-branchwater-at-the-command-line">Executing branchwater at the command line</h3>
+<p>branchwater takes in search parameters as well as two text files, one
 containing a list of query file paths and one containing a list of
 subject file paths. Upon execution, it reports the number of query
 sketches loaded and the number of subject file paths found, and then
 begins the search. It progressively reports the number of sketches
 searched in blocks of 10000, and outputs matches to a CSV File.</p>
-<p>We typically run <code>sra_search</code> in a snakemake workflow, which manages
+<p>We typically run branchwater in a snakemake workflow, which manages
 environment variables and input/output files.</p>
 <h3 id="performance-and-scaling-analysis">Performance and scaling analysis</h3>
-<p>Benchmarks TODO:</p>
-<ul>
-<li>Do a benchmark of a complete query against all.</li>
-<li>Biggest sketches are much slower.</li>
-</ul>
-<p>XXX make a table with 10k-normalized time and memory for entire catalog,
-largest 30%, and random sample.</p>
-<p><code>sra_search</code> is largely I/O bound, with substantial input
-requirements; this is particularly clear from the YYY% slowdown from
-loading the 10,000 biggest sketches.
-<code>sra_search</code> scales linearly in memory and time with queries and number of threads.</p>
+<p>In Tables <a href="#tbl:avg_bench">3</a> and <a href="#tbl:catalog">4</a> we show performance metrics
+for branchwater. Table <a href="#tbl:avg_bench">3</a> contains average measurements
+and standard deviations for time, memory, and I/O, showing that
+branchwater is I/O and memory intensive. Table <a href="#tbl:catalog">4</a> compares
+the runtimes and memory usage for a search the entire catalog
+(normalized to 10k samples) against both the random subsets in Table
+<span class="citation" data-cites="tbl_avg_bench">[<a href="#ref-tbl_avg_bench" role="doc-biblioref"><strong>tbl_avg_bench?</strong></a>]</span> and the largest 10k sketches in the database. The
+increased memory usage of the catalog and especially the 10k largest
+metagenomes suggests that a relatively small number of metagenomes
+contributes the bulk of both time and memory usage to a full catalog
+search of branchwater.</p>
 <div id="tbl:avg_bench" class="tablenos">
 <table id="tbl:avg_bench">
 <caption><span>Table 3:</span> Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 metagenomes. Queries were randomly selected from 318k genomes in GTDB rs207. Metagenomes were randomly selected from the full catalog of 767k. </caption>
@@ -520,7 +522,7 @@ loading the 10,000 biggest sketches.
 <table id="tbl:catalog">
 <caption><span>Table 4:</span> A comparison of database searches for the entire catalog of
 767k metagenomes, with time normalized to 10k, the average of the 10k
-subsets in Table <a href="#tbl:avg_bench">3</a>, and the 10k largest metagenomses. </caption>
+subsets in Table <a href="#tbl:avg_bench">3</a>, and the 10k largest metagenomes. </caption>
 <thead>
 <tr class="header">
 <th>database</th>
@@ -569,12 +571,16 @@ containment numbers, although sourmash provides additional information
 (e.g. estimated abundances) on top of the minimal information
 provided by branchwater. FracMinHash generally and Branchwater
 specifically have been validated bioinformatically primarily by
-mapping reads (see <span class="citation" data-cites="IadOz4ol uNh28jlz">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">11</a>]</span>). This is discussed
+mapping reads (see <span class="citation" data-cites="IadOz4ol uNh28jlz">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>). This is discussed
 further below.</p>
-<h3 id="sra_search-is-inexpensive-and-supports-exploratory-queries">Sra_search is inexpensive and supports exploratory queries</h3>
-<p>CTB: Estimate cost of a run. Compare to serratus - cloud compute, data
+<!--
+### branchwater is inexpensive and supports exploratory queries
+
+CTB: Estimate cost of a run. Compare to serratus - cloud compute, data
 download. Serratus is probably cheaper than $20k now but still
-expensive.</p>
+expensive.
+
+-->
 <h2 class="page_break_before" id="discussion">Discussion</h2>
 <p>Enabling content-based search of very large collections of sequencing data
 is an open problem, and approaches that work for smaller collections
@@ -600,14 +606,14 @@ search relies upon exact matching of long nucleotide k-mers, which
 work best for sequences with high sequence identity (90%+ ANI),
 particularly when combined with thresholding used for fast search.
 Approaches using alignment-based techniques may be more useful for
-detecting similarity across larger evolutionary distances <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">5</a>]</span>.
+detecting similarity across larger evolutionary distances <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">10</a>]</span>.
 Lumian et al. (2022) validated branchwater results by downloading
 matching Illumina metagenomes above a specific containment threshold
 and mapping the reads back to the query genomes to evaluate both
 mapping detection and effective coverage. In all but one case,
 k-mer-based genome detection of the query was lower than mapping-based
 detection - in some cases significantly so. This was also seen with a
-a smaller set of samples in Irber et al., 2022 <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span>, and is
+a smaller set of samples in Irber et al., 2022 <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>, and is
 likely because mapping-based approaches can tolerate mismatches, while
 k-mer based approaches require exact mismatches.</p>
 <p>Second, as designed, branchwater cannot robustly detect sequence
@@ -621,7 +627,7 @@ Because only a fraction of the original data needs to be stored,
 FracMinHash sketches are good basic components in the implementation
 of systems that allow searching large collections of datasets.
 However, this approach comes with some detection limitations. Robust
-detection requires a minimum overlap of 2-3 hashes <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span>. With the
+detection requires a minimum overlap of 2-3 hashes <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>. With the
 scaling used in branchwater, this represents approximately 2-3 kb of
 matching sequence. Since many plasmids and most bacterial and
 archaeal genomes are far larger than 10kb, branchwater is well suited
@@ -631,8 +637,8 @@ sequences smaller than 10kb may be missed as a result of this
 fractional k-mer selection.</p>
 <h3 id="tackling-biological-use-cases-with-branchwater">Tackling biological use cases with branchwater</h3>
 <p>K-mer search via branchwater has been used in two projects so far -
-Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">11</a>]</span> and Viehweger et al. (2021)
-<span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">10</a>]</span>. Viehweger et al. used branchwater to find a metagenome
+Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span> and Viehweger et al. (2021)
+<span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">15</a>]</span>. Viehweger et al. used branchwater to find a metagenome
 containing an additional <em>Klebsiella pneumoniae</em> for a large scale
 analysis of outbreak data, while Lumian et al. conducted a global
 biogeography analysis of five new antarctic cyanobacteria. Both
@@ -642,8 +648,7 @@ search.</p>
 emerge as petabase scale search becomes more widely available. The low
 cost of search with branchwater is particularly enabling for
 exploratory efforts, although the sheer size of the underlying data
-needed even for branchwater continues to present obstacles. We are
-planning to focus on real-time API access to search methods XXX.</p>
+needed even for branchwater continues to present obstacles.</p>
 <p>There are several scientific limitations of our approach to overcome
 as well. The current search approach has limited sensitivity to
 divergent sequence beyond the genus level, and cannot find smaller
@@ -667,7 +672,7 @@ cost beyond the minimal space required to save the results.</p>
 distribution of the annotated metagenome type (<code>ScientificName</code> from
 the SRA Runinfo database). We have provided a simple script that
 imports the SRA metadata and summarizes the Branchwater results at the
-provided threshold (example output XXX).</p>
+provided threshold. <!-- (example output XXX). --></p>
 <p>After filtering, many paths can be taken. A plethora of general
 purpose bioinformatics tools exist for working with the data from
 individual metagenomes.</p>
@@ -676,15 +681,15 @@ branchwater, genome-grist and spacegraphcats. Genome-grist performs
 an entirely automated reference-based characterization of individual
 metagenomes that follows the minimum metagenome cover produced by
 sourmash gather with mapping of short reads; it is described in Irber
-et al. <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">9</a>]</span> and was used in Lumian et al. <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">11</a>]</span>. While
+et al. <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span> and was used in Lumian et al. <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>. While
 genome-grist does download the entire data set in order to map the
 reads, it is still reference based and thus relatively lightweight.</p>
 <p>spacegraphcats is an assembly-graph based investigative tool for
 metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation
-<span class="citation" data-cites="VsLophuT">[<a href="#ref-VsLophuT" role="doc-biblioref">19</a>]</span>. It was used to retrieve putative accessory elements
-from sourmash matches in Reiter et al. (2022) <span class="citation" data-cites="186WBs2Eo">[<a href="#ref-186WBs2Eo" role="doc-biblioref">20</a>]</span> and Lumian
-et al. (2022) <span class="citation" data-cites="f68KPOUX">[<a href="#ref-f68KPOUX" role="doc-biblioref">21</a>]</span>. It is much heavier weight than
+<span class="citation" data-cites="VsLophuT">[<a href="#ref-VsLophuT" role="doc-biblioref">24</a>]</span>. It was used to retrieve putative accessory elements
+from sourmash matches in Reiter et al. (2022) <span class="citation" data-cites="186WBs2Eo">[<a href="#ref-186WBs2Eo" role="doc-biblioref">25</a>]</span> and Lumian
+et al. (2022) <span class="citation" data-cites="f68KPOUX">[<a href="#ref-f68KPOUX" role="doc-biblioref">26</a>]</span>. It is much heavier weight than
 genome-grist because it relies on a compact De Bruijn graph, which is
 expensive to build for very rich or diverse metagenomes.</p>
 <h3 id="design-alternatives-to-the-current-branchwater-implementation">Design alternatives to the current branchwater implementation</h3>
@@ -751,7 +756,7 @@ to ecological to technical (Table <a href="#tbl:bio-use-cases">1</a>).</p>
 <h2 id="data-availability-statement">Data availability statement:</h2>
 <p>All of the original data underlying the Branchwater database is
 available from the NCBI Sequence Read Archive. A current catalog of
-the SRA accessions is provided (here - XXX). The sketch collection is
+the SRA accessions is available at XXX. The sketch collection is
 7.5 TB and is available upon request. All sourmash sketches are
 provided under Creative Commons Zero (CC0) - No Rights Reserved.</p>
 <h2 class="page_break_before" id="references">References</h2>
@@ -760,65 +765,80 @@ provided under Creative Commons Zero (CC0) - No Rights Reserved.</p>
 <div id="ref-1GBPSAJ10" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>The Sequence Read Archive</strong> <div class="csl-block">R Leinonen, H Sugawara, M Shumway</div> <em>Nucleic Acids Research</em> (2010-11-09) <a href="https://doi.org/c652z5">https://doi.org/c652z5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1093/nar/gkq1019">10.1093/nar/gkq1019</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21062823">21062823</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3013647">PMC3013647</a></div></div>
 </div>
+<div id="ref-x94unSVP" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>A unified catalog of 204,938 reference genomes from the human gut microbiome</strong> <div class="csl-block">Alexandre Almeida, Stephen Nayfach, Miguel Boland, Francesco Strozzi, Martin Beracochea, Zhou Jason Shi, Katherine S Pollard, Ekaterina Sakharova, Donovan H Parks, Philip Hugenholtz, … Robert D Finn</div> <em>Nature Biotechnology</em> (2020-07-20) <a href="https://doi.org/gg5hgn">https://doi.org/gg5hgn</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41587-020-0603-3">10.1038/s41587-020-0603-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32690973">32690973</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7801254">PMC7801254</a></div></div>
+</div>
+<div id="ref-g228aulb" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>A new view of the tree of life</strong> <div class="csl-block">Laura A Hug, Brett J Baker, Karthik Anantharaman, Christopher T Brown, Alexander J Probst, Cindy J Castelle, Cristina N Butterfield, Alex W Hernsdorf, Yuki Amano, Kotaro Ise, … Jillian F Banfield</div> <em>Nature Microbiology</em> (2016-04-11) <a href="https://doi.org/bpkh">https://doi.org/bpkh</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmicrobiol.2016.48">10.1038/nmicrobiol.2016.48</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27572647">27572647</a></div></div>
+</div>
+<div id="ref-aN8nTk2A" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Clades of huge phages from across Earth’s ecosystems</strong> <div class="csl-block">Basem Al-Shayeb, Rohan Sachdeva, Lin-Xing Chen, Fred Ward, Patrick Munk, Audra Devoto, Cindy J Castelle, Matthew R Olm, Keith Bouma-Gregson, Yuki Amano, … Jillian F Banfield</div> <em>Nature</em> (2020-02-12) <a href="https://doi.org/ggkq9d">https://doi.org/ggkq9d</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-020-2007-4">10.1038/s41586-020-2007-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32051592">32051592</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7162821">PMC7162821</a></div></div>
+</div>
+<div id="ref-EZWCo053" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Use of simulated data sets to evaluate the fidelity of metagenomic processing methods</strong> <div class="csl-block">Konstantinos Mavromatis, Natalia Ivanova, Kerrie Barry, Harris Shapiro, Eugene Goltsman, Alice C McHardy, Isidore Rigoutsos, Asaf Salamov, Frank Korzeniewski, Miriam Land, … Nikos C Kyrpides</div> <em>Nature Methods</em> (2007-04-29) <a href="https://doi.org/b28wj2">https://doi.org/b28wj2</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nmeth1043">10.1038/nmeth1043</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/17468765">17468765</a></div></div>
+</div>
+<div id="ref-18UKYqh4i" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Evaluating Metagenome Assembly on a Simple Defined Community with Many Strain Variants</strong> <div class="csl-block">Sherine Awad, Luiz Irber, CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2017-06-25) <a href="https://doi.org/ghvn6x">https://doi.org/ghvn6x</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/155358">10.1101/155358</a></div></div>
+</div>
 <div id="ref-DfZvKOpG" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Fast search of thousands of short-read sequencing experiments</strong> <div class="csl-block">Brad Solomon, Carl Kingsford</div> <em>Nature Biotechnology</em> (2016-02-08) <a href="https://doi.org/f8ddk3">https://doi.org/f8ddk3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nbt.3442">10.1038/nbt.3442</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26854477">26854477</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4804353">PMC4804353</a></div></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Fast search of thousands of short-read sequencing experiments</strong> <div class="csl-block">Brad Solomon, Carl Kingsford</div> <em>Nature Biotechnology</em> (2016-02-08) <a href="https://doi.org/f8ddk3">https://doi.org/f8ddk3</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/nbt.3442">10.1038/nbt.3442</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/26854477">26854477</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4804353">PMC4804353</a></div></div>
 </div>
 <div id="ref-1C29pM7VV" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Ultrafast search of all deposited bacterial and viral genomic data</strong> <div class="csl-block">Phelim Bradley, Henk C den Bakker, Eduardo PC Rocha, Gil McVean, Zamin Iqbal</div> <em>Nature Biotechnology</em> (2019-02) <a href="https://doi.org/gf4x49">https://doi.org/gf4x49</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41587-018-0010-1">10.1038/s41587-018-0010-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718882">30718882</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420049">PMC6420049</a></div></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Ultrafast search of all deposited bacterial and viral genomic data</strong> <div class="csl-block">Phelim Bradley, Henk C den Bakker, Eduardo PC Rocha, Gil McVean, Zamin Iqbal</div> <em>Nature Biotechnology</em> (2019-02) <a href="https://doi.org/gf4x49">https://doi.org/gf4x49</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41587-018-0010-1">10.1038/s41587-018-0010-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30718882">30718882</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420049">PMC6420049</a></div></div>
 </div>
 <div id="ref-1HpdDzfQX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Improved Search of Large Transcriptomic Sequencing Databases Using Split Sequence Bloom Trees</strong> <div class="csl-block">Brad Solomon, Carl Kingsford</div> <em>Journal of Computational Biology</em> (2018-07) <a href="https://doi.org/gdxhgz">https://doi.org/gdxhgz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1089/cmb.2017.0265">10.1089/cmb.2017.0265</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29641248">29641248</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6067102">PMC6067102</a></div></div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Improved Search of Large Transcriptomic Sequencing Databases Using Split Sequence Bloom Trees</strong> <div class="csl-block">Brad Solomon, Carl Kingsford</div> <em>Journal of Computational Biology</em> (2018-07) <a href="https://doi.org/gdxhgz">https://doi.org/gdxhgz</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1089/cmb.2017.0265">10.1089/cmb.2017.0265</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29641248">29641248</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6067102">PMC6067102</a></div></div>
 </div>
 <div id="ref-13FFUe3m" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Petabase-scale sequence alignment catalyses viral discovery</strong> <div class="csl-block">Robert C Edgar, Jeff Taylor, Victor Lin, Tomer Altman, Pierre Barbera, Dmitry Meleshko, Dan Lohr, Gherman Novakovsky, Benjamin Buchfink, Basem Al-Shayeb, … Artem Babaian</div> <em>Nature</em> (2022-01-26) <a href="https://doi.org/gn9xsd">https://doi.org/gn9xsd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-021-04332-2">10.1038/s41586-021-04332-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35082445">35082445</a></div></div>
+<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Petabase-scale sequence alignment catalyses viral discovery</strong> <div class="csl-block">Robert C Edgar, Jeff Taylor, Victor Lin, Tomer Altman, Pierre Barbera, Dmitry Meleshko, Dan Lohr, Gherman Novakovsky, Benjamin Buchfink, Basem Al-Shayeb, … Artem Babaian</div> <em>Nature</em> (2022-01-26) <a href="https://doi.org/gn9xsd">https://doi.org/gn9xsd</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1038/s41586-021-04332-2">10.1038/s41586-021-04332-2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/35082445">35082445</a></div></div>
 </div>
 <div id="ref-1BYIMl6bC" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Home</strong> <a href="https://www.searchsra.org/">https://www.searchsra.org/</a></div>
+<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Home</strong> <a href="https://www.searchsra.org/">https://www.searchsra.org/</a></div>
 </div>
 <div id="ref-JAROV9W7" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>MetaGraph: Indexing and Analysing Nucleotide Archives at Petabase-scale</strong> <div class="csl-block">Mikhail Karasikov, Harun Mustafa, Daniel Danciu, Marc Zimmermann, Christopher Barber, Gunnar Rätsch, André Kahles</div> <em>Cold Spring Harbor Laboratory</em> (2020-10-02) <a href="https://doi.org/ghfd79">https://doi.org/ghfd79</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2020.10.01.322164">10.1101/2020.10.01.322164</a></div></div>
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>MetaGraph: Indexing and Analysing Nucleotide Archives at Petabase-scale</strong> <div class="csl-block">Mikhail Karasikov, Harun Mustafa, Daniel Danciu, Marc Zimmermann, Christopher Barber, Gunnar Rätsch, André Kahles</div> <em>Cold Spring Harbor Laboratory</em> (2020-10-02) <a href="https://doi.org/ghfd79">https://doi.org/ghfd79</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2020.10.01.322164">10.1101/2020.10.01.322164</a></div></div>
 </div>
 <div id="ref-ExvjTLL3" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>sourmash: a library for MinHash sketching of DNA</strong> <div class="csl-block">C Titus Brown, Luiz Irber</div> <em>The Journal of Open Source Software</em> (2016-09-14) <a href="https://doi.org/ghdrk5">https://doi.org/ghdrk5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.21105/joss.00027">10.21105/joss.00027</a></div></div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>sourmash: a library for MinHash sketching of DNA</strong> <div class="csl-block">C Titus Brown, Luiz Irber</div> <em>The Journal of Open Source Software</em> (2016-09-14) <a href="https://doi.org/ghdrk5">https://doi.org/ghdrk5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.21105/joss.00027">10.21105/joss.00027</a></div></div>
 </div>
 <div id="ref-IadOz4ol" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>Lightweight compositional analysis of metagenomes with FracMinHash and minimum metagenome covers</strong> <div class="csl-block">Luiz Irber, Phillip T Brooks, Taylor Reiter, NTessa Pierce-Ward, Mahmudur Rahman Hera, David Koslicki, CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-01-12) <a href="https://doi.org/gn34zt">https://doi.org/gn34zt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.11.475838">10.1101/2022.01.11.475838</a></div></div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Lightweight compositional analysis of metagenomes with FracMinHash and minimum metagenome covers</strong> <div class="csl-block">Luiz Irber, Phillip T Brooks, Taylor Reiter, NTessa Pierce-Ward, Mahmudur Rahman Hera, David Koslicki, CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-01-12) <a href="https://doi.org/gn34zt">https://doi.org/gn34zt</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.11.475838">10.1101/2022.01.11.475838</a></div></div>
 </div>
 <div id="ref-cEbYrZXG" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline"><strong>Context-aware genomic surveillance reveals hidden transmission of a carbapenemase-producing Klebsiella pneumoniae</strong> <div class="csl-block">Adrian Viehweger, Christian Blumenscheit, Norman Lippmann, Kelly L Wyres, Christian Brandt, Jörg B Hans, Martin Hölzer, Luiz Irber, Sören Gatermann, Christoph Lübbert, … Brigitte König</div> <em>Microbial Genomics</em> (2021-12-16) <a href="https://doi.org/gq5gt8">https://doi.org/gq5gt8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1099/mgen.0.000741">10.1099/mgen.0.000741</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34913861">34913861</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767333">PMC8767333</a></div></div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>Context-aware genomic surveillance reveals hidden transmission of a carbapenemase-producing Klebsiella pneumoniae</strong> <div class="csl-block">Adrian Viehweger, Christian Blumenscheit, Norman Lippmann, Kelly L Wyres, Christian Brandt, Jörg B Hans, Martin Hölzer, Luiz Irber, Sören Gatermann, Christoph Lübbert, … Brigitte König</div> <em>Microbial Genomics</em> (2021-12-16) <a href="https://doi.org/gq5gt8">https://doi.org/gq5gt8</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1099/mgen.0.000741">10.1099/mgen.0.000741</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34913861">34913861</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8767333">PMC8767333</a></div></div>
 </div>
 <div id="ref-uNh28jlz" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>Biogeographic Distribution of Five Antarctic Cyanobacteria Using Large-Scale k-mer Searching with sourmash branchwater</strong> <div class="csl-block">Jessica Lumian, Dawn Sumner, Christen Grettenberger, Anne D Jungblut, Luiz Irber, NTessa Pierce-Ward, CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-10-30) <a href="https://doi.org/gq5p6v">https://doi.org/gq5p6v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.10.27.514113">10.1101/2022.10.27.514113</a></div></div>
+<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Biogeographic Distribution of Five Antarctic Cyanobacteria Using Large-Scale k-mer Searching with sourmash branchwater</strong> <div class="csl-block">Jessica Lumian, Dawn Sumner, Christen Grettenberger, Anne D Jungblut, Luiz Irber, NTessa Pierce-Ward, CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-10-30) <a href="https://doi.org/gq5p6v">https://doi.org/gq5p6v</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.10.27.514113">10.1101/2022.10.27.514113</a></div></div>
 </div>
 <div id="ref-mH9pzoIn" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Mash: fast genome and metagenome distance estimation using MinHash</strong> <div class="csl-block">Brian D Ondov, Todd J Treangen, Páll Melsted, Adam B Mallonee, Nicholas H Bergman, Sergey Koren, Adam M Phillippy</div> <em>Genome Biology</em> (2016-06-20) <a href="https://doi.org/gfx74q">https://doi.org/gfx74q</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-016-0997-x">10.1186/s13059-016-0997-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27323842">27323842</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4915045">PMC4915045</a></div></div>
+<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Mash: fast genome and metagenome distance estimation using MinHash</strong> <div class="csl-block">Brian D Ondov, Todd J Treangen, Páll Melsted, Adam B Mallonee, Nicholas H Bergman, Sergey Koren, Adam M Phillippy</div> <em>Genome Biology</em> (2016-06-20) <a href="https://doi.org/gfx74q">https://doi.org/gfx74q</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-016-0997-x">10.1186/s13059-016-0997-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27323842">27323842</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4915045">PMC4915045</a></div></div>
 </div>
 <div id="ref-10ppWuOJ6" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">13. </div><div class="csl-right-inline"><strong>Dashing: fast and accurate genomic distances with HyperLogLog</strong> <div class="csl-block">Daniel N Baker, Ben Langmead</div> <em>Genome Biology</em> (2019-12) <a href="https://doi.org/ggkmjc">https://doi.org/ggkmjc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1875-0">10.1186/s13059-019-1875-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31801633">31801633</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6892282">PMC6892282</a></div></div>
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Dashing: fast and accurate genomic distances with HyperLogLog</strong> <div class="csl-block">Daniel N Baker, Ben Langmead</div> <em>Genome Biology</em> (2019-12) <a href="https://doi.org/ggkmjc">https://doi.org/ggkmjc</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1875-0">10.1186/s13059-019-1875-0</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31801633">31801633</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6892282">PMC6892282</a></div></div>
 </div>
 <div id="ref-19AP1jyqE" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">14. </div><div class="csl-right-inline"><strong>Mash Screen: high-throughput sequence containment estimation for genome discovery</strong> <div class="csl-block">Brian D Ondov, Gabriel J Starrett, Anna Sappington, Aleksandra Kostic, Sergey Koren, Christopher B Buck, Adam M Phillippy</div> <em>Genome Biology</em> (2019-11-05) <a href="https://doi.org/ghtqmb">https://doi.org/ghtqmb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1841-x">10.1186/s13059-019-1841-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31690338">31690338</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6833257">PMC6833257</a></div></div>
+<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Mash Screen: high-throughput sequence containment estimation for genome discovery</strong> <div class="csl-block">Brian D Ondov, Gabriel J Starrett, Anna Sappington, Aleksandra Kostic, Sergey Koren, Christopher B Buck, Adam M Phillippy</div> <em>Genome Biology</em> (2019-11-05) <a href="https://doi.org/ghtqmb">https://doi.org/ghtqmb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-019-1841-x">10.1186/s13059-019-1841-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31690338">31690338</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6833257">PMC6833257</a></div></div>
 </div>
 <div id="ref-jxLvWK4U" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">15. </div><div class="csl-right-inline"><strong>IMPROVING MIN HASH VIA THE CONTAINMENT INDEX WITH APPLICATIONS TO METAGENOMIC ANALYSIS</strong> <div class="csl-block">David Koslicki, Hooman Zabeti</div> <em>Cold Spring Harbor Laboratory</em> (2017-09-04) <a href="https://doi.org/ghvn6z">https://doi.org/ghvn6z</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/184150">10.1101/184150</a></div></div>
+<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>IMPROVING MIN HASH VIA THE CONTAINMENT INDEX WITH APPLICATIONS TO METAGENOMIC ANALYSIS</strong> <div class="csl-block">David Koslicki, Hooman Zabeti</div> <em>Cold Spring Harbor Laboratory</em> (2017-09-04) <a href="https://doi.org/ghvn6z">https://doi.org/ghvn6z</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/184150">10.1101/184150</a></div></div>
 </div>
 <div id="ref-ART4gJKs" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">16. </div><div class="csl-right-inline"><strong>Large-scale sequence comparisons with sourmash</strong> <div class="csl-block">NTessa Pierce, Luiz Irber, Taylor Reiter, Phillip Brooks, CTitus Brown</div> <em>F1000Research</em> (2019-07-04) <a href="https://doi.org/gf9v84">https://doi.org/gf9v84</a> <div class="csl-block">DOI: <a href="https://doi.org/10.12688/f1000research.19675.1">10.12688/f1000research.19675.1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31508216">31508216</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6720031">PMC6720031</a></div></div>
+<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Large-scale sequence comparisons with sourmash</strong> <div class="csl-block">NTessa Pierce, Luiz Irber, Taylor Reiter, Phillip Brooks, CTitus Brown</div> <em>F1000Research</em> (2019-07-04) <a href="https://doi.org/gf9v84">https://doi.org/gf9v84</a> <div class="csl-block">DOI: <a href="https://doi.org/10.12688/f1000research.19675.1">10.12688/f1000research.19675.1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31508216">31508216</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6720031">PMC6720031</a></div></div>
 </div>
 <div id="ref-fCWtHkDP" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">17. </div><div class="csl-right-inline"><strong>Debiasing FracMinHash and deriving confidence intervals for mutation rates across a wide range of evolutionary distances</strong> <div class="csl-block">Mahmudur Rahman Hera, NTessa Pierce-Ward, David Koslicki</div> <em>Cold Spring Harbor Laboratory</em> (2022-01-12) <a href="https://doi.org/gn342h">https://doi.org/gn342h</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.11.475870">10.1101/2022.01.11.475870</a></div></div>
+<div class="csl-left-margin">22. </div><div class="csl-right-inline"><strong>Debiasing FracMinHash and deriving confidence intervals for mutation rates across a wide range of evolutionary distances</strong> <div class="csl-block">Mahmudur Rahman Hera, NTessa Pierce-Ward, David Koslicki</div> <em>Cold Spring Harbor Laboratory</em> (2022-01-12) <a href="https://doi.org/gn342h">https://doi.org/gn342h</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.01.11.475870">10.1101/2022.01.11.475870</a></div></div>
 </div>
 <div id="ref-1Anhy7wy0" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">18. </div><div class="csl-right-inline"><strong>Sustainable data analysis with Snakemake</strong> <div class="csl-block">Felix Mölder, Kim Philipp Jablonski, Brice Letcher, Michael B Hall, Christopher H Tomkins-Tinch, Vanessa Sochat, Jan Forster, Soohyun Lee, Sven O Twardziok, Alexander Kanitz, … Johannes Köster</div> <em>F1000Research</em> (2021-04-19) <a href="https://doi.org/gj76rq">https://doi.org/gj76rq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.12688/f1000research.29032.2">10.12688/f1000research.29032.2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34035898">34035898</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8114187">PMC8114187</a></div></div>
+<div class="csl-left-margin">23. </div><div class="csl-right-inline"><strong>Sustainable data analysis with Snakemake</strong> <div class="csl-block">Felix Mölder, Kim Philipp Jablonski, Brice Letcher, Michael B Hall, Christopher H Tomkins-Tinch, Vanessa Sochat, Jan Forster, Soohyun Lee, Sven O Twardziok, Alexander Kanitz, … Johannes Köster</div> <em>F1000Research</em> (2021-04-19) <a href="https://doi.org/gj76rq">https://doi.org/gj76rq</a> <div class="csl-block">DOI: <a href="https://doi.org/10.12688/f1000research.29032.2">10.12688/f1000research.29032.2</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/34035898">34035898</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8114187">PMC8114187</a></div></div>
 </div>
 <div id="ref-VsLophuT" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">19. </div><div class="csl-right-inline"><strong>Exploring neighborhoods in large metagenome assembly graphs using spacegraphcats reveals hidden sequence diversity</strong> <div class="csl-block">CTitus Brown, Dominik Moritz, Michael P O’Brien, Felix Reidl, Taylor Reiter, Blair D Sullivan</div> <em>Genome Biology</em> (2020-07-06) <a href="https://doi.org/d4bb">https://doi.org/d4bb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02066-4">10.1186/s13059-020-02066-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32631445">32631445</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7336657">PMC7336657</a></div></div>
+<div class="csl-left-margin">24. </div><div class="csl-right-inline"><strong>Exploring neighborhoods in large metagenome assembly graphs using spacegraphcats reveals hidden sequence diversity</strong> <div class="csl-block">CTitus Brown, Dominik Moritz, Michael P O’Brien, Felix Reidl, Taylor Reiter, Blair D Sullivan</div> <em>Genome Biology</em> (2020-07-06) <a href="https://doi.org/d4bb">https://doi.org/d4bb</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1186/s13059-020-02066-4">10.1186/s13059-020-02066-4</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/32631445">32631445</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7336657">PMC7336657</a></div></div>
 </div>
 <div id="ref-186WBs2Eo" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">20. </div><div class="csl-right-inline"><strong>Meta-analysis of metagenomes via machine learning and assembly graphs reveals strain switches in Crohn’s disease</strong> <div class="csl-block">Taylor E Reiter, Luiz Irber, Alicia A Gingrich, Dylan Haynes, NTessa Pierce-Ward, Phillip T Brooks, Yosuke Mizutani, Dominik Moritz, Felix Reidl, Amy D Willis, … CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-07-05) <a href="https://doi.org/gq5gt9">https://doi.org/gq5gt9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.06.30.498290">10.1101/2022.06.30.498290</a></div></div>
+<div class="csl-left-margin">25. </div><div class="csl-right-inline"><strong>Meta-analysis of metagenomes via machine learning and assembly graphs reveals strain switches in Crohn’s disease</strong> <div class="csl-block">Taylor E Reiter, Luiz Irber, Alicia A Gingrich, Dylan Haynes, NTessa Pierce-Ward, Phillip T Brooks, Yosuke Mizutani, Dominik Moritz, Felix Reidl, Amy D Willis, … CTitus Brown</div> <em>Cold Spring Harbor Laboratory</em> (2022-07-05) <a href="https://doi.org/gq5gt9">https://doi.org/gq5gt9</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1101/2022.06.30.498290">10.1101/2022.06.30.498290</a></div></div>
 </div>
 <div id="ref-f68KPOUX" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">21. </div><div class="csl-right-inline"><strong>Metabolic Capacity of the Antarctic Cyanobacterium Phormidium pseudopriestleyi That Sustains Oxygenic Photosynthesis in the Presence of Hydrogen Sulfide</strong> <div class="csl-block">Jessica E Lumian, Anne D Jungblut, Megan L Dillion, Ian Hawes, Peter T Doran, Tyler J Mackey, Gregory J Dick, Christen L Grettenberger, Dawn Y Sumner</div> <em>Genes</em> (2021-03-16) <a href="https://doi.org/gjmxx5">https://doi.org/gjmxx5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3390/genes12030426">10.3390/genes12030426</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33809699">33809699</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8002359">PMC8002359</a></div></div>
+<div class="csl-left-margin">26. </div><div class="csl-right-inline"><strong>Metabolic Capacity of the Antarctic Cyanobacterium Phormidium pseudopriestleyi That Sustains Oxygenic Photosynthesis in the Presence of Hydrogen Sulfide</strong> <div class="csl-block">Jessica E Lumian, Anne D Jungblut, Megan L Dillion, Ian Hawes, Peter T Doran, Tyler J Mackey, Gregory J Dick, Christen L Grettenberger, Dawn Y Sumner</div> <em>Genes</em> (2021-03-16) <a href="https://doi.org/gjmxx5">https://doi.org/gjmxx5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3390/genes12030426">10.3390/genes12030426</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/33809699">33809699</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8002359">PMC8002359</a></div></div>
 </div>
 </div>
 <!-- default theme -->

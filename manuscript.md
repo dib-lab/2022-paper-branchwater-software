@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/b483f0ee2e84b98538871bb8c21003d0428a9b6e/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@b483f0e](https://github.com/dib-lab/2022-paper-branchwater-software/tree/b483f0ee2e84b98538871bb8c21003d0428a9b6e)
+from [dib-lab/2022-paper-branchwater-software@dd58cd7](https://github.com/dib-lab/2022-paper-branchwater-software/tree/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c)
 on November 2, 2022.
 </em></small>
 
@@ -151,8 +151,9 @@ GB) and can be highly complex, with environmental samples containing
 genomic data that can be attributed to thousands or more species.  In
 the past decade, hundreds of thousands of new bacterial and archaeal
 genomes have been isolated from public metagenomes, and several
-entirely new branches of life have been discovered (large
-bacteriophage, hug et al, etc. XXX)
+entirely new branches of life have been discovered purely through
+analysis of public data
+[@doi:10.1038/s41587-020-0603-3; @doi:10.1038/nmicrobiol.2016.48; @doi:10.1038/s41586-020-2007-4].
 
 Beyond their initial use, these data sets form an incredibly rich
 resource for contextualizing novel sequencing data and for synthesis
@@ -175,13 +176,14 @@ However, search of unassembled sequence is critical to ensure unbiased
 and comprehensive recovery of relevant datasets.  Assembly techniques
 are designed to produce consensus reference sequences useful for
 consistent comparisons across genotypes, often collapsing sequence
-variation in the process (XXX 2007, awad paper).  In addition, reassembly and reanalysis of
-existing data using different parameters or newer methods often yields
-different results.  Content-based search of unassembled metagenomes
-can bypass these issues and facilitate consistent downstream analysis
-across data sets that may have been initially generated to answer a
-range of disparate biological questions, and been first analyzed over
-a range of years and with myriad techniques.
+variation in the process [@doi:10.1038/nmeth1043;@doi:10.1101/155358].
+In addition, reassembly and reanalysis of existing data using
+different parameters or newer methods often yields different results.
+Content-based search of unassembled metagenomes can bypass these
+issues and facilitate consistent downstream analysis across data sets
+that may have been initially generated to answer a range of disparate
+biological questions, and been first analyzed over a range of years
+and with myriad techniques.
 
 A number of approaches have been developed to enable content-based
 search of single-organism genomic and RNAseq data.  Methods that
@@ -323,7 +325,7 @@ pursued a purpose-built multithreaded solution instead.
 
 ## Methods {.page_break_before}
 
-XXX diagram
+<!-- XXX diagram -->
 
 <!-- *The Methods should include a subsection on Implementation describing
  how the tool works and any relevant technical details required for
@@ -371,7 +373,7 @@ Read Archive, as of March 2022. {#tbl:sra-types}
 
 <!-- CTB: rename program to branchwater? -->
 
-The `sra_search` program is built in Rust on top of the sourmash
+Branchwater program is built in Rust on top of the sourmash
 library for loading and comparing sketches. It implements the
 following steps:
 
@@ -395,32 +397,31 @@ storing them all in memory. The approach also takes advantage of the
 effective immutability of queries, which can be shared without
 data races by multiple processing threads.
 
-### Executing sra_search at the command line
+### Executing branchwater at the command line
 
-`sra_search` takes in search parameters as well as two text files, one
+branchwater takes in search parameters as well as two text files, one
 containing a list of query file paths and one containing a list of
 subject file paths. Upon execution, it reports the number of query
 sketches loaded and the number of subject file paths found, and then
 begins the search. It progressively reports the number of sketches
 searched in blocks of 10000, and outputs matches to a CSV File.
 
-We typically run `sra_search` in a snakemake workflow, which manages
+We typically run branchwater in a snakemake workflow, which manages
 environment variables and input/output files.
 
 ### Performance and scaling analysis
 
-Benchmarks TODO:
-
-* Do a benchmark of a complete query against all.
-* Biggest sketches are much slower.
-
-XXX make a table with 10k-normalized time and memory for entire catalog,
-largest 30%, and random sample.
-
-`sra_search` is largely I/O bound, with substantial input
-requirements; this is particularly clear from the YYY% slowdown from
-loading the 10,000 biggest sketches. 
-`sra_search` scales linearly in memory and time with queries and number of threads.
+In Tables @tbl:avg_bench and @tbl:catalog we show performance metrics
+for branchwater. Table @tbl:avg_bench contains average measurements
+and standard deviations for time, memory, and I/O, showing that
+branchwater is I/O and memory intensive. Table @tbl:catalog compares
+the runtimes and memory usage for a search the entire catalog
+(normalized to 10k samples) against both the random subsets in Table
+@tbl_avg_bench and the largest 10k sketches in the database. The
+increased memory usage of the catalog and especially the 10k largest
+metagenomes suggests that a relatively small number of metagenomes
+contributes the bulk of both time and memory usage to a full catalog
+search of branchwater.
 
 | metric | observed | 
 | -------- | -------- | 
@@ -438,7 +439,7 @@ Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 met
 
 Table: A comparison of database searches for the entire catalog of
 767k metagenomes, with time normalized to 10k, the average of the 10k
-subsets in Table @tbl:avg_bench, and the 10k largest metagenomses. {#tbl:catalog}
+subsets in Table @tbl:avg_bench, and the 10k largest metagenomes. {#tbl:catalog}
 
 ![**branchwater scales well with number of threads.** Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search.](images/basic_benchmarks.svg "basic benchmarking"){#fig:basic_bench}
 
@@ -460,11 +461,14 @@ specifically have been validated bioinformatically primarily by
 mapping reads (see [@gather; @lumian_biogeo]). This is discussed
 further below.
 
-### Sra_search is inexpensive and supports exploratory queries
+<!--
+### branchwater is inexpensive and supports exploratory queries
 
 CTB: Estimate cost of a run. Compare to serratus - cloud compute, data
 download. Serratus is probably cheaper than $20k now but still
 expensive.
+
+-->
 
 
 
@@ -543,8 +547,7 @@ We expect a broader range and more elaborate set of use cases to
 emerge as petabase scale search becomes more widely available. The low
 cost of search with branchwater is particularly enabling for
 exploratory efforts, although the sheer size of the underlying data
-needed even for branchwater continues to present obstacles. We are
-planning to focus on real-time API access to search methods XXX.
+needed even for branchwater continues to present obstacles.
 
 There are several scientific limitations of our approach to overcome
 as well. The current search approach has limited sensitivity to
@@ -573,7 +576,7 @@ Thresholds are typically chosen based on the use case and the observed
 distribution of the annotated metagenome type (`ScientificName` from
 the SRA Runinfo database). We have provided a simple script that
 imports the SRA metadata and summarizes the Branchwater results at the
-provided threshold (example output XXX).
+provided threshold. <!-- (example output XXX). -->
 
 After filtering, many paths can be taken. A plethora of general
 purpose bioinformatics tools exist for working with the data from
@@ -672,7 +675,7 @@ to ecological to technical (Table @tbl:bio-use-cases).
 
 All of the original data underlying the Branchwater database is
 available from the NCBI Sequence Read Archive. A current catalog of
-the SRA accessions is provided (here - XXX). The sketch collection is
+the SRA accessions is available at XXX. The sketch collection is
 7.5 TB and is available upon request.  All sourmash sketches are
 provided under Creative Commons Zero (CC0) - No Rights Reserved.
 
