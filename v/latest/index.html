@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c">dib-lab/2022-paper-branchwater-software@dd58cd7</a>
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/c14c50f25d457e2458571f47cc5a96954b1a017b">dib-lab/2022-paper-branchwater-software@c14c50f</a>
 on November 2, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -488,7 +488,7 @@ and standard deviations for time, memory, and I/O, showing that
 branchwater is I/O and memory intensive. Table <a href="#tbl:catalog">4</a> compares
 the runtimes and memory usage for a search the entire catalog
 (normalized to 10k samples) against both the random subsets in Table
-<span class="citation" data-cites="tbl_avg_bench">[<a href="#ref-tbl_avg_bench" role="doc-biblioref"><strong>tbl_avg_bench?</strong></a>]</span> and the largest 10k sketches in the database. The
+<a href="#tbl:avg_bench">3</a> and the largest 10k sketches in the database. The
 increased memory usage of the catalog and especially the 10k largest
 metagenomes suggests that a relatively small number of metagenomes
 contributes the bulk of both time and memory usage to a full catalog
@@ -522,7 +522,7 @@ search of branchwater.</p>
 <table id="tbl:catalog">
 <caption><span>Table 4:</span> A comparison of database searches for the entire catalog of
 767k metagenomes, with time normalized to 10k, the average of the 10k
-subsets in Table <a href="#tbl:avg_bench">3</a>, and the 10k largest metagenomes. </caption>
+subsets from Table <a href="#tbl:avg_bench">3</a>, and the 10k largest metagenomes. </caption>
 <thead>
 <tr class="header">
 <th>database</th>
@@ -570,9 +570,11 @@ data sets. This does not validate the matches beyond confirming the
 containment numbers, although sourmash provides additional information
 (e.g. estimated abundances) on top of the minimal information
 provided by branchwater. FracMinHash generally and Branchwater
-specifically have been validated bioinformatically primarily by
-mapping reads (see <span class="citation" data-cites="IadOz4ol uNh28jlz">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>). This is discussed
+specifically have been validated bioinformatically with read mapping
+(see <span class="citation" data-cites="IadOz4ol uNh28jlz">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>). This is discussed
 further below.</p>
+<!-- talk about detection more... ->
+
 <!--
 ### branchwater is inexpensive and supports exploratory queries
 
