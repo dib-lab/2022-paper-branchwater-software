@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@c14c50f](https://github.com/dib-lab/2022-paper-branchwater-software/tree/c14c50f25d457e2458571f47cc5a96954b1a017b)
+from [dib-lab/2022-paper-branchwater-software@1b3854b](https://github.com/dib-lab/2022-paper-branchwater-software/tree/1b3854baed46122986806f826da43ef220544b4e)
 on November 2, 2022.
 </em></small>
 
@@ -578,7 +578,22 @@ Thresholds are typically chosen based on the use case and the observed
 distribution of the annotated metagenome type (`ScientificName` from
 the SRA Runinfo database). We have provided a simple script that
 imports the SRA metadata and summarizes the Branchwater results at the
-provided threshold. <!-- (example output XXX). -->
+provided threshold; some example output is in Table @tbl:match_categories.
+
+| ScientificName         |   count of matches |
+|:-----------------------|-----------------:|
+| human gut metagenome   |            41089 |
+| gut metagenome         |             6933 |
+| metagenome             |             6144 |
+| human metagenome       |             4666 |
+| Homo sapiens           |             3141 |
+| feces metagenome       |             2261 |
+| wastewater metagenome  |             1279 |
+| mouse gut metagenome   |              191 |
+| human feces metagenome |              184 |
+| sediment metagenome    |              167 |
+
+Table: Output summary of `ScientificNames` from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. {#tbl:match_categories}
 
 After filtering, many paths can be taken. A plethora of general
 purpose bioinformatics tools exist for working with the data from

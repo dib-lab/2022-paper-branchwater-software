@@ -1075,7 +1075,7 @@
   },
   {
     "publisher": "Cold Spring Harbor Laboratory",
-    "abstract": "<jats:p>Cyanobacteria form diverse communities and are important primary producers in Antarctic freshwater environments, but their geographic distribution patterns in Antarctica and globally are still unresolved. There are however few genomes of cultured cyanobacteria from Antarctica available and therefore metagenome-assembled genomes (MAGs) from Antarctic cyanobacteria microbial mats provide an opportunity to explore distribution of uncultured taxa. These MAGs also allow comparison with metagenomes of cyanobacteria enriched communities from a range of habitats, geographic locations, and climates. However, most MAGs do not contain 16S rRNA gene sequences, making a 16S rRNA gene-based biogeography comparison difficult. An alternative technique is to use large-scale k-mer searching to find genomes of interest in public metagenomes. This paper presents the results of k-mer based searches for 5 Antarctic cyanobacteria MAGs from Lakes Fryxell and Lake Vanda, assigned the names Phormidium pseudopriestleyi, a Microcoleus, a Leptolyngbya, a Pseudanabaena, and a Neosynechococcus (Lumian et al., 2021, Lumian et al., 2022, in prep.) in 498,942 unassembled metagenomes from the National Center for Biotechnology Information (NCBI) Sequence Read Archive (SRA). The Microcoleus MAG was found in a wide variety of environments, P. pseudopriestleyi was found in environments with challenging conditions, the Neosynechococcus was only found in Antarctica, and the Leptolyngbya and Pseudanabaena MAGs were found in Antarctic and other cold environments. The findings based on metagenome matches and global comparisons suggest that these Antarctic cyanobacteria have distinct distribution patterns ranging from locally restricted to global distribution across the cold biosphere and other climatic zones.</jats:p>",
+    "abstract": "<jats:title>ABSTRACT</jats:title><jats:p>Cyanobacteria form diverse communities and are important primary producers in Antarctic freshwater environments, but their geographic distribution patterns in Antarctica and globally are still unresolved. There are however few genomes of cultured cyanobacteria from Antarctica available and therefore metagenome-assembled genomes (MAGs) from Antarctic cyanobacteria microbial mats provide an opportunity to explore distribution of uncultured taxa. These MAGs also allow comparison with metagenomes of cyanobacteria enriched communities from a range of habitats, geographic locations, and climates. However, most MAGs do not contain 16S rRNA gene sequences, making a 16S rRNA gene-based biogeography comparison difficult. An alternative technique is to use large-scale k-mer searching to find genomes of interest in public metagenomes.</jats:p><jats:p>This paper presents the results of k-mer based searches for 5 Antarctic cyanobacteria MAGs from Lakes Fryxell and Lake Vanda, assigned the names<jats:italic>Phormidium pseudopriestleyi</jats:italic>, a<jats:italic>Microcoleus</jats:italic>, a<jats:italic>Leptolyngbya</jats:italic>, a<jats:italic>Pseudanabaena</jats:italic>, and a<jats:italic>Neosynechococcus</jats:italic>(Lumian et al., 2021, Lumian et al., 2022, in prep.) in 498,942 unassembled metagenomes from the National Center for Biotechnology Information (NCBI) Sequence Read Archive (SRA). The<jats:italic>Microcoleus</jats:italic>MAG was found in a wide variety of environments,<jats:italic>P. pseudopriestleyi</jats:italic>was found in environments with challenging conditions, the<jats:italic>Neosynechococcus</jats:italic>was only found in Antarctica, and the<jats:italic>Leptolyngbya</jats:italic>and<jats:italic>Pseudanabaena</jats:italic>MAGs were found in Antarctic and other cold environments. The findings based on metagenome matches and global comparisons suggest that these Antarctic cyanobacteria have distinct distribution patterns ranging from locally restricted to global distribution across the cold biosphere and other climatic zones.</jats:p>",
     "DOI": "10.1101/2022.10.27.514113",
     "type": "manuscript",
     "source": "Crossref",
@@ -1094,7 +1094,7 @@
         "family": "Grettenberger"
       },
       {
-        "given": "Anne D",
+        "given": "Anne D.",
         "family": "Jungblut"
       },
       {
@@ -1572,7 +1572,7 @@
         [
           "2022",
           11,
-          1
+          2
         ]
       ]
     },

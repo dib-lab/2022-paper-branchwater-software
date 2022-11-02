@@ -6,14 +6,14 @@ archaeal
 bigsi
 biogeo
 biogeographical
-Biogeography
+biogeography
 bioinformatically
 bioinformatics
 bluegenes
 branchwater
 Bruijn
 CLI
-cmash
+CMash
 contig
 contigs
 cov
@@ -40,7 +40,7 @@ levele
 lossy
 Luiz
 luizirber
-lumian
+Lumian
 MBs
 mer
 mers
@@ -76,6 +76,7 @@ runtime
 runtimes
 saltyscientist
 scalable
+ScientificName
 searchsra
 Serratus
 snakemake
