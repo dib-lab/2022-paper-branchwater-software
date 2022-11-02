@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/1b3854baed46122986806f826da43ef220544b4e/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/c14c50f25d457e2458571f47cc5a96954b1a017b">dib-lab/2022-paper-branchwater-software@c14c50f</a>
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/1b3854baed46122986806f826da43ef220544b4e">dib-lab/2022-paper-branchwater-software@1b3854b</a>
 on November 2, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -674,7 +674,60 @@ cost beyond the minimal space required to save the results.</p>
 distribution of the annotated metagenome type (<code>ScientificName</code> from
 the SRA Runinfo database). We have provided a simple script that
 imports the SRA metadata and summarizes the Branchwater results at the
-provided threshold. <!-- (example output XXX). --></p>
+provided threshold; some example output is in Table <a href="#tbl:match_categories">5</a>.</p>
+<div id="tbl:match_categories" class="tablenos">
+<table id="tbl:match_categories">
+<caption><span>Table 5:</span> Output summary of <code>ScientificNames</code> from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. </caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ScientificName</th>
+<th style="text-align: right;">count of matches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">human gut metagenome</td>
+<td style="text-align: right;">41089</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">gut metagenome</td>
+<td style="text-align: right;">6933</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">metagenome</td>
+<td style="text-align: right;">6144</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">human metagenome</td>
+<td style="text-align: right;">4666</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Homo sapiens</td>
+<td style="text-align: right;">3141</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">feces metagenome</td>
+<td style="text-align: right;">2261</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">wastewater metagenome</td>
+<td style="text-align: right;">1279</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mouse gut metagenome</td>
+<td style="text-align: right;">191</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">human feces metagenome</td>
+<td style="text-align: right;">184</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sediment metagenome</td>
+<td style="text-align: right;">167</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>After filtering, many paths can be taken. A plethora of general
 purpose bioinformatics tools exist for working with the data from
 individual metagenomes.</p>
