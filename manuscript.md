@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@f83c624](https://github.com/dib-lab/2022-paper-branchwater-software/tree/f83c624cbdd915c3e7391ab8f5ca224135aeed3e)
+from [dib-lab/2022-paper-branchwater-software@416f277](https://github.com/dib-lab/2022-paper-branchwater-software/tree/416f277a23888da4b1169cb733f9bc6c7e8bd7c9)
 on November 2, 2022.
 </em></small>
 
@@ -409,6 +409,45 @@ searched in blocks of 10000, and outputs matches to a CSV File.
 We typically run branchwater in a snakemake workflow, which manages
 environment variables and input/output files.
 
+
+## Results {.page_break_before}
+
+### Example Branchwater search results
+
+To showcase the utility of Branchwater search, we searched a gut bacterium
+mixture against all indexed SRA metagenomes using a k-mer size of 31.
+Branchwater search is exhaustive: every query is searched against every
+search metagenome. Reporting resources are minimal: each match is reported
+as a single line in a CSV containing the query and match identities and the
+k-mer containment of the query in the match. As a result, we use a low default
+threshold, 0.01, which means that any metagenome that contains more than 1% of
+the k-mers in any query is reported.
+Branchwater search with this default threshold returned 192,699 metagenomes.
+We then filtered these results for metagenomes that contained at least 20% of
+query k-mers, retaining 66,705 metagenomes for further analysis.
+The summarized SRA metadata (@tbl:match_categories) provides some insight into
+the types of metagenomes recovered: the majority were annotated as "human gut
+metagenome" or "gut metagenome", with a smaller number of other gut-related
+categories, including "wastewater metagenome" and "mouse gut metagenome".
+Branchwater also reported 167 "sediment metagenome" samples, but
+upon further investigation, many of these originated from a transect study
+investigating the presence of microbes with distance from wastewater treatment.
+
+| ScientificName         |   count of matches |
+|:-----------------------|-----------------:|
+| human gut metagenome   |            41089 |
+| gut metagenome         |             6933 |
+| metagenome             |             6144 |
+| human metagenome       |             4666 |
+| Homo sapiens           |             3141 |
+| feces metagenome       |             2261 |
+| wastewater metagenome  |             1279 |
+| mouse gut metagenome   |              191 |
+| human feces metagenome |              184 |
+| sediment metagenome    |              167 |
+
+Table: Output summary of `ScientificNames` from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. We have provided a simple script that imports the SRA metadata and summarizes the Branchwater results at the provided threshold. {#tbl:match_categories}
+
 ### Performance and scaling analysis
 
 In Tables @tbl:avg_bench and @tbl:catalog we show performance metrics
@@ -471,9 +510,6 @@ download. Serratus is probably cheaper than $20k now but still
 expensive.
 
 -->
-
-
-
 
 ## Discussion {.page_break_before}
 
@@ -567,37 +603,17 @@ at which to filter results, (2) evaluating the overall results by type
 of metagenome retrieved, and (3) retrieving the data underlying the
 matches.
 
-The first analysis step taken is typically picking a more stringent
-threshold. The default Branchwater threshold is set to 0.01
-containment - any metagenome that contains more than 1% of the k-mers
-in any query is reported. This is done because searches are exhaustive
-- every query is searched against every subject - and so there is no extra
-cost beyond the minimal space required to save the results.
-
-Thresholds are typically chosen based on the use case and the observed
+As branchwater search is exhaustive, the first analysis step taken
+is typically picking a more stringent threshold. The number of metagenomes
+results is highly dependent on the query, ranging from dozens of results
+for organisms from understudied environments to tens or hundreds of
+thousands of results for organisms from well-sequenced environments,
+such as human gut search in (@tbl:match_categories). As a result,
+thresholds are typically chosen based on the use case and the observed
 distribution of the annotated metagenome type (`ScientificName` from
-the SRA Runinfo database). We have provided a simple script that
-imports the SRA metadata and summarizes the Branchwater results at the
-provided threshold; some example output is in Table @tbl:match_categories.
-
-| ScientificName         |   count of matches |
-|:-----------------------|-----------------:|
-| human gut metagenome   |            41089 |
-| gut metagenome         |             6933 |
-| metagenome             |             6144 |
-| human metagenome       |             4666 |
-| Homo sapiens           |             3141 |
-| feces metagenome       |             2261 |
-| wastewater metagenome  |             1279 |
-| mouse gut metagenome   |              191 |
-| human feces metagenome |              184 |
-| sediment metagenome    |              167 |
-
-Table: Output summary of `ScientificNames` from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. {#tbl:match_categories}
-
-After filtering, many paths can be taken. A plethora of general
-purpose bioinformatics tools exist for working with the data from
-individual metagenomes.
+the SRA Runinfo database). After filtering, many paths can be taken.
+A plethora of general purpose bioinformatics tools exist for working
+with the data from individual metagenomes.
 
 We have built two custom tools in concert with sourmash and
 branchwater, genome-grist and spacegraphcats.  Genome-grist performs

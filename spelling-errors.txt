@@ -13,7 +13,7 @@ bluegenes
 branchwater
 Bruijn
 CLI
-cmash
+CMash
 contig
 contigs
 cov
@@ -60,7 +60,7 @@ Pangenome
 pangenomes
 pathogenicity
 performant
-petabase
+Petabase
 petabases
 plasmids
 pneumoniae
@@ -82,7 +82,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-sra
+SRA
 ssbt
 SSD
 summarization
