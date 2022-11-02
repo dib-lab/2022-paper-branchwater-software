@@ -10,7 +10,7 @@ biogeography
 bioinformatically
 bioinformatics
 bluegenes
-branchwater
+Branchwater
 Bruijn
 CLI
 CMash
