@@ -209,10 +209,10 @@ content/04.methods.md:134:branchwater
 content/04.methods.md:134:Branchwater
 content/04.methods.md:134:FracMinHash
 content/04.methods.md:135:bioinformatically
-content/04.methods.md:140:branchwater
-content/04.methods.md:142:CTB
-content/04.methods.md:142:serratus
-content/04.methods.md:143:Serratus
+content/04.methods.md:142:branchwater
+content/04.methods.md:144:CTB
+content/04.methods.md:144:serratus
+content/04.methods.md:145:Serratus
 content/06.discussion.md:11:branchwater
 content/06.discussion.md:11:mer
 content/06.discussion.md:11:scalable

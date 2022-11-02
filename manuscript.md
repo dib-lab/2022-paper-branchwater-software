@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,9 +68,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/c14c50f25d457e2458571f47cc5a96954b1a017b/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@dd58cd7](https://github.com/dib-lab/2022-paper-branchwater-software/tree/dd58cd7e4590f5f758cfaadfbb23c0c41ae65b8c)
+from [dib-lab/2022-paper-branchwater-software@c14c50f](https://github.com/dib-lab/2022-paper-branchwater-software/tree/c14c50f25d457e2458571f47cc5a96954b1a017b)
 on November 2, 2022.
 </em></small>
 
@@ -417,7 +417,7 @@ and standard deviations for time, memory, and I/O, showing that
 branchwater is I/O and memory intensive. Table @tbl:catalog compares
 the runtimes and memory usage for a search the entire catalog
 (normalized to 10k samples) against both the random subsets in Table
-@tbl_avg_bench and the largest 10k sketches in the database. The
+@tbl:avg_bench and the largest 10k sketches in the database. The
 increased memory usage of the catalog and especially the 10k largest
 metagenomes suggests that a relatively small number of metagenomes
 contributes the bulk of both time and memory usage to a full catalog
@@ -439,7 +439,7 @@ Table: Time, memory, and I/O input for 5 runs of 1000 queries against 10,000 met
 
 Table: A comparison of database searches for the entire catalog of
 767k metagenomes, with time normalized to 10k, the average of the 10k
-subsets in Table @tbl:avg_bench, and the 10k largest metagenomes. {#tbl:catalog}
+subsets from Table @tbl:avg_bench, and the 10k largest metagenomes. {#tbl:catalog}
 
 ![**branchwater scales well with number of threads.** Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search.](images/basic_benchmarks.svg "basic benchmarking"){#fig:basic_bench}
 
@@ -457,9 +457,11 @@ data sets. This does not validate the matches beyond confirming the
 containment numbers, although sourmash provides additional information
 (e.g. estimated abundances) on top of the minimal information
 provided by branchwater.  FracMinHash generally and Branchwater
-specifically have been validated bioinformatically primarily by
-mapping reads (see [@gather; @lumian_biogeo]). This is discussed
+specifically have been validated bioinformatically with read mapping
+(see [@gather; @lumian_biogeo]). This is discussed
 further below.
+
+<!-- talk about detection more... ->
 
 <!--
 ### branchwater is inexpensive and supports exploratory queries

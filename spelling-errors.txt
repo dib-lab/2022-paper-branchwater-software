@@ -13,7 +13,7 @@ bluegenes
 branchwater
 Bruijn
 CLI
-CMash
+cmash
 contig
 contigs
 cov
@@ -40,12 +40,12 @@ levele
 lossy
 Luiz
 luizirber
-Lumian
+lumian
 MBs
 mer
 mers
 metagenome
-Metagenomes
+metagenomes
 metagenomic
 metagraph
 microbiome
@@ -81,7 +81,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-SRA
+sra
 ssbt
 SSD
 summarization
