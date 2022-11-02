@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/dib-lab/2022-paper-branchwater-software/tree/gh-pages) branch hosts the contents of this directory at <https://dib-lab.github.io/2022-paper-branchwater-software/>.
-The permalink for this webpage version is <https://dib-lab.github.io/2022-paper-branchwater-software/v/f83c624cbdd915c3e7391ab8f5ca224135aeed3e/>.
+The permalink for this webpage version is <https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://dib-lab.github.io/2022-paper-branchwater-software/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`f83c624cbdd915c3e7391ab8f5ca224135aeed3e`](https://github.com/dib-lab/2022-paper-branchwater-software/commit/f83c624cbdd915c3e7391ab8f5ca224135aeed3e).
+[`416f277a23888da4b1169cb733f9bc6c7e8bd7c9`](https://github.com/dib-lab/2022-paper-branchwater-software/commit/416f277a23888da4b1169cb733f9bc6c7e8bd7c9).
