@@ -6,7 +6,7 @@ archaeal
 bigsi
 biogeo
 biogeographical
-biogeography
+Biogeography
 bioinformatically
 bioinformatics
 bluegenes
@@ -40,7 +40,7 @@ levele
 lossy
 Luiz
 luizirber
-lumian
+Lumian
 MBs
 mer
 mers
@@ -60,7 +60,7 @@ Pangenome
 pangenomes
 pathogenicity
 performant
-Petabase
+petabase
 petabases
 plasmids
 pneumoniae
@@ -82,7 +82,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-SRA
+sra
 ssbt
 SSD
 summarization

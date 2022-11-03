@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-11-02'
+date-meta: '2022-11-03'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-11-02" />
-  <meta name="citation_publication_date" content="2022-11-02" />
+  <meta name="dc.date" content="2022-11-03" />
+  <meta name="citation_publication_date" content="2022-11-03" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/416f277a23888da4b1169cb733f9bc6c7e8bd7c9/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@416f277](https://github.com/dib-lab/2022-paper-branchwater-software/tree/416f277a23888da4b1169cb733f9bc6c7e8bd7c9)
-on November 2, 2022.
+from [dib-lab/2022-paper-branchwater-software@e900ac6](https://github.com/dib-lab/2022-paper-branchwater-software/tree/e900ac62225cf93a4f2cbb5682be5479767984f8)
+on November 3, 2022.
 </em></small>
 
 ## Authors
@@ -348,9 +348,14 @@ The resulting catalog contains 767,277 metagenome data sets as of
 March 2022, with the largest category annotated as human-associated microbiomes
 (Table @tbl:sra-types). The size of all sketches together is 7.5 TB,
 containing approximately 375 billion hashes per k-mer size,
-representing 375 trillion k-mers <!-- from ZZZ PB of original files CTB -->. The
+representing 375 trillion k-mers <!-- from ZZZ PB of original files CTB -->.
+There are 2.20 billion distinct hashes in this collection, representing
+approximately 2.20 trillion distinct k-mers.
+
+The
 average sketch file size is 9.7 MB, and the median file size is 570kb. The
 largest 10,000 data sets comprise 30% of the total sketch sizes.
+
 <!-- NTP question: how big is largest sketch? XXX -->
 
 | "Scientific Name" provided by submitter | distinct data sets |
@@ -373,7 +378,7 @@ Read Archive, as of March 2022. {#tbl:sra-types}
 
 <!-- CTB: rename program to branchwater? -->
 
-Branchwater program is built in Rust on top of the sourmash
+The branchwater program is built in Rust on top of the sourmash
 library for loading and comparing sketches. It implements the
 following steps:
 
@@ -425,7 +430,7 @@ the k-mers in any query is reported.
 Branchwater search with this default threshold returned 192,699 metagenomes.
 We then filtered these results for metagenomes that contained at least 20% of
 query k-mers, retaining 66,705 metagenomes for further analysis.
-The summarized SRA metadata (@tbl:match_categories) provides some insight into
+The summarized SRA metadata (Table @tbl:match_categories) provides some insight into
 the types of metagenomes recovered: the majority were annotated as "human gut
 metagenome" or "gut metagenome", with a smaller number of other gut-related
 categories, including "wastewater metagenome" and "mouse gut metagenome".
@@ -510,6 +515,7 @@ download. Serratus is probably cheaper than $20k now but still
 expensive.
 
 -->
+
 
 ## Discussion {.page_break_before}
 
