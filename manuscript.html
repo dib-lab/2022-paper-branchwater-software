@@ -7,7 +7,7 @@
   <meta name="author" content="Luiz Irber" />
   <meta name="author" content="N. Tessa Pierce-Ward" />
   <meta name="author" content="C. Titus Brown" />
-  <meta name="dcterms.date" content="2022-11-03" />
+  <meta name="dcterms.date" content="2022-11-04" />
   <meta name="keywords" content="sourmash" />
   <title>Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search</title>
   <style>
@@ -46,8 +46,8 @@
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-11-03" />
-  <meta name="citation_publication_date" content="2022-11-03" />
+  <meta name="dc.date" content="2022-11-04" />
+  <meta name="citation_publication_date" content="2022-11-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/e900ac62225cf93a4f2cbb5682be5479767984f8">dib-lab/2022-paper-branchwater-software@e900ac6</a>
-on November 3, 2022.
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/488aa370d79e6b9b46a1c616c1eee15c0792b810">dib-lab/2022-paper-branchwater-software@488aa37</a>
+on November 4, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -198,7 +198,7 @@ probabilistic data structures to reduce the effective search space
 <span class="citation" data-cites="DfZvKOpG 1C29pM7VV 1HpdDzfQX">[<a href="#ref-DfZvKOpG" role="doc-biblioref">7</a>,<a href="#ref-1C29pM7VV" role="doc-biblioref">8</a>,<a href="#ref-1HpdDzfQX" role="doc-biblioref">9</a>]</span>. However, these approaches do not readily
 translate to datasets with unknown levels of sequence diversity, the
 defining feature of metagenomic datasets.</p>
-<p>Recent Serratus used extensive search across public datasets to
+<p>Recently Serratus used extensive search across public datasets to
 recover 880,000 RNA-dependent RNA polymerase-containing sequences, and
 discovered over 131,000 novel RNA viruses <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">10</a>]</span>. This search
 was comprehensive but also time-consuming and costly, and still out of
@@ -220,7 +220,7 @@ explored with Branchwater: Viehweger et al. (2021) <span class="citation" data-
 Branchwater to discover a metagenomic sample containing <em>Klebsiella
 pneumonia</em> that was subsequently included in an outbreak analysis, and
 Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span> conducted a biogeographical
-study on five newly generated cyanobacterial genomes from Antarctic
+study on five newly generated cyanobacterial metagenome-assembled genomes from Antarctic
 samples.</p>
 <div id="tbl:bio-use-cases" class="tablenos">
 <table id="tbl:bio-use-cases">
@@ -250,7 +250,7 @@ samples.</p>
 </tr>
 <tr class="odd">
 <td>Pangenome expansion</td>
-<td>Expand and explore composition of strains, species and genus levele pangenomes (including SAGs and MAGs)</td>
+<td>Expand and explore composition of strains, species and genus level pangenomes (including SAGs and MAGs)</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
@@ -764,7 +764,7 @@ metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation
 <span class="citation" data-cites="VsLophuT">[<a href="#ref-VsLophuT" role="doc-biblioref">24</a>]</span>. It was used to retrieve putative accessory elements
 from sourmash matches in Reiter et al. (2022) <span class="citation" data-cites="186WBs2Eo">[<a href="#ref-186WBs2Eo" role="doc-biblioref">25</a>]</span> and Lumian
-et al. (2022) <span class="citation" data-cites="f68KPOUX">[<a href="#ref-f68KPOUX" role="doc-biblioref">26</a>]</span>. It is much heavier weight than
+et al. (2021) <span class="citation" data-cites="f68KPOUX">[<a href="#ref-f68KPOUX" role="doc-biblioref">26</a>]</span>. It is much heavier weight than
 genome-grist because it relies on a compact De Bruijn graph, which is
 expensive to build for very rich or diverse metagenomes.</p>
 <h3 id="design-alternatives-to-the-current-branchwater-implementation">Design alternatives to the current branchwater implementation</h3>

@@ -62,10 +62,10 @@ content/02.introduction.md:83:metagenomic
 content/02.introduction.md:85:biogeographical
 content/02.introduction.md:85:Lumian
 content/02.introduction.md:86:cyanobacterial
+content/02.introduction.md:86:metagenome
 content/02.introduction.md:89:branchwater
 content/02.introduction.md:91:biogeographical
 content/02.introduction.md:91:Biogeography
-content/02.introduction.md:93:levele
 content/02.introduction.md:93:Pangenome
 content/02.introduction.md:93:pangenomes
 content/02.introduction.md:94:metagenomes

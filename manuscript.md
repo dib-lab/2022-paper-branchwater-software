@@ -3,7 +3,7 @@ title: Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search
 keywords:
 - sourmash
 lang: en-US
-date-meta: '2022-11-03'
+date-meta: '2022-11-04'
 author-meta:
 - Luiz Irber
 - N. Tessa Pierce-Ward
@@ -18,8 +18,8 @@ header-includes: |-
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-11-03" />
-  <meta name="citation_publication_date" content="2022-11-03" />
+  <meta name="dc.date" content="2022-11-04" />
+  <meta name="citation_publication_date" content="2022-11-04" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -44,9 +44,9 @@ header-includes: |-
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -68,10 +68,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/e900ac62225cf93a4f2cbb5682be5479767984f8/))
+([permalink](https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/))
 was automatically generated
-from [dib-lab/2022-paper-branchwater-software@e900ac6](https://github.com/dib-lab/2022-paper-branchwater-software/tree/e900ac62225cf93a4f2cbb5682be5479767984f8)
-on November 3, 2022.
+from [dib-lab/2022-paper-branchwater-software@488aa37](https://github.com/dib-lab/2022-paper-branchwater-software/tree/488aa370d79e6b9b46a1c616c1eee15c0792b810)
+on November 4, 2022.
 </em></small>
 
 ## Authors
@@ -194,7 +194,7 @@ probabilistic data structures to reduce the effective search space
 translate to datasets with unknown levels of sequence diversity, the
 defining feature of metagenomic datasets.
 
-Recent Serratus used extensive search across public datasets to
+Recently Serratus used extensive search across public datasets to
 recover 880,000 RNA-dependent RNA polymerase-containing sequences, and
 discovered over 131,000 novel RNA viruses [@serratus].  This search
 was comprehensive but also time-consuming and costly, and still out of
@@ -219,14 +219,14 @@ explored with Branchwater: Viehweger et al. (2021) [@viehweger] used
 Branchwater to discover a metagenomic sample containing *Klebsiella
 pneumonia* that was subsequently included in an outbreak analysis, and
 Lumian et al. (2022) [@lumian_biogeo] conducted a biogeographical
-study on five newly generated cyanobacterial genomes from Antarctic
+study on five newly generated cyanobacterial metagenome-assembled genomes from Antarctic
 samples.
 
 | Use case | Description | Enabled by branchwater |
 | -------- | -------- | -------- |
 | Biogeography of genomes     | Describe and characterize biogeographical distribution of species; identify sampling locations     | Yes     |
 | Outbreak tracking | Trace pathogen spread via public data | Yes, for genomes > 10kb |
-| Pangenome expansion | Expand and explore composition of strains, species and genus levele pangenomes (including SAGs and MAGs) | Yes |
+| Pangenome expansion | Expand and explore composition of strains, species and genus level pangenomes (including SAGs and MAGs) | Yes |
 | SRA metadata reannotation | Content-based validation and reannotation of SRA metagenomes | Yes |
 | Private database access and search | Provide privacy-enabled search of large, access-restricted databases | Yes |
 | Post-processing and cleaning MAGs | Evaluating contig-level presence and abundance across multiple metagenomes | Yes, for contigs > 10kb |
@@ -635,7 +635,7 @@ metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation
 [@spacegraphcats]. It was used to retrieve putative accessory elements
 from sourmash matches in Reiter et al. (2022) [@reiter_ibd] and Lumian
-et al. (2022) [@lumian_phormidium]. It is much heavier weight than
+et al. (2021) [@lumian_phormidium]. It is much heavier weight than
 genome-grist because it relies on a compact De Bruijn graph, which is
 expensive to build for very rich or diverse metagenomes.
 

@@ -36,11 +36,10 @@ Irber
 Jaccard
 JSON
 Klebsiella
-levele
 lossy
 Luiz
 luizirber
-Lumian
+lumian
 MBs
 mer
 mers
@@ -60,7 +59,7 @@ Pangenome
 pangenomes
 pathogenicity
 performant
-petabase
+Petabase
 petabases
 plasmids
 pneumoniae
@@ -82,7 +81,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-sra
+SRA
 ssbt
 SSD
 summarization
