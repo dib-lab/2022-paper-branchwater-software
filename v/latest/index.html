@@ -7,7 +7,7 @@
   <meta name="author" content="Luiz Irber" />
   <meta name="author" content="N. Tessa Pierce-Ward" />
   <meta name="author" content="C. Titus Brown" />
-  <meta name="dcterms.date" content="2022-11-04" />
+  <meta name="dcterms.date" content="2022-11-10" />
   <meta name="keywords" content="sourmash" />
   <title>Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search</title>
   <style>
@@ -46,8 +46,8 @@
   <meta name="citation_title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="og:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
   <meta property="twitter:title" content="Sourmash Branchwater Enables Lightweight Petabyte-Scale Sequence Search" />
-  <meta name="dc.date" content="2022-11-04" />
-  <meta name="citation_publication_date" content="2022-11-04" />
+  <meta name="dc.date" content="2022-11-10" />
+  <meta name="citation_publication_date" content="2022-11-10" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -72,9 +72,9 @@
   <meta name="citation_fulltext_html_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/" />
   <meta name="citation_pdf_url" content="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://dib-lab.github.io/2022-paper-branchwater-software/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
-  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/" />
-  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://dib-lab.github.io/2022-paper-branchwater-software/v/55424904de3d830e971dbd96ed2a2b8c31ec102d/" />
+  <meta name="manubot_html_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/55424904de3d830e971dbd96ed2a2b8c31ec102d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://dib-lab.github.io/2022-paper-branchwater-software/v/55424904de3d830e971dbd96ed2a2b8c31ec102d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -91,10 +91,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/488aa370d79e6b9b46a1c616c1eee15c0792b810/">permalink</a>)
+(<a href="https://dib-lab.github.io/2022-paper-branchwater-software/v/55424904de3d830e971dbd96ed2a2b8c31ec102d/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/488aa370d79e6b9b46a1c616c1eee15c0792b810">dib-lab/2022-paper-branchwater-software@488aa37</a>
-on November 4, 2022.
+from <a href="https://github.com/dib-lab/2022-paper-branchwater-software/tree/55424904de3d830e971dbd96ed2a2b8c31ec102d">dib-lab/2022-paper-branchwater-software@5542490</a>
+on November 10, 2022.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -161,7 +161,12 @@ the past decade, hundreds of thousands of new bacterial and archaeal
 genomes have been isolated from public metagenomes, and several
 entirely new branches of life have been discovered purely through
 analysis of public data
-<span class="citation" data-cites="x94unSVP g228aulb aN8nTk2A">[<a href="#ref-x94unSVP" role="doc-biblioref">2</a>,<a href="#ref-g228aulb" role="doc-biblioref">3</a>,<a href="#ref-aN8nTk2A" role="doc-biblioref">4</a>]</span>.</p>
+<span class="citation" data-cites="x94unSVP g228aulb aN8nTk2A">[<a href="#ref-x94unSVP" role="doc-biblioref">2</a>,<a href="#ref-g228aulb" role="doc-biblioref">3</a>,<a href="#ref-aN8nTk2A" role="doc-biblioref">4</a>]</span>.
+<!-- CTB: add refs to various papers:
+
+Biogeography of human-health associated butyrate-producing bacteria
+https://www.biorxiv.org/content/10.1101/2022.10.07.510278v1.full
+--></p>
 <p>Beyond their initial use, these data sets form an incredibly rich
 resource for contextualizing novel sequencing data and for synthesis
 research on a myriad of large-scale genomic questions ranging from
@@ -176,20 +181,21 @@ incomplete or inconsistent, rendering systematic data set discovery
 intractable.</p>
 <p>Content-based search is a promising alternative strategy for finding
 data sets in archives. By searching with genomic content of interest,
-content-based search can recover datasets containing relevant species
-or genes of interest regardless of their associated metadata.
-However, search of unassembled sequence is critical to ensure unbiased
-and comprehensive recovery of relevant datasets. Assembly techniques
-are designed to produce consensus reference sequences useful for
-consistent comparisons across genotypes, often collapsing sequence
-variation in the process <span class="citation" data-cites="EZWCo053 18UKYqh4i">[<a href="#ref-EZWCo053" role="doc-biblioref">5</a>,<a href="#ref-18UKYqh4i" role="doc-biblioref">6</a>]</span>.
-In addition, reassembly and reanalysis of existing data using
-different parameters or newer methods often yields different results.
-Content-based search of unassembled metagenomes can bypass these
-issues and facilitate consistent downstream analysis across data sets
-that may have been initially generated to answer a range of disparate
-biological questions, and been first analyzed over a range of years
-and with myriad techniques.</p>
+content-based search of metagenomes can recover datasets containing
+relevant species or genes of interest regardless of their associated
+metadata. However, search of <em>unassembled</em> metagenomic sequence is critical to
+ensure unbiased and comprehensive recovery of relevant datasets.
+Assembly techniques are designed to produce consensus reference
+sequences useful for consistent comparisons across genotypes, often
+collapsing sequence variation in the process
+<span class="citation" data-cites="EZWCo053 18UKYqh4i">[<a href="#ref-EZWCo053" role="doc-biblioref">5</a>,<a href="#ref-18UKYqh4i" role="doc-biblioref">6</a>]</span>. In addition, reassembly
+and reanalysis of existing data using different parameters or newer
+methods often yields different results. Content-based search of
+unassembled metagenomes can bypass these issues and facilitate
+consistent downstream analysis across data sets that may have been
+initially generated to answer a range of disparate biological
+questions, and been first analyzed over a range of years and with
+myriad techniques.</p>
 <p>A number of approaches have been developed to enable content-based
 search of single-organism genomic and RNAseq data. Methods that
 enable rapid, large-scale search across hundreds of thousands of data
@@ -206,18 +212,21 @@ reach for unfunded exploratory research. Other approaches such as
 searchsra.org <span class="citation" data-cites="1BYIMl6bC">[<a href="#ref-1BYIMl6bC" role="doc-biblioref">11</a>]</span> and metagraph <span class="citation" data-cites="JAROV9W7">[<a href="#ref-JAROV9W7" role="doc-biblioref">12</a>]</span> are promising
 but are not yet capable of searching all public data.</p>
 <!-- add https://www.biorxiv.org/content/10.1101/2022.10.07.510278v1.full at some point -->
-<p>Here, we introduce Branchwater, a petabase-scale querying system that
-uses containment searches based on FracMinHash sketching to search all
-public metagenome data sets in the SRA in 24-36 hours on
-commodity hardware with 1-1000 query genomes. Branchwater uses the
-Rust library underlying the sourmash implementation of FracMinHash to
-execute massively parallel searches of a presketched digest of the
-SRA <span class="citation" data-cites="ExvjTLL3 IadOz4ol">[<a href="#ref-ExvjTLL3" role="doc-biblioref">13</a>,<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>.</p>
+<p>Here, we introduce branchwater, a petabase-scale querying system that
+uses containment searches based on FracMinHash sketching to search
+unassembled data sets. Branchwater can search all public metagenome
+data sets in the SRA in 24-36 hours on commodity hardware with 1-1000
+query genomes. Branchwater uses the Rust library underlying the
+sourmash implementation of FracMinHash to execute massively parallel
+searches of a presketched digest of the SRA <span class="citation" data-cites="ExvjTLL3 IadOz4ol">[<a href="#ref-ExvjTLL3" role="doc-biblioref">13</a>,<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>.</p>
+<!--
+FIGURE
+-->
 <p>The availability of relatively lightweight content-based search of SRA
 metagenomes helps address many of the biological use cases in Table
 <a href="#tbl:bio-use-cases">1</a> (see 3rd column). Some of these use cases have already been
-explored with Branchwater: Viehweger et al. (2021) <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">15</a>]</span> used
-Branchwater to discover a metagenomic sample containing <em>Klebsiella
+explored with branchwater: Viehweger et al. (2021) <span class="citation" data-cites="cEbYrZXG">[<a href="#ref-cEbYrZXG" role="doc-biblioref">15</a>]</span> used
+branchwater to discover a metagenomic sample containing <em>Klebsiella
 pneumonia</em> that was subsequently included in an outbreak analysis, and
 Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span> conducted a biogeographical
 study on five newly generated cyanobacterial metagenome-assembled genomes from Antarctic
@@ -310,7 +319,8 @@ Thoughts and questions:
 CTB NOTE: Small viral pangenome query comment/Luiz. Association studies.
 
 -->
-<h2 class="page_break_before" id="background-fracminhash-and-sourmash">Background: FracMinHash and sourmash</h2>
+<h2 id="background">Background</h2>
+<h3 class="page_break_before" id="fracminhash-and-sourmash">FracMinHash and sourmash</h3>
 <p>FracMinHash is a bottom-sketch version of ModHash that supports
 accurate estimation of overlap and containment between two sequencing
 sets <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>. In brief, FracMinHash is a lossy compression approach
@@ -326,8 +336,8 @@ FracMinHash does not require the original data sets
 essentially unbounded in size, since they can grow to
 include up to <span class="math inline">\(H/S\)</span> elements for a hash space <span class="math inline">\(H\)</span> in size.</p>
 <p>The open-source sourmash software provides a mature and
-well-documented command-line interface to FracMinHash, along with
-Python and Rust APIs for loading and using FracMinHash sketches
+well-documented command-line interface to FracMinHash sketching, along with
+Python and Rust APIs for saving, loading and comparing FracMinHash sketches
 <span class="citation" data-cites="ExvjTLL3 ART4gJKs">[<a href="#ref-ExvjTLL3" role="doc-biblioref">13</a>,<a href="#ref-ART4gJKs" role="doc-biblioref">21</a>]</span>. The Python layer provides a larger
 number of user experience conveniences on top of the performant Rust
 layer. However, despite the thread safety of the underlying Rust code,
@@ -345,7 +355,7 @@ be found; based on k-mer containment to ANI conversion
 <span class="citation" data-cites="fCWtHkDP">[<a href="#ref-fCWtHkDP" role="doc-biblioref">22</a>]</span>, we find that sourmash defaults work well for
 finding matches to genomes within about 90% ANI of the query, but not
 necessarily further. Finally, FracMinHash was developed for shotgun
-data sets and different parameters would be required for targeted
+data sets and different parameters would be required for other types of
 sequencing data such as amplicon data sets. Some of these limitations
 are intrinsic to FracMinHash, and others may be overcome in the future
 by parameter tuning and further research.</p>
@@ -360,17 +370,17 @@ single thread on an SSD laptop; more complex algorithms such as the
 min-set-cov approach described in <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span> can take a few hours but are still
 acceptably performant on most real-world data.</p>
 <p>Branchwater faces very different challenges in searching large
-collections of <em>metagenomes</em>. Many of these data sets are extremely
-large, slow to read from disk, and individually require substantial
-memory to load. Where multiple queries are used to search each
-metagenome, quadratic search costs will also be incurred.</p>
+collections of <em>metagenomes</em>. Many of these data sets are individually
+extremely large, and hence slow to read from disk and expensive to
+store in memory. Where multiple queries are used to search each
+metagenome, quadratic search costs are also be incurred.</p>
 <p>One solution we explored was a scatter-gather approach based on
 a cluster-aware workflow engine (in this case, snakemake
 <span class="citation" data-cites="1Anhy7wy0">[<a href="#ref-1Anhy7wy0" role="doc-biblioref">23</a>]</span>). The overhead on workflow coordination and executing
 shell commands was prohibitive for our initial implementation, so we
 pursued a purpose-built multithreaded solution instead.</p>
 <h2 class="page_break_before" id="methods">Methods</h2>
-<!-- XXX diagram -->
+<!-- CTB diagram -->
 <!-- *The Methods should include a subsection on Implementation describing
  how the tool works and any relevant technical details required for
  implementation; and a subsection on Operation, which should include
@@ -382,18 +392,18 @@ metagenomic via the query string <code>"METAGENOMIC"[Source] NOT amplicon[All Fi
 https://www.ncbi.nlm.nih.gov/sra. We then downloaded all runs for all
 accessions and streamed them into <code>sourmash sketch dna</code> with
 parameters <code>-p k=21,31,51,scaled=1000,abund</code>. The output sourmash
-signature files were saved as individual gzipped JSON files (each
-containing 3 sketches), one file for each input run.</p>
+signature files were saved as individual gzipped JSON files -
+one file for each input data set, each containing 3 sketches.</p>
 <p>The resulting catalog contains 767,277 metagenome data sets as of
 March 2022, with the largest category annotated as human-associated microbiomes
 (Table <a href="#tbl:sra-types">2</a>). The size of all sketches together is 7.5 TB,
-containing approximately 375 billion hashes per k-mer size,
+containing approximately 375 billion hashes per k-mer size and
 representing 375 trillion k-mers <!-- from ZZZ PB of original files CTB -->.
 There are 2.20 billion distinct hashes in this collection, representing
 approximately 2.20 trillion distinct k-mers.</p>
 <p>The
 average sketch file size is 9.7 MB, and the median file size is 570kb. The
-largest 10,000 data sets comprise 30% of the total sketch sizes.</p>
+largest 10,000 data sets comprise 30% of the total catalog size.</p>
 <!-- NTP question: how big is largest sketch? XXX -->
 <div id="tbl:sra-types" class="tablenos">
 <table id="tbl:sra-types">
@@ -453,7 +463,7 @@ Read Archive, as of March 2022. </caption>
 <!-- CTB: rename program to branchwater? -->
 <p>The branchwater program is built in Rust on top of the sourmash
 library for loading and comparing sketches. It implements the
-following steps:</p>
+following steps: <!-- CTB figure? --></p>
 <ol type="1">
 <li>Loads all query sketches into memory from a list of files.</li>
 <li>Loads the list of filenames containing subject sketches to search.</li>
@@ -485,13 +495,14 @@ searched in blocks of 10000, and outputs matches to a CSV File.</p>
 <p>We typically run branchwater in a snakemake workflow, which manages
 environment variables and input/output files.</p>
 <h2 class="page_break_before" id="results">Results</h2>
-<h3 id="example-branchwater-search-results">Example Branchwater search results</h3>
-<p>To showcase the utility of Branchwater search, we searched a gut bacterium
+<h3 id="example-branchwater-search-results">Example branchwater search results</h3>
+<!-- CTB redo with different query -->
+<p>To showcase the utility of branchwater search, we searched a gut bacterium
 mixture against all indexed SRA metagenomes using a k-mer size of 31.
 Branchwater search is exhaustive: every query is searched against every
-search metagenome. Reporting resources are minimal: each match is reported
+subject metagenome. Reporting is minimal: each match is reported
 as a single line in a CSV containing the query and match identities and the
-k-mer containment of the query in the match. As a result, we use a low default
+k-mer containment of the query in the match. As a result, we typically use a low default
 threshold, 0.01, which means that any metagenome that contains more than 1% of
 the k-mers in any query is reported.
 Branchwater search with this default threshold returned 192,699 metagenomes.
@@ -501,12 +512,12 @@ The summarized SRA metadata (Table <a href="#tbl:match_categories">3</a>) provid
 the types of metagenomes recovered: the majority were annotated as “human gut
 metagenome” or “gut metagenome”, with a smaller number of other gut-related
 categories, including “wastewater metagenome” and “mouse gut metagenome”.
-Branchwater also reported 167 “sediment metagenome” samples, but
+Branchwater also reported 167 “sediment metagenome” samples, and
 upon further investigation, many of these originated from a transect study
-investigating the presence of microbes with distance from wastewater treatment.</p>
+investigating the presence of microbes near a wastewater treatment plant.</p>
 <div id="tbl:match_categories" class="tablenos">
 <table id="tbl:match_categories">
-<caption><span>Table 3:</span> Output summary of <code>ScientificNames</code> from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. We have provided a simple script that imports the SRA metadata and summarizes the Branchwater results at the provided threshold. </caption>
+<caption><span>Table 3:</span> Output summary of <code>ScientificNames</code> from metagenome annotations in the Sequence Read Archive for a gut bacterium search mixture. We have provided a simple script that imports the SRA metadata and summarizes the branchwater results at the provided threshold. </caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">ScientificName</th>
@@ -562,8 +573,8 @@ investigating the presence of microbes with distance from wastewater treatment.<
 for branchwater. Table <a href="#tbl:avg_bench">4</a> contains average measurements
 and standard deviations for time, memory, and I/O, showing that
 branchwater is I/O and memory intensive. Table <a href="#tbl:catalog">5</a> compares
-the runtimes and memory usage for a search the entire catalog
-(normalized to 10k samples) against both the random subsets in Table
+the runtimes and memory usage for a search of the entire catalog
+(normalized to 10k samples) with both the random subsets in Table
 <a href="#tbl:avg_bench">4</a> and the largest 10k sketches in the database. The
 increased memory usage of the catalog and especially the 10k largest
 metagenomes suggests that a relatively small number of metagenomes
@@ -597,7 +608,7 @@ search of branchwater.</p>
 <div id="tbl:catalog" class="tablenos">
 <table id="tbl:catalog">
 <caption><span>Table 5:</span> A comparison of database searches for the entire catalog of
-767k metagenomes, with time normalized to 10k, the average of the 10k
+767k metagenomes, with time normalized to 10k (*), the average of the 10k
 subsets from Table <a href="#tbl:avg_bench">4</a>, and the 10k largest metagenomes. </caption>
 <thead>
 <tr class="header">
@@ -627,28 +638,36 @@ subsets from Table <a href="#tbl:avg_bench">4</a>, and the 10k largest metagenom
 </div>
 <div id="fig:basic_bench" class="fignos">
 <figure>
-<img src="images/basic_benchmarks.svg" alt="Figure 1: branchwater scales well with number of threads. Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search." />
-<figcaption aria-hidden="true"><span>Figure 1:</span> <strong>branchwater scales well with number of threads.</strong> Processing time drops linearly with number of threads, while total compute stays approximately the same and memory usage increases linearly with number of threads as each thread loads a subject to search.</figcaption>
+<img src="images/basic_benchmarks.svg" alt="Figure 1: branchwater scales well with number of threads. Processing time drops linearly with number of threads, while total compute stays approximately constant. Memory usage increases linearly with number of threads because each thread independently loads subject data sets to to search." />
+<figcaption aria-hidden="true"><span>Figure 1:</span> <strong>branchwater scales well with number of threads.</strong> Processing time drops linearly with number of threads, while total compute stays approximately constant. Memory usage increases linearly with number of threads because each thread independently loads subject data sets to to search.</figcaption>
 </figure>
 </div>
-<!-- CTB: should note that one thread is used exclusively for writing to CSV. -->
+<!-- CTB: should note that one thread is used exclusively for writing to CSV.
+
+also why is Figure 1 like that?
+add "time" to header of middle figure.
+do more replicates?
+
+-->
 <div id="fig:basic_scaling" class="fignos">
 <figure>
 <img src="images/subsample_benchmarks.svg" alt="Figure 2: branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime. Processing time increases slowly with number of query genomes used to search, because they are held in memory and fast to compare. Processing time increases quickly with number of subject metagenomes being searched, because they are large and slow to load and search." />
 <figcaption aria-hidden="true"><span>Figure 2:</span> <strong>branchwater scales linearly with number of queries and subjects, but number of subjects dominates runtime.</strong> Processing time increases slowly with number of query genomes used to search, because they are held in memory and fast to compare. Processing time increases quickly with number of subject metagenomes being searched, because they are large and slow to load and search.</figcaption>
 </figure>
 </div>
+<!-- add 1000, 10000 here -->
 <p>See https://github.com/dib-lab/2022-branchwater-benchmarking for
 number processing and figure generating notebooks.</p>
+<!-- CTB zenodo -->
 <h3 id="post-search-validation">Post-search validation</h3>
 <p>The sourmash CLI can be used to explore k-mer matches for individual
 data sets. This does not validate the matches beyond confirming the
 containment numbers, although sourmash provides additional information
 (e.g. estimated abundances) on top of the minimal information
-provided by branchwater. FracMinHash generally and Branchwater
+provided by branchwater. FracMinHash generally and branchwater
 specifically have been validated bioinformatically with read mapping
 (see <span class="citation" data-cites="IadOz4ol uNh28jlz">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>,<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>). This is discussed
-further below.</p>
+in more below.</p>
 <!-- talk about detection more... ->
 
 <!--
@@ -665,27 +684,19 @@ is an open problem, and approaches that work for smaller collections
 rarely scale well, even for current database sizes. New methods that
 take advantage of specific particularities of the query and desired
 answer can help bridge the gap between more general methods by
-allowing filtering large databases, resulting in more manageable
-subsets that can be used efficiently with current methods.</p>
+allowing filtering of large databases, resulting in more manageable
+subsets that can be used efficiently with current in depth analysis methods.</p>
 <p>K-mer search via sourmash branchwater is a lightweight, scalable
 approach to content-based search of petabase-scale collections of
 sequencing data. Branchwater is designed to recover data sets
-with high nucleotide similarity to the query sequence (&gt;90% ANI)
+with high nucleotide similarity to the query sequence (&gt;= 90% ANI)
 across the Sequence Read Archive using computational resources
-available to many researchers. As this approach enables content-based
+readily available to many researchers. As this approach enables content-based
 search across petabases of sequence data, we anticipate it will be
 most useful for filtering large databases to generate a manageable
 subset of relevant data sets that can be analyzed in detail using other
 tools.</p>
-<p>Despite its utility, branchwater search has limitations, some of which
-are intrinsic to the approach, and some of which can be overcome with
-improved database storage and search design. First, branchwater
-search relies upon exact matching of long nucleotide k-mers, which
-work best for sequences with high sequence identity (90%+ ANI),
-particularly when combined with thresholding used for fast search.
-Approaches using alignment-based techniques may be more useful for
-detecting similarity across larger evolutionary distances <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">10</a>]</span>.
-Lumian et al. (2022) validated branchwater results by downloading
+<p>Lumian et al. (2022) validated branchwater results by downloading
 matching Illumina metagenomes above a specific containment threshold
 and mapping the reads back to the query genomes to evaluate both
 mapping detection and effective coverage. In all but one case,
@@ -694,11 +705,19 @@ detection - in some cases significantly so. This was also seen with a
 a smaller set of samples in Irber et al., 2022 <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>, and is
 likely because mapping-based approaches can tolerate mismatches, while
 k-mer based approaches require exact mismatches.</p>
+<p>While demonstrably useful, branchwater search has limitations, some of
+which are intrinsic to the approach, and some of which can be overcome
+with improved database storage and search design. First, branchwater
+search relies upon exact matching of long nucleotide k-mers, which
+work best for sequences with high sequence identity (90%+ ANI),
+particularly when combined with thresholding used for fast search.
+Approaches using alignment-based techniques may be more useful for
+detecting similarity across larger evolutionary distances <span class="citation" data-cites="13FFUe3m">[<a href="#ref-13FFUe3m" role="doc-biblioref">10</a>]</span>.</p>
 <p>Second, as designed, branchwater cannot robustly detect sequence
 similarity for data sets under 10kb in size. This limit is related to
 the scaling approach used to reduce the effective search space and
 enable petabase-scale search. Branchwater leverages FracMinHash
-sketching to build a reduced representation of each data set, which
+sketching to build a compressed representation of each data set, which
 enables direct and accurate sequence similarity and containment
 comparisons without needing to access the original sequencing reads.
 Because only a fraction of the original data needs to be stored,
@@ -706,13 +725,23 @@ FracMinHash sketches are good basic components in the implementation
 of systems that allow searching large collections of datasets.
 However, this approach comes with some detection limitations. Robust
 detection requires a minimum overlap of 2-3 hashes <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span>. With the
-scaling used in branchwater, this represents approximately 2-3 kb of
-matching sequence. Since many plasmids and most bacterial and
-archaeal genomes are far larger than 10kb, branchwater is well suited
-to detecting matches to such sequences in the SRA. Future storage and
-search optimizations may enable higher resolution search, but for now,
-sequences smaller than 10kb may be missed as a result of this
-fractional k-mer selection.</p>
+<span class="math inline">\(S=1000\)</span> parameters used in branchwater, this represents approximately
+2-3 kb of matching sequence. Since many plasmids and most bacterial
+and archaeal genomes are far larger than 10kb, branchwater is well
+suited to detecting matches to such sequences in the SRA.</p>
+<p>Here we note that branchwater has a one-sided error: matches of 3
+hashes are reliable guarantees of the presence of sequence, while no
+match does not guarantee absence of sequence. In particular, sequences
+smaller than 10kb may be missed despite being present. Future storage
+and search optimizations may enable higher resolution search.</p>
+<p>Interestingly, k-mer detection and FracMinHash specifically is quite
+sensitive even when genome <em>coverage</em> is low. This is because (1) 1x
+sequencing coverage of a genome will yield approximately 2/3 of the
+k-mers in that genome, (2) 21-mers, 31-mers, and 51-mers are all
+highly specific in combination, and (3) genomes are large, so
+detecting 3 or more hashes indicates that 3kb or more overlap is
+present.</p>
+<!-- CTB cite detection, metapalette, gather; revisit paragraph; graph? -->
 <h3 id="tackling-biological-use-cases-with-branchwater">Tackling biological use cases with branchwater</h3>
 <p>K-mer search via branchwater has been used in two projects so far -
 Lumian et al. (2022) <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span> and Viehweger et al. (2021)
@@ -731,16 +760,18 @@ needed even for branchwater continues to present obstacles.</p>
 as well. The current search approach has limited sensitivity to
 divergent sequence beyond the genus level, and cannot find smaller
 matches. These are topics for future research and development.</p>
-<h3 id="following-up-on-branchwater-results">Following up on Branchwater results</h3>
-<p>Many Branchwater use cases are intended for early-stage hypothesis
+<h3 id="following-up-on-branchwater-results">Following up on branchwater results</h3>
+<p>Many branchwater use cases are intended for early-stage hypothesis
 generation and refinement, i.e. branchwater implements the first part
-of a “hit to lead” pipeline. Hence Branchwater operates at an early
-stage in conceptual and concrete workflows. The initial steps
-immediately after executing Branchwater are (1) choosing a threshold
+of a “hit to lead” pipeline. Hence branchwater operates at an early
+stage in both conceptual and concrete workflows. The next steps
+after executing branchwater are (1) choosing a threshold
 at which to filter results, (2) evaluating the overall results by type
 of metagenome retrieved, and (3) retrieving the data underlying the
 matches.</p>
-<p>As branchwater search is exhaustive, the first analysis step taken
+<p>Branchwater search is exhaustive and can be too sensitive for many
+applications: that is, branchwater may return too many results for
+detailed investigation. Thus the first analysis step taken
 is typically picking a more stringent threshold. The number of metagenomes
 results is highly dependent on the query, ranging from dozens of results
 for organisms from understudied environments to tens or hundreds of
@@ -754,11 +785,11 @@ with the data from individual metagenomes.</p>
 <p>We have built two custom tools in concert with sourmash and
 branchwater, genome-grist and spacegraphcats. Genome-grist performs
 an entirely automated reference-based characterization of individual
-metagenomes that follows the minimum metagenome cover produced by
-sourmash gather with mapping of short reads; it is described in Irber
+metagenomes that uses the minimum metagenome cover produced by
+sourmash gather to guide mapping of short reads; it is described in Irber
 et al. <span class="citation" data-cites="IadOz4ol">[<a href="#ref-IadOz4ol" role="doc-biblioref">14</a>]</span> and was used in Lumian et al. <span class="citation" data-cites="uNh28jlz">[<a href="#ref-uNh28jlz" role="doc-biblioref">16</a>]</span>. While
 genome-grist does download the entire data set in order to map the
-reads, it is still reference based and thus relatively lightweight.</p>
+reads, it is reference based and thus relatively lightweight.</p>
 <p>spacegraphcats is an assembly-graph based investigative tool for
 metagenomes that retrieves graph neighborhoods from metagenome
 assembly graphs for the purpose of investigating strain variation
@@ -780,10 +811,10 @@ more efficiently. The current JSON-based format is convenient for
 debugging and multi-language interoperability but is extremely
 inefficient. Moreover, each file currently contains three k-mer
 sketches (one per each desired k-mer search size), which means
-approximately 3 times as much data is loaded per query than is
-actually used. FracMinHash also could support fractional loading,
-i.e. decreased resolution by loading only the bottom portion of the
-sketch; this would enable must faster searches albeit at lower
+approximately 3 times as much data is loaded per file than is actually
+used in a comparison. FracMinHash also could support fractional
+loading, i.e. decreased resolution by loading only the bottom portion
+of the sketch; this would enable must faster searches albeit at lower
 resolution. This is not yet supported by the underlying sourmash
 library.</p>
 <!-- XXX also talk about david's alternate sketch format -->
@@ -804,7 +835,7 @@ structure with one-sided error. For example, we could create a Bloom
 filter for each sketch that could be used to estimate containment
 prior to loading the full sketch file. However, for some potentially
 common use cases such as queries with many matches, this could add
-significant I/O without speeding up the actual search.</p>
+significant I/O without speeding up the overall search.</p>
 <p>Building an inverted index that maps hashes to data sets could also
 enable rapid queries. Two challenges here are the scale of the catalog
 and the number of data sets; the total number of hashes present in our
@@ -824,16 +855,17 @@ important considerations in any scientific software workflow.</p>
 <h2 class="page_break_before" id="conclusion">Conclusion</h2>
 <p>We provide a flexible and fast petabase-scale search based on
 FracMinHash, together with some simple downstream summarization tools
-and an increasingly mature (but much slower) investigative ecosystem.
+and an increasingly mature (albeit slower) investigative ecosystem.
 This supports and enables a wide range of biological use cases that
 take advantage of public data; these use cases range from biomedical
 to ecological to technical (Table <a href="#tbl:bio-use-cases">1</a>).</p>
 <h2 id="data-availability-statement">Data availability statement:</h2>
-<p>All of the original data underlying the Branchwater database is
-available from the NCBI Sequence Read Archive. A current catalog of
-the SRA accessions is available at XXX. The sketch collection is
-7.5 TB and is available upon request. All sourmash sketches are
-provided under Creative Commons Zero (CC0) - No Rights Reserved.</p>
+<p>All of the original data for the sketches in the branchwater database
+is available from the NCBI Sequence Read Archive. A current catalog of
+the SRA accessions is available at XXX. The sketch collection is 7.5
+TB and is available upon request. All sourmash sketches are provided
+under Creative Commons Zero (CC0) - No Rights Reserved.</p>
+<!-- CTB add catalog -->
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
