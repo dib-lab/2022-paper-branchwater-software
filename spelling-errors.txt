@@ -6,14 +6,14 @@ archaeal
 bigsi
 biogeo
 biogeographical
-Biogeography
+biogeography
 bioinformatically
 bioinformatics
 bluegenes
 branchwater
 Bruijn
 CLI
-CMash
+cmash
 contig
 contigs
 cov
@@ -39,7 +39,7 @@ Klebsiella
 lossy
 Luiz
 luizirber
-lumian
+Lumian
 MBs
 mer
 mers
@@ -59,7 +59,7 @@ Pangenome
 pangenomes
 pathogenicity
 performant
-Petabase
+petabase
 petabases
 plasmids
 pneumoniae
@@ -81,7 +81,7 @@ Serratus
 snakemake
 sourmash
 spacegraphcats
-SRA
+sra
 ssbt
 SSD
 summarization
